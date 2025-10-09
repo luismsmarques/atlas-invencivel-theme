@@ -2317,8 +2317,9 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header .container {
-        grid-template-columns: auto 1fr auto;
+        grid-template-columns: auto auto auto;
         justify-content: space-between;
+        align-items: center;
     }
     
     .header-nav-wrapper {
@@ -2342,7 +2343,14 @@ body {
     }
     
     .social-icons {
-        display: none;
+        display: flex;
+        gap: 10px;
+    }
+    
+    .social-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
     }
     
     .hero-content {
