@@ -15,157 +15,178 @@ if ( ! defined( 'ABSPATH' ) ) {
     </main><!-- #primary -->
 
     <footer id="colophon" class="site-footer footer">
-        <!-- Footer Main Content -->
-        <div class="footer-main">
-            <div class="container">
-                <div class="footer-grid">
-                    <!-- Company Info Widget Area -->
-                    <div class="footer-section footer-about">
-                        <?php
-                        if ( is_active_sidebar( 'footer-about' ) ) {
-                            dynamic_sidebar( 'footer-about' );
-                        } else {
-                            // Fallback content if no widgets are added
-                            ?>
-                            <div class="footer-logo">
-                                <?php
-                                $footer_logo_icon = get_option( 'atlas_footer_logo_icon', 'A' );
-                                $footer_logo_text = get_option( 'atlas_footer_logo_text', 'Atlas Invencível' );
-                                ?>
-                                <div class="footer-logo-icon"><?php echo esc_html( $footer_logo_icon ); ?></div>
-                                <span class="footer-logo-text"><?php echo esc_html( $footer_logo_text ); ?></span>
-                            </div>
-                            
-                            <p class="footer-description">
-                                Desenvolvedor apaixonado criando soluções inovadoras e compartilhando conhecimento através de código e conteúdo.
-                            </p>
-                            
-                            <div class="footer-social">
-                                <?php
-                                $linkedin_url = get_option( 'atlas_social_linkedin', 'https://www.linkedin.com/in/luismsmarques/' );
-                                $twitter_url = get_option( 'atlas_social_twitter', 'https://x.com/luismsmarques' );
-                                $github_url = get_option( 'atlas_social_github', 'https://github.com/luismsmarques' );
-                                $instagram_url = get_option( 'atlas_social_instagram', '' );
-                                
-                                if ( $linkedin_url ) {
-                                    echo '<a href="' . esc_url( $linkedin_url ) . '" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>';
-                                }
-                                if ( $twitter_url ) {
-                                    echo '<a href="' . esc_url( $twitter_url ) . '" target="_blank" rel="noopener" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>';
-                                }
-                                if ( $github_url ) {
-                                    echo '<a href="' . esc_url( $github_url ) . '" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>';
-                                }
-                                if ( $instagram_url ) {
-                                    echo '<a href="' . esc_url( $instagram_url ) . '" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>';
-                                }
-                                ?>
-                            </div>
-                            <?php
-                        }
-                        ?>
+        <div class="container">
+            <!-- Top Section - 4 Columns -->
+            <div class="footer-top">
+                <div class="footer-columns">
+                    <!-- Company Info Column -->
+                    <div class="footer-column footer-company">
+                        <h3 class="footer-column-title">
+                            <?php echo esc_html( get_option( 'atlas_footer_logo_text', 'Atlas Invencível' ) ); ?>
+                        </h3>
+                        <p class="footer-description">
+                            <?php echo esc_html( get_option( 'atlas_footer_description', 'Helping people solve problems with code.' ) ); ?>
+                        </p>
                     </div>
                     
-                    <!-- Quick Links Widget Area -->
-                    <div class="footer-section footer-links">
+                    <!-- Footer 1 Column -->
+                    <div class="footer-column footer-shop">
                         <?php
-                        if ( is_active_sidebar( 'footer-links' ) ) {
-                            dynamic_sidebar( 'footer-links' );
+                        if ( has_nav_menu( 'footer-shop' ) ) {
+                            $menu = wp_get_nav_menu_object( get_nav_menu_locations()['footer-shop'] );
+                            $menu_title = $menu ? $menu->name : 'Shop';
+                            echo '<h3 class="footer-column-title">' . esc_html( $menu_title ) . '</h3>';
+                            
+                            wp_nav_menu( array(
+                                'theme_location' => 'footer-shop',
+                                'menu_id'        => 'footer-shop-menu',
+                                'container'      => false,
+                                'fallback_cb'    => 'atlas_theme_footer_shop_fallback_menu',
+                                'depth'          => 1,
+                            ) );
                         } else {
                             // Fallback content
+                            echo '<h3 class="footer-column-title">Shop</h3>';
                             ?>
-                            <h3 class="footer-title">Links Rápidos</h3>
-                            <nav class="footer-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Navigation', 'atlas-theme' ); ?>">
-                                <?php
-                                wp_nav_menu( array(
-                                    'theme_location' => 'footer',
-                                    'menu_id'        => 'footer-menu',
-                                    'container'      => false,
-                                    'fallback_cb'    => 'atlas_theme_footer_fallback_menu',
-                                    'depth'          => 1,
-                                ) );
-                                ?>
-                            </nav>
-                            <?php
-                        }
-                        ?>
-                    </div>
-                    
-                    <!-- Services Widget Area -->
-                    <div class="footer-section footer-services">
-                        <?php
-                        if ( is_active_sidebar( 'footer-services' ) ) {
-                            dynamic_sidebar( 'footer-services' );
-                        } else {
-                            // Fallback content
-                            ?>
-                            <h3 class="footer-title">Serviços</h3>
-                            <ul class="footer-services-list">
-                                <li><a href="#web-development">Desenvolvimento Web</a></li>
-                                <li><a href="#wordpress">WordPress</a></li>
-                                <li><a href="#ecommerce">E-commerce</a></li>
-                                <li><a href="#consulting">Consultoria</a></li>
-                                <li><a href="#maintenance">Manutenção</a></li>
+                            <ul class="footer-links">
+                                <li><a href="#sell-online">Sell online</a></li>
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#examples">Examples</a></li>
+                                <li><a href="#website-editors">Website editors</a></li>
+                                <li><a href="#online-retail">Online retail</a></li>
                             </ul>
                             <?php
                         }
                         ?>
                     </div>
                     
-                    <!-- Contact Info Widget Area -->
-                    <div class="footer-section footer-contact">
+                    <!-- Footer 2 Column -->
+                    <div class="footer-column footer-press">
                         <?php
-                        if ( is_active_sidebar( 'footer-contact' ) ) {
-                            dynamic_sidebar( 'footer-contact' );
+                        if ( has_nav_menu( 'footer-press' ) ) {
+                            $menu = wp_get_nav_menu_object( get_nav_menu_locations()['footer-press'] );
+                            $menu_title = $menu ? $menu->name : 'Press';
+                            echo '<h3 class="footer-column-title">' . esc_html( $menu_title ) . '</h3>';
+                            
+                            wp_nav_menu( array(
+                                'theme_location' => 'footer-press',
+                                'menu_id'        => 'footer-press-menu',
+                                'container'      => false,
+                                'fallback_cb'    => 'atlas_theme_footer_press_fallback_menu',
+                                'depth'          => 1,
+                            ) );
                         } else {
                             // Fallback content
+                            echo '<h3 class="footer-column-title">Press</h3>';
                             ?>
-                            <h3 class="footer-title">Contacto</h3>
-                            <div class="contact-info">
-                                <div class="contact-item">
-                                    <i class="fas fa-envelope"></i>
-                                    <span><?php echo esc_html( get_option( 'atlas_contact_email', 'luis@atlasinvencivel.com' ) ); ?></span>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="fas fa-phone"></i>
-                                    <span><?php echo esc_html( get_option( 'atlas_contact_phone', '+351 123 456 789' ) ); ?></span>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span><?php echo esc_html( get_option( 'atlas_contact_address', 'Portugal' ) ); ?></span>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="fas fa-clock"></i>
-                                    <span>Disponível para projetos</span>
-                                </div>
-                            </div>
+                            <ul class="footer-links">
+                                <li><a href="#events">Events</a></li>
+                                <li><a href="#news">News</a></li>
+                                <li><a href="#awards">Awards</a></li>
+                                <li><a href="#testimonials">Testimonials</a></li>
+                                <li><a href="#online-retail">Online retail</a></li>
+                            </ul>
+                            <?php
+                        }
+                        ?>
+                    </div>
+                    
+                    <!-- Footer 3 Column -->
+                    <div class="footer-column footer-about">
+                        <?php
+                        if ( has_nav_menu( 'footer-about' ) ) {
+                            $menu = wp_get_nav_menu_object( get_nav_menu_locations()['footer-about'] );
+                            $menu_title = $menu ? $menu->name : 'About';
+                            echo '<h3 class="footer-column-title">' . esc_html( $menu_title ) . '</h3>';
+                            
+                            wp_nav_menu( array(
+                                'theme_location' => 'footer-about',
+                                'menu_id'        => 'footer-about-menu',
+                                'container'      => false,
+                                'fallback_cb'    => 'atlas_theme_footer_about_fallback_menu',
+                                'depth'          => 1,
+                            ) );
+                        } else {
+                            // Fallback content
+                            echo '<h3 class="footer-column-title">About</h3>';
+                            ?>
+                            <ul class="footer-links">
+                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#team">Team</a></li>
+                                <li><a href="#career">Career</a></li>
+                                <li><a href="#contacts">Contacts</a></li>
+                            </ul>
                             <?php
                         }
                         ?>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-bottom-content">
-                    <div class="footer-copyright">
+            
+            <!-- Middle Section - Legal Links & Social Media -->
+            <div class="footer-middle">
+                <div class="footer-middle-content">
+                    <!-- Legal Links -->
+                    <div class="footer-legal">
                         <?php
-                        $copyright_text = get_option( 'atlas_footer_copyright', sprintf( esc_html__( '© %d %s. Todos os direitos reservados.', 'atlas-theme' ), date( 'Y' ), get_bloginfo( 'name' ) ) );
-                        echo wp_kses_post( $copyright_text );
+                        if ( has_nav_menu( 'footer-legal' ) ) {
+                            wp_nav_menu( array(
+                                'theme_location' => 'footer-legal',
+                                'menu_id'        => 'footer-legal-menu',
+                                'container'      => false,
+                                'fallback_cb'    => 'atlas_theme_footer_legal_fallback_menu',
+                                'depth'          => 1,
+                            ) );
+                        } else {
+                            // Fallback content
+                            ?>
+                            <a href="/privacy-policy/">Privacy Policy</a>
+                            <a href="/terms-conditions/">Terms & Conditions</a>
+                            <a href="/code-conduct/">Code of Conduct</a>
+                            <?php
+                        }
                         ?>
                     </div>
                     
-                    <div class="footer-bottom-links">
-                        <a href="/privacy-policy/">Política de Privacidade</a>
-                        <a href="/terms-of-service/">Termos de Serviço</a>
-                        <a href="/cookies/">Política de Cookies</a>
-                        <a href="/sitemap/">Mapa do Site</a>
+                    <!-- Social Media Icons -->
+                    <div class="footer-social">
+                        <?php
+                        $social_links = array(
+                            'twitter' => array(
+                                'url' => get_option( 'atlas_social_twitter', 'https://x.com/luismsmarques' ),
+                                'icon' => 'fab fa-x-twitter',
+                                'label' => 'Twitter'
+                            ),
+                            'instagram' => array(
+                                'url' => get_option( 'atlas_social_instagram', '' ),
+                                'icon' => 'fab fa-instagram',
+                                'label' => 'Instagram'
+                            ),
+                            'facebook' => array(
+                                'url' => get_option( 'atlas_social_facebook', '' ),
+                                'icon' => 'fab fa-facebook-f',
+                                'label' => 'Facebook'
+                            ),
+                            'pinterest' => array(
+                                'url' => get_option( 'atlas_social_pinterest', '' ),
+                                'icon' => 'fab fa-pinterest-p',
+                                'label' => 'Pinterest'
+                            ),
+                        );
+                        
+                        foreach ( $social_links as $platform => $data ) {
+                            if ( ! empty( $data['url'] ) ) {
+                                echo '<a href="' . esc_url( $data['url'] ) . '" target="_blank" rel="noopener" class="social-icon" aria-label="' . esc_attr( $data['label'] ) . '">';
+                                echo '<i class="' . esc_attr( $data['icon'] ) . '"></i>';
+                                echo '</a>';
+                            }
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
+            
         </div>
     </footer>
 </div><!-- #page -->

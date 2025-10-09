@@ -28,11 +28,59 @@ function atlas_theme_fallback_menu() {
  */
 function atlas_theme_footer_fallback_menu() {
     echo '<ul id="footer-menu" class="menu">';
-    echo '<li><a href="#home" class="footer-nav-link">' . esc_html__( 'HOME', 'atlas-theme' ) . '</a></li>';
-    echo '<li><a href="#about" class="footer-nav-link">' . esc_html__( 'ABOUT', 'atlas-theme' ) . '</a></li>';
-    echo '<li><a href="#projects" class="footer-nav-link">' . esc_html__( 'PROJECTS', 'atlas-theme' ) . '</a></li>';
-    echo '<li><a href="#contacts" class="footer-nav-link">' . esc_html__( 'CONTACTS', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a href="#home" class="footer-nav-link">' . esc_html__( 'Home', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a href="#about" class="footer-nav-link">' . esc_html__( 'About', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a href="#services" class="footer-nav-link">' . esc_html__( 'Service', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a href="#contact" class="footer-nav-link">' . esc_html__( 'Contact Us', 'atlas-theme' ) . '</a></li>';
     echo '</ul>';
+}
+
+/**
+ * Fallback menu for footer 1 navigation
+ */
+function atlas_theme_footer_shop_fallback_menu() {
+    echo '<ul id="footer-shop-menu" class="footer-links">';
+    echo '<li><a href="#sell-online">' . esc_html__( 'Sell online', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a href="#features">' . esc_html__( 'Features', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a href="#examples">' . esc_html__( 'Examples', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a href="#website-editors">' . esc_html__( 'Website editors', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a href="#online-retail">' . esc_html__( 'Online retail', 'atlas-theme' ) . '</a></li>';
+    echo '</ul>';
+}
+
+/**
+ * Fallback menu for footer 2 navigation
+ */
+function atlas_theme_footer_press_fallback_menu() {
+    echo '<ul id="footer-press-menu" class="footer-links">';
+    echo '<li><a href="#events">' . esc_html__( 'Events', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a href="#news">' . esc_html__( 'News', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a href="#awards">' . esc_html__( 'Awards', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a href="#testimonials">' . esc_html__( 'Testimonials', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a href="#online-retail">' . esc_html__( 'Online retail', 'atlas-theme' ) . '</a></li>';
+    echo '</ul>';
+}
+
+/**
+ * Fallback menu for footer 3 navigation
+ */
+function atlas_theme_footer_about_fallback_menu() {
+    echo '<ul id="footer-about-menu" class="footer-links">';
+    echo '<li><a href="#contact">' . esc_html__( 'Contact', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a href="#services">' . esc_html__( 'Services', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a href="#team">' . esc_html__( 'Team', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a href="#career">' . esc_html__( 'Career', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a href="#contacts">' . esc_html__( 'Contacts', 'atlas-theme' ) . '</a></li>';
+    echo '</ul>';
+}
+
+/**
+ * Fallback menu for footer legal navigation
+ */
+function atlas_theme_footer_legal_fallback_menu() {
+    echo '<a href="/privacy-policy/">' . esc_html__( 'Privacy Policy', 'atlas-theme' ) . '</a>';
+    echo '<a href="/terms-conditions/">' . esc_html__( 'Terms & Conditions', 'atlas-theme' ) . '</a>';
+    echo '<a href="/code-conduct/">' . esc_html__( 'Code of Conduct', 'atlas-theme' ) . '</a>';
 }
 
 /**

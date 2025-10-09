@@ -56,6 +56,10 @@ function atlas_theme_setup() {
     register_nav_menus( array(
         'primary' => esc_html__( 'Primary Navigation', 'atlas-theme' ),
         'footer'  => esc_html__( 'Footer Navigation', 'atlas-theme' ),
+        'footer-shop' => esc_html__( 'Footer 1 Menu', 'atlas-theme' ),
+        'footer-press' => esc_html__( 'Footer 2 Menu', 'atlas-theme' ),
+        'footer-about' => esc_html__( 'Footer 3 Menu', 'atlas-theme' ),
+        'footer-legal' => esc_html__( 'Footer Legal Menu', 'atlas-theme' ),
     ) );
     
     // Register footer widget areas
