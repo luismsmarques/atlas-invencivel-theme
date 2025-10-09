@@ -1,5 +1,20 @@
 /* Contact Page Styles */
 
+/* Ensure Header and Footer are identical to homepage */
+.site-header.header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+.site-footer.footer {
+    background: #000000;
+    color: white;
+    margin-top: 80px;
+    padding: 60px 0 40px;
+}
+
 /* Contact Hero Section */
 .contact-hero {
     background: linear-gradient(135deg, #134686 0%, #0d2f5a 100%);
