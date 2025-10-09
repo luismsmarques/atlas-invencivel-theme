@@ -509,6 +509,85 @@ function atlas_theme_add_social_section( $wp_customize ) {
         'section' => 'atlas_social',
         'type'    => 'url',
     ) );
+    
+    // Add Contact Section
+    atlas_theme_add_contact_section( $wp_customize );
+}
+
+/**
+ * Add Contact Section
+ */
+function atlas_theme_add_contact_section( $wp_customize ) {
+    $wp_customize->add_section( 'atlas_contact', array(
+        'title'    => esc_html__( 'Contact Settings', 'atlas-theme' ),
+        'panel'    => 'atlas_theme_panel',
+        'priority' => 50,
+    ) );
+    
+    // Contact Email
+    $wp_customize->add_setting( 'atlas_contact_email', array(
+        'default'           => 'hello@atlasinvencivel.com',
+        'sanitize_callback' => 'sanitize_email',
+        'transport'         => 'postMessage',
+    ) );
+    
+    $wp_customize->add_control( 'atlas_contact_email', array(
+        'label'   => esc_html__( 'Contact Email', 'atlas-theme' ),
+        'section' => 'atlas_contact',
+        'type'    => 'email',
+    ) );
+    
+    // Contact Phone
+    $wp_customize->add_setting( 'atlas_contact_phone', array(
+        'default'           => '+351 123 456 789',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport'         => 'postMessage',
+    ) );
+    
+    $wp_customize->add_control( 'atlas_contact_phone', array(
+        'label'   => esc_html__( 'Contact Phone', 'atlas-theme' ),
+        'section' => 'atlas_contact',
+        'type'    => 'text',
+    ) );
+    
+    // Contact Location
+    $wp_customize->add_setting( 'atlas_contact_location', array(
+        'default'           => 'Porto, Portugal',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport'         => 'postMessage',
+    ) );
+    
+    $wp_customize->add_control( 'atlas_contact_location', array(
+        'label'   => esc_html__( 'Contact Location', 'atlas-theme' ),
+        'section' => 'atlas_contact',
+        'type'    => 'text',
+    ) );
+    
+    // Contact Availability
+    $wp_customize->add_setting( 'atlas_contact_availability', array(
+        'default'           => 'Monday - Friday: 9:00 AM - 6:00 PM',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport'         => 'postMessage',
+    ) );
+    
+    $wp_customize->add_control( 'atlas_contact_availability', array(
+        'label'   => esc_html__( 'Availability', 'atlas-theme' ),
+        'section' => 'atlas_contact',
+        'type'    => 'text',
+    ) );
+    
+    // Contact Response Time
+    $wp_customize->add_setting( 'atlas_contact_response_time', array(
+        'default'           => 'Within 24 hours',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport'         => 'postMessage',
+    ) );
+    
+    $wp_customize->add_control( 'atlas_contact_response_time', array(
+        'label'   => esc_html__( 'Response Time', 'atlas-theme' ),
+        'section' => 'atlas_contact',
+        'type'    => 'text',
+    ) );
 }
 
 /**

@@ -23,8 +23,7 @@ function atlas_theme_cache_busting_version() {
     $contact_files = array(
         get_template_directory() . '/page-contact.php',
         get_template_directory() . '/assets/css/contact.css',
-        get_template_directory() . '/assets/js/contact.js',
-        get_template_directory() . '/inc/contact-form.php'
+        get_template_directory() . '/assets/js/contact.js'
     );
     
     $latest_modification = 0;
@@ -76,9 +75,12 @@ function atlas_theme_force_cache_refresh() {
 }
 
 /**
- * Add cache busting to CSS and JS files
+ * Add cache busting to CSS files
  */
-function atlas_theme_add_cache_busting( $html, $handle, $href, $media ) {
+function atlas_theme_add_cache_busting_css( $html, $handle, $href, $media ) {
+    // Temporarily disable cache busting for debugging
+    return $html;
+    
     $cache_version = atlas_theme_cache_busting_version();
     
     // Add version parameter to contact page assets
@@ -89,8 +91,27 @@ function atlas_theme_add_cache_busting( $html, $handle, $href, $media ) {
     
     return $html;
 }
-add_filter( 'style_loader_tag', 'atlas_theme_add_cache_busting', 10, 4 );
-add_filter( 'script_loader_tag', 'atlas_theme_add_cache_busting', 10, 4 );
+
+/**
+ * Add cache busting to JS files
+ */
+function atlas_theme_add_cache_busting_js( $html, $handle, $href ) {
+    // Temporarily disable cache busting for debugging
+    return $html;
+    
+    $cache_version = atlas_theme_cache_busting_version();
+    
+    // Add version parameter to contact page assets
+    if ( strpos( $handle, 'contact' ) !== false ) {
+        $separator = strpos( $href, '?' ) !== false ? '&' : '?';
+        $html = str_replace( $href, $href . $separator . 'v=' . $cache_version, $html );
+    }
+    
+    return $html;
+}
+
+add_filter( 'style_loader_tag', 'atlas_theme_add_cache_busting_css', 10, 4 );
+add_filter( 'script_loader_tag', 'atlas_theme_add_cache_busting_js', 10, 3 );
 
 /**
  * Add meta tags to prevent caching on contact page

@@ -22,6 +22,26 @@ define( 'ATLAS_THEME_URI', get_template_directory_uri() );
 define( 'ATLAS_THEME_INC', ATLAS_THEME_DIR . '/inc' );
 
 /**
+ * Include Theme Files
+ */
+require_once ATLAS_THEME_INC . '/enqueue.php';
+require_once ATLAS_THEME_INC . '/customizer.php';
+require_once ATLAS_THEME_INC . '/custom-post-types.php';
+require_once ATLAS_THEME_INC . '/template-functions.php';
+require_once ATLAS_THEME_INC . '/widgets.php';
+require_once ATLAS_THEME_INC . '/cache-busting.php';
+require_once ATLAS_THEME_INC . '/options-page.php';
+require_once ATLAS_THEME_INC . '/shortpixel-optimization.php';
+
+// Include block files
+require_once ATLAS_THEME_INC . '/blocks/hero-block.php';
+require_once ATLAS_THEME_INC . '/blocks/skills-grid-block.php';
+require_once ATLAS_THEME_INC . '/blocks/projects-grid-block.php';
+require_once ATLAS_THEME_INC . '/blocks/timeline-block.php';
+require_once ATLAS_THEME_INC . '/blocks/services-grid-block.php';
+require_once ATLAS_THEME_INC . '/blocks/company-logos-block.php';
+
+/**
  * Theme Setup
  */
 function atlas_theme_setup() {
