@@ -73,13 +73,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Mobile menu toggle functionality
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
     const body = document.body;
     
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
-            const isOpen = mobileMenu.classList.contains('active');
+    if (mobileMenuToggle && mobileMenuOverlay) {
+        mobileMenuToggle.addEventListener('click', function() {
+            const isOpen = mobileMenuOverlay.classList.contains('active');
             
             if (isOpen) {
                 closeMobileMenu();
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Close mobile menu when clicking on a navigation link
-        const mobileNavLinks = document.querySelectorAll('.mobile-navigation a');
+        const mobileNavLinks = document.querySelectorAll('.mobile-menu-nav a');
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', function() {
                 closeMobileMenu();
@@ -98,31 +98,31 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Close mobile menu on escape key
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
                 closeMobileMenu();
             }
         });
         
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(e) {
-            if (mobileMenu.classList.contains('active') && 
-                !mobileMenu.contains(e.target) && 
-                !mobileMenuBtn.contains(e.target)) {
+            if (mobileMenuOverlay.classList.contains('active') && 
+                !mobileMenuOverlay.contains(e.target) && 
+                !mobileMenuToggle.contains(e.target)) {
                 closeMobileMenu();
             }
         });
         
         function openMobileMenu() {
-            mobileMenuBtn.classList.add('active');
-            mobileMenu.classList.add('active');
-            mobileMenuBtn.setAttribute('aria-expanded', 'true');
+            mobileMenuToggle.classList.add('active');
+            mobileMenuOverlay.classList.add('active');
+            mobileMenuToggle.setAttribute('aria-expanded', 'true');
             body.style.overflow = 'hidden';
         }
         
         function closeMobileMenu() {
-            mobileMenuBtn.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            mobileMenuToggle.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
             body.style.overflow = '';
         }
     }
