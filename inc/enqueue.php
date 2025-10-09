@@ -12,24 +12,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Enqueue Theme Assets with Async CSS Loading
+ * Enqueue Theme Assets - SIMPLIFIED VERSION FOR DEBUGGING
  */
 function atlas_theme_enqueue_assets() {
-    // Main stylesheet (WordPress requirement)
-    wp_enqueue_style( 'atlas-theme-style', get_stylesheet_uri(), array(), ATLAS_THEME_VERSION );
+    // Google Fonts - TEMPORARILY USING FOR DEBUGGING
+    wp_enqueue_style( 'atlas-theme-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap', array(), null );
     
-    // Self-hosted fonts with font-display: swap
-    wp_enqueue_style( 'atlas-theme-fonts', ATLAS_THEME_URI . '/assets/css/fonts.css', array(), ATLAS_THEME_VERSION );
+    // Main stylesheet (WordPress requirement) - Critical CSS, load synchronously
+    wp_enqueue_style( 'atlas-theme-style', get_stylesheet_uri(), array('atlas-theme-fonts'), ATLAS_THEME_VERSION );
     
-    // Main CSS - Load asynchronously using preload + loadCSS
-    wp_enqueue_style( 'atlas-theme-main', ATLAS_THEME_URI . '/assets/css/main.css', array(), ATLAS_THEME_VERSION );
+    // Main CSS - Load synchronously for debugging
+    wp_enqueue_style( 'atlas-theme-main', ATLAS_THEME_URI . '/assets/css/main.css', array('atlas-theme-style'), ATLAS_THEME_VERSION );
     
     // Main JavaScript
     wp_enqueue_script( 'atlas-theme-main', ATLAS_THEME_URI . '/assets/js/main.js', array(), ATLAS_THEME_VERSION, true );
     
     // Services page specific assets
     if ( is_page_template( 'page-services.php' ) || is_page_template( 'template-services-integrated.php' ) ) {
-        wp_enqueue_style( 'atlas-theme-services', ATLAS_THEME_URI . '/assets/css/services.css', array(), ATLAS_THEME_VERSION );
+        wp_enqueue_style( 'atlas-theme-services', ATLAS_THEME_URI . '/assets/css/services.css', array('atlas-theme-main'), ATLAS_THEME_VERSION );
         wp_enqueue_script( 'atlas-theme-services', ATLAS_THEME_URI . '/assets/js/services.js', array(), ATLAS_THEME_VERSION, true );
     }
     
@@ -57,9 +57,7 @@ add_action( 'enqueue_block_editor_assets', 'atlas_theme_enqueue_editor_assets' )
  */
 function atlas_theme_conditional_assets() {
     // Load specific assets based on page type
-    if ( is_front_page() ) {
-        wp_enqueue_script( 'atlas-theme-homepage', ATLAS_THEME_URI . '/assets/js/homepage.js', array( 'atlas-theme-main' ), ATLAS_THEME_VERSION, true );
-    }
+    // REMOVED homepage.js - functionality is in main.js
     
     // Load case-study.css for project pages
     if ( is_singular( 'atlas_project' ) ) {
@@ -91,14 +89,14 @@ add_action( 'wp_head', 'atlas_theme_loadcss_polyfill', 1 );
  * Convert CSS Links to Async Loading
  */
 function atlas_theme_async_css_loading( $html, $handle, $href, $media ) {
-    // List of CSS files to load asynchronously
+    // List of CSS files to load asynchronously - TEMPORARILY DISABLED FOR DEBUGGING
     $async_css = array(
-        'atlas-theme-main',
-        'atlas-theme-fonts', 
-        'atlas-theme-services',
-        'atlas-theme-case-study',
-        'atlas-theme-project',
-        'atlas-theme-service'
+        // 'atlas-theme-main',
+        // 'atlas-theme-fonts', 
+        // 'atlas-theme-services',
+        // 'atlas-theme-case-study',
+        // 'atlas-theme-project',
+        // 'atlas-theme-service'
     );
     
     if ( in_array( $handle, $async_css ) ) {
@@ -134,59 +132,20 @@ function atlas_theme_remove_unnecessary_assets() {
 add_action( 'init', 'atlas_theme_remove_unnecessary_assets' );
 
 /**
- * Optimize CSS Delivery - Critical CSS Inline
+ * Optimize CSS Delivery - Critical CSS Inline - TEMPORARILY DISABLED
  */
 function atlas_theme_optimize_css_delivery() {
-    // Comprehensive critical CSS for above-the-fold content
-    $critical_css = '
-        /* Reset and Base Styles */
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:"Inter",sans-serif;line-height:1.6;color:#333;background-color:#fff}
-        img{max-width:100%;height:auto}
-        
-        /* Container */
-        .container{max-width:1200px;margin:0 auto;padding:0 20px}
-        
-        /* Header Critical Styles */
-        .header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);z-index:1000;padding:15px 0;border-bottom:1px solid rgba(0,0,0,0.1)}
-        .header .container{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px}
-        .logo{display:flex;align-items:center;gap:10px}
-        .logo-link{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
-        .logo-icon{width:40px;height:40px;background:#134686;color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;border-radius:8px}
-        .logo-text{font-weight:700;font-size:20px;color:#134686}
-        .nav{display:flex;justify-content:center;gap:30px}
-        .main-navigation ul{list-style:none;margin:0;padding:0;display:flex;gap:30px}
-        .main-navigation a{text-decoration:none;color:#333;font-weight:500;padding:8px 0;display:block}
-        .header-right{display:flex;align-items:center;gap:20px}
-        .social-icons{display:flex;gap:15px}
-        .social-icon{width:35px;height:35px;background:#134686;color:white;display:flex;align-items:center;justify-content:center;border-radius:50%;text-decoration:none}
-        .mobile-menu-toggle{display:none;flex-direction:column;justify-content:space-around;width:30px;height:30px;background:transparent;border:none;cursor:pointer;padding:0;z-index:1001}
-        .hamburger-line{width:25px;height:3px;background:#134686;transition:all 0.3s ease;transform-origin:center}
-        
-        /* Hero Section Critical Styles */
-        .hero{background:linear-gradient(135deg,#134686 0%,#0d2f5a 100%);min-height:60vh;display:flex;align-items:center;position:relative;overflow:hidden}
-        .hero-bg{position:absolute;top:0;left:0;right:0;bottom:0;z-index:1}
-        .hero-content{position:relative;z-index:2;color:white;text-align:center;max-width:800px;margin:0 auto;padding:0 20px}
-        .hero h1{font-size:3.5rem;font-weight:800;margin-bottom:20px;line-height:1.2}
-        .hero p{font-size:1.25rem;margin-bottom:30px;opacity:0.9}
-        .hero-buttons{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
-        .btn{display:inline-block;padding:15px 30px;text-decoration:none;border-radius:50px;font-weight:600;transition:all 0.3s ease;border:none;cursor:pointer}
-        .btn-primary{background:#FEB21A;color:#134686}
-        .btn-secondary{background:transparent;color:white;border:2px solid white}
-        
-        /* Mobile Responsive Critical */
-        @media (max-width:768px){
-            .header .container{grid-template-columns:auto 1fr auto;gap:15px}
-            .main-navigation{display:none}
-            .mobile-menu-toggle{display:flex}
-            .hero h1{font-size:2.5rem}
-            .hero p{font-size:1.1rem}
-            .hero-buttons{flex-direction:column;align-items:center}
-            .btn{padding:12px 25px;font-size:16px}
-        }
-    ';
-    
-    echo '<style id="atlas-critical-css">' . $critical_css . '</style>' . "\n";
+    // DISABLED FOR DEBUGGING - Critical CSS inline removed
+    // $critical_css = '
+    //     /* Ultra-critical loading optimization only */
+    //     /* Prevent FOUC (Flash of Unstyled Content) - REMOVED visibility:hidden */
+    //     
+    //     /* Critical font loading */
+    //     @font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url("' . ATLAS_THEME_URI . '/assets/fonts/inter-regular.woff2") format("woff2")}
+    //     @font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url("' . ATLAS_THEME_URI . '/assets/fonts/inter-bold.woff2") format("woff2")}
+    // ';
+    // 
+    // echo '<style id="atlas-critical-css">' . $critical_css . '</style>' . "\n";
 }
 add_action( 'wp_head', 'atlas_theme_optimize_css_delivery', 2 );
 

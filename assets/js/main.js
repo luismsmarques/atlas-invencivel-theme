@@ -78,9 +78,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuClose = document.querySelector('.mobile-menu-close');
     const body = document.body;
     
+    console.log('Mobile menu elements:', {
+        toggle: mobileMenuToggle,
+        overlay: mobileMenuOverlay,
+        close: mobileMenuClose
+    });
+    
     if (mobileMenuToggle && mobileMenuOverlay) {
         mobileMenuToggle.addEventListener('click', function() {
+            console.log('Mobile menu toggle clicked!');
             const isOpen = mobileMenuOverlay.classList.contains('active');
+            console.log('Menu is open:', isOpen);
             
             if (isOpen) {
                 closeMobileMenu();
@@ -122,6 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         function openMobileMenu() {
+            console.log('Opening mobile menu...');
             mobileMenuToggle.classList.add('active');
             mobileMenuOverlay.classList.add('active');
             mobileMenuToggle.setAttribute('aria-expanded', 'true');
@@ -129,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         function closeMobileMenu() {
+            console.log('Closing mobile menu...');
             mobileMenuToggle.classList.remove('active');
             mobileMenuOverlay.classList.remove('active');
             mobileMenuToggle.setAttribute('aria-expanded', 'false');

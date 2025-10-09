@@ -1,105 +1,3 @@
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header Styles */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo-icon {
-    width: 40px;
-    height: 40px;
-    background: #2D5A5A;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 18px;
-    border-radius: 8px;
-}
-
-.logo-text {
-    font-weight: 700;
-    font-size: 20px;
-    color: #2D5A5A;
-}
-
-.nav {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #2D5A5A;
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icon {
-    width: 35px;
-    height: 35px;
-    background: #2D5A5A;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: background 0.3s ease;
-}
-
-.social-icon:hover {
-    background: #1a3d3d;
-}
-
 /* Services Section */
 .services {
     padding: 120px 0 80px;
@@ -116,7 +14,7 @@ body {
 .services-title {
     font-size: 48px;
     font-weight: 800;
-    color: #2D5A5A;
+    color: #134686;
 }
 
 .view-all-btn {
@@ -156,7 +54,7 @@ body {
 }
 
 .service-card.featured {
-    background: linear-gradient(135deg, #2D5A5A 0%, #1a3d3d 100%);
+    background: linear-gradient(135deg, #134686 0%, #0d2f5a 100%);
     border: none;
     color: white;
 }
@@ -181,7 +79,7 @@ body {
 .icon-square {
     width: 50px;
     height: 50px;
-    background: #2D5A5A;
+    background: #134686;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -222,7 +120,7 @@ body {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #2D5A5A;
+    color: #134686;
 }
 
 .featured .service-title {
@@ -393,13 +291,13 @@ body {
 .cta-title {
     font-size: 28px;
     font-weight: 700;
-    color: #2D5A5A;
+    color: #134686;
     margin-bottom: 30px;
     line-height: 1.2;
 }
 
 .cta-button {
-    background: #2D5A5A;
+    background: #134686;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -411,7 +309,7 @@ body {
 }
 
 .cta-button:hover {
-    background: #1a3d3d;
+    background: #0d2f5a;
 }
 
 .cta-image {
@@ -428,77 +326,8 @@ body {
     padding: 20px;
 }
 
-/* Footer */
-.footer {
-    background: #f8f9fa;
-    padding: 40px 0;
-    border-top: 1px solid #e9ecef;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-left p {
-    font-size: 14px;
-    color: #666;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.footer-logo-icon {
-    width: 30px;
-    height: 30px;
-    background: #2D5A5A;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 14px;
-    border-radius: 6px;
-}
-
-.footer-logo-text {
-    font-weight: 700;
-    font-size: 16px;
-    color: #2D5A5A;
-}
-
-.footer-nav {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-nav-link {
-    text-decoration: none;
-    color: #666;
-    font-size: 14px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.footer-nav-link:hover {
-    color: #2D5A5A;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .nav {
-        gap: 20px;
-    }
-    
     .services-header {
         flex-direction: column;
         gap: 20px;
@@ -545,23 +374,9 @@ body {
         width: 250px;
         height: 300px;
     }
-    
-    .footer-content {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-    
-    .footer-nav {
-        justify-content: center;
-    }
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
-    
     .services-title {
         font-size: 28px;
     }

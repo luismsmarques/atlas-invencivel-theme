@@ -58,6 +58,47 @@ function atlas_theme_setup() {
         'footer'  => esc_html__( 'Footer Navigation', 'atlas-theme' ),
     ) );
     
+    // Register footer widget areas
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer About', 'atlas-theme' ),
+        'id'            => 'footer-about',
+        'description'   => esc_html__( 'Widget area for company information and description.', 'atlas-theme' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+    
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer Links', 'atlas-theme' ),
+        'id'            => 'footer-links',
+        'description'   => esc_html__( 'Widget area for quick links and navigation.', 'atlas-theme' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+    
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer Services', 'atlas-theme' ),
+        'id'            => 'footer-services',
+        'description'   => esc_html__( 'Widget area for services list.', 'atlas-theme' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+    
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer Contact', 'atlas-theme' ),
+        'id'            => 'footer-contact',
+        'description'   => esc_html__( 'Widget area for contact information.', 'atlas-theme' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+    
     // Add custom image sizes for better image quality
     add_image_size( 'atlas-hero', 500, 700, true ); // Hero profile image
     add_image_size( 'atlas-project', 600, 400, true ); // Project cards
@@ -156,37 +197,38 @@ function atlas_regenerate_image_sizes() {
 add_action( 'after_switch_theme', 'atlas_regenerate_image_sizes' );
 
 /**
- * Enqueue Scripts and Styles
+ * Enqueue Scripts and Styles - DISABLED
+ * Using inc/enqueue.php instead for better organization
  */
-function atlas_theme_scripts() {
-    // Main stylesheet
-    wp_enqueue_style( 'atlas-theme-style', get_stylesheet_uri(), array(), ATLAS_THEME_VERSION );
-    
-    // Main CSS
-    wp_enqueue_style( 'atlas-theme-main', ATLAS_THEME_URI . '/assets/css/main.css', array(), ATLAS_THEME_VERSION );
-    
-    // Google Fonts
-    wp_enqueue_style( 'atlas-theme-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap', array(), null );
-    
-    // Font Awesome
-    wp_enqueue_style( 'atlas-theme-fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css', array(), '6.0.0' );
-    
-    // Main JavaScript
-    wp_enqueue_script( 'atlas-theme-main', ATLAS_THEME_URI . '/assets/js/main.js', array(), ATLAS_THEME_VERSION, true );
-    
-    // Services page specific assets
-    if ( is_page_template( 'page-services.php' ) || is_page_template( 'template-services-integrated.php' ) ) {
-        wp_enqueue_style( 'atlas-theme-services', ATLAS_THEME_URI . '/assets/css/services.css', array(), ATLAS_THEME_VERSION );
-        wp_enqueue_script( 'atlas-theme-services', ATLAS_THEME_URI . '/assets/js/services.js', array(), ATLAS_THEME_VERSION, true );
-    }
-    
-    // Localize script for AJAX
-    wp_localize_script( 'atlas-theme-main', 'atlas_theme_ajax', array(
-        'ajax_url' => admin_url( 'admin-ajax.php' ),
-        'nonce'    => wp_create_nonce( 'atlas_theme_nonce' ),
-    ) );
-}
-add_action( 'wp_enqueue_scripts', 'atlas_theme_scripts' );
+// function atlas_theme_scripts() {
+//     // Main stylesheet
+//     wp_enqueue_style( 'atlas-theme-style', get_stylesheet_uri(), array(), ATLAS_THEME_VERSION );
+//     
+//     // Main CSS
+//     wp_enqueue_style( 'atlas-theme-main', ATLAS_THEME_URI . '/assets/css/main.css', array(), ATLAS_THEME_VERSION );
+//     
+//     // Google Fonts
+//     wp_enqueue_style( 'atlas-theme-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap', array(), null );
+//     
+//     // Font Awesome
+//     wp_enqueue_style( 'atlas-theme-fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css', array(), '6.0.0' );
+//     
+//     // Main JavaScript
+//     wp_enqueue_script( 'atlas-theme-main', ATLAS_THEME_URI . '/assets/js/main.js', array(), ATLAS_THEME_VERSION, true );
+//     
+//     // Services page specific assets
+//     if ( is_page_template( 'page-services.php' ) || is_page_template( 'template-services-integrated.php' ) ) {
+//         wp_enqueue_style( 'atlas-theme-services', ATLAS_THEME_URI . '/assets/css/services.css', array(), ATLAS_THEME_VERSION );
+//         wp_enqueue_script( 'atlas-theme-services', ATLAS_THEME_URI . '/assets/js/services.js', array(), ATLAS_THEME_VERSION, true );
+//     }
+//     
+//     // Localize script for AJAX
+//     wp_localize_script( 'atlas-theme-main', 'atlas_theme_ajax', array(
+//         'ajax_url' => admin_url( 'admin-ajax.php' ),
+//         'nonce'    => wp_create_nonce( 'atlas_theme_nonce' ),
+//     ) );
+// }
+// add_action( 'wp_enqueue_scripts', 'atlas_theme_scripts' );
 
 /**
  * Enqueue Block Editor Assets
@@ -205,6 +247,7 @@ require_once ATLAS_THEME_INC . '/custom-post-types.php';
 require_once ATLAS_THEME_INC . '/options-page.php'; // Classic options page
 require_once ATLAS_THEME_INC . '/template-functions.php';
 require_once ATLAS_THEME_INC . '/enqueue.php';
+require_once ATLAS_THEME_INC . '/widgets.php';
 require_once ATLAS_THEME_INC . '/shortpixel-optimization.php'; // ShortPixel image optimization
 
 // Include block files
