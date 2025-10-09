@@ -1,0 +1,259 @@
+/**
+ * Self-Hosted Fonts with font-display: swap
+ * 
+ * @package AtlasTheme
+ * @since 1.0.0
+ */
+
+/* Inter Font Family - Self-hosted with font-display: swap */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../fonts/inter-light.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+21D2, U+21D4, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/inter-regular.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+21D2, U+21D4, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/inter-medium.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+21D2, U+21D4, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/inter-semibold.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+21D2, U+21D4, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/inter-bold.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+21D2, U+21D4, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../fonts/inter-extrabold.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+21D2, U+21D4, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Font Awesome Icons - Self-hosted */
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/fa-regular-400.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('../fonts/fa-solid-900.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/fa-brands-400.woff2') format('woff2');
+}
+
+/* Font Awesome CSS Classes */
+.fa, .fas, .far, .fab {
+    font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.fas {
+    font-weight: 900;
+}
+
+.fab {
+    font-family: 'Font Awesome 6 Brands';
+}
+
+/* Common Font Awesome Icons Used in Theme */
+.fa-linkedin-in:before { content: "\f0e1"; }
+.fa-x-twitter:before { content: "\f099"; }
+.fa-dribbble:before { content: "\f17d"; }
+.fa-instagram:before { content: "\f16d"; }
+.fa-times:before { content: "\f00d"; }
+.fa-bars:before { content: "\f0c9"; }
+.fa-arrow-right:before { content: "\f061"; }
+.fa-external-link-alt:before { content: "\f35d"; }
+.fa-github:before { content: "\f09b"; }
+.fa-envelope:before { content: "\f0e0"; }
+.fa-phone:before { content: "\f095"; }
+.fa-map-marker-alt:before { content: "\f3c5"; }
+.fa-calendar:before { content: "\f133"; }
+.fa-user:before { content: "\f007"; }
+.fa-code:before { content: "\f121"; }
+.fa-palette:before { content: "\f53f"; }
+.fa-mobile-alt:before { content: "\f3cd"; }
+.fa-desktop:before { content: "\f108"; }
+.fa-server:before { content: "\f233"; }
+.fa-database:before { content: "\f1c0"; }
+.fa-cloud:before { content: "\f0c2"; }
+.fa-shield-alt:before { content: "\f3ed"; }
+.fa-rocket:before { content: "\f135"; }
+.fa-lightbulb:before { content: "\f0eb"; }
+.fa-cog:before { content: "\f013"; }
+.fa-chart-line:before { content: "\f201"; }
+.fa-users:before { content: "\f0c0"; }
+.fa-heart:before { content: "\f004"; }
+.fa-star:before { content: "\f005"; }
+.fa-check:before { content: "\f00c"; }
+.fa-plus:before { content: "\f067"; }
+.fa-minus:before { content: "\f068"; }
+.fa-search:before { content: "\f002"; }
+.fa-filter:before { content: "\f0b0"; }
+.fa-sort:before { content: "\f0dc"; }
+.fa-chevron-down:before { content: "\f078"; }
+.fa-chevron-up:before { content: "\f077"; }
+.fa-chevron-left:before { content: "\f053"; }
+.fa-chevron-right:before { content: "\f054"; }
+.fa-angle-down:before { content: "\f107"; }
+.fa-angle-up:before { content: "\f106"; }
+.fa-angle-left:before { content: "\f104"; }
+.fa-angle-right:before { content: "\f105"; }
+.fa-play:before { content: "\f04b"; }
+.fa-pause:before { content: "\f04c"; }
+.fa-stop:before { content: "\f04d"; }
+.fa-volume-up:before { content: "\f028"; }
+.fa-volume-down:before { content: "\f027"; }
+.fa-volume-mute:before { content: "\f6a9"; }
+.fa-download:before { content: "\f019"; }
+.fa-upload:before { content: "\f093"; }
+.fa-file:before { content: "\f15b"; }
+.fa-file-alt:before { content: "\f15c"; }
+.fa-file-pdf:before { content: "\f1c1"; }
+.fa-file-word:before { content: "\f1c2"; }
+.fa-file-excel:before { content: "\f1c3"; }
+.fa-file-powerpoint:before { content: "\f1c4"; }
+.fa-file-image:before { content: "\f1c5"; }
+.fa-file-video:before { content: "\f1c8"; }
+.fa-file-audio:before { content: "\f1c7"; }
+.fa-file-archive:before { content: "\f1c6"; }
+.fa-file-code:before { content: "\f1c9"; }
+.fa-folder:before { content: "\f07b"; }
+.fa-folder-open:before { content: "\f07c"; }
+.fa-trash:before { content: "\f1f8"; }
+.fa-edit:before { content: "\f044"; }
+.fa-save:before { content: "\f0c7"; }
+.fa-copy:before { content: "\f0c5"; }
+.fa-cut:before { content: "\f0c4"; }
+.fa-paste:before { content: "\f0ea"; }
+.fa-undo:before { content: "\f0e2"; }
+.fa-redo:before { content: "\f01e"; }
+.fa-print:before { content: "\f02f"; }
+.fa-share:before { content: "\f064"; }
+.fa-share-alt:before { content: "\f1e0"; }
+.fa-share-square:before { content: "\f14d"; }
+.fa-link:before { content: "\f0c1"; }
+.fa-unlink:before { content: "\f127"; }
+.fa-bookmark:before { content: "\f02e"; }
+.fa-flag:before { content: "\f024"; }
+.fa-tag:before { content: "\f02b"; }
+.fa-tags:before { content: "\f02c"; }
+.fa-comment:before { content: "\f075"; }
+.fa-comments:before { content: "\f086"; }
+.fa-thumbs-up:before { content: "\f164"; }
+.fa-thumbs-down:before { content: "\f165"; }
+.fa-smile:before { content: "\f118"; }
+.fa-frown:before { content: "\f119"; }
+.fa-meh:before { content: "\f11a"; }
+.fa-grin:before { content: "\f580"; }
+.fa-grin-alt:before { content: "\f581"; }
+.fa-grin-beam:before { content: "\f582"; }
+.fa-grin-beam-sweat:before { content: "\f583"; }
+.fa-grin-hearts:before { content: "\f584"; }
+.fa-grin-kiss:before { content: "\f585"; }
+.fa-grin-kiss-wink-heart:before { content: "\f586"; }
+.fa-grin-squint:before { content: "\f585"; }
+.fa-grin-squint-tears:before { content: "\f586"; }
+.fa-grin-stars:before { content: "\f587"; }
+.fa-grin-tears:before { content: "\f588"; }
+.fa-grin-tongue:before { content: "\f589"; }
+.fa-grin-tongue-squint:before { content: "\f58a"; }
+.fa-grin-tongue-wink:before { content: "\f58b"; }
+.fa-grin-wink:before { content: "\f58c"; }
+.fa-kiss:before { content: "\f596"; }
+.fa-kiss-beam:before { content: "\f597"; }
+.fa-kiss-wink-heart:before { content: "\f598"; }
+.fa-laugh:before { content: "\f599"; }
+.fa-laugh-beam:before { content: "\f59a"; }
+.fa-laugh-squint:before { content: "\f59b"; }
+.fa-laugh-wink:before { content: "\f59c"; }
+.fa-sad-cry:before { content: "\f5b3"; }
+.fa-sad-tear:before { content: "\f5b4"; }
+.fa-surprise:before { content: "\f5c2"; }
+.fa-tired:before { content: "\f5c8"; }
+.fa-wink:before { content: "\f58c"; }
+.fa-angry:before { content: "\f556"; }
+.fa-dizzy:before { content: "\f567"; }
+.fa-flushed:before { content: "\f579"; }
+.fa-frown-open:before { content: "\f57a"; }
+.fa-grimace:before { content: "\f57f"; }
+.fa-grin:before { content: "\f580"; }
+.fa-grin-alt:before { content: "\f581"; }
+.fa-grin-beam:before { content: "\f582"; }
+.fa-grin-beam-sweat:before { content: "\f583"; }
+.fa-grin-hearts:before { content: "\f584"; }
+.fa-grin-kiss:before { content: "\f585"; }
+.fa-grin-kiss-wink-heart:before { content: "\f586"; }
+.fa-grin-squint:before { content: "\f585"; }
+.fa-grin-squint-tears:before { content: "\f586"; }
+.fa-grin-stars:before { content: "\f587"; }
+.fa-grin-tears:before { content: "\f588"; }
+.fa-grin-tongue:before { content: "\f589"; }
+.fa-grin-tongue-squint:before { content: "\f58a"; }
+.fa-grin-tongue-wink:before { content: "\f58b"; }
+.fa-grin-wink:before { content: "\f58c"; }
+.fa-kiss:before { content: "\f596"; }
+.fa-kiss-beam:before { content: "\f597"; }
+.fa-kiss-wink-heart:before { content: "\f598"; }
+.fa-laugh:before { content: "\f599"; }
+.fa-laugh-beam:before { content: "\f59a"; }
+.fa-laugh-squint:before { content: "\f59b"; }
+.fa-laugh-wink:before { content: "\f59c"; }
+.fa-sad-cry:before { content: "\f5b3"; }
+.fa-sad-tear:before { content: "\f5b4"; }
+.fa-surprise:before { content: "\f5c2"; }
+.fa-tired:before { content: "\f5c8"; }
+.fa-wink:before { content: "\f58c"; }
+.fa-angry:before { content: "\f556"; }
+.fa-dizzy:before { content: "\f567"; }
+.fa-flushed:before { content: "\f579"; }
+.fa-frown-open:before { content: "\f57a"; }
+.fa-grimace:before { content: "\f57f"; }

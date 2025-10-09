@@ -1,5 +1,4 @@
-/* Import Case Study Styles */
-@import url('case-study.css');
+/* Case Study Styles are now loaded conditionally via PHP */
 
 /* Reset and Base Styles */
 * {

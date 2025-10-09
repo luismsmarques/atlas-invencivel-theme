@@ -67,6 +67,71 @@ function atlas_theme_setup() {
 add_action( 'after_setup_theme', 'atlas_theme_setup' );
 
 /**
+ * Image Optimization and Lazy Loading
+ */
+function atlas_theme_image_optimization() {
+    // Add native lazy loading to images
+    add_filter( 'wp_get_attachment_image_attributes', function( $attr, $attachment, $size ) {
+        // Skip lazy loading for above-the-fold images (hero, logo, etc.)
+        $skip_lazy_classes = array( 'hero-image', 'logo', 'custom-logo', 'profile-image' );
+        
+        if ( isset( $attr['class'] ) ) {
+            foreach ( $skip_lazy_classes as $skip_class ) {
+                if ( strpos( $attr['class'], $skip_class ) !== false ) {
+                    return $attr;
+                }
+            }
+        }
+        
+        // Add lazy loading to other images
+        $attr['loading'] = 'lazy';
+        $attr['decoding'] = 'async';
+        
+        return $attr;
+    }, 10, 3 );
+    
+    // Add responsive image sizes
+    add_image_size( 'atlas-hero-large', 1920, 1080, true );
+    add_image_size( 'atlas-hero-medium', 1200, 675, true );
+    add_image_size( 'atlas-hero-small', 768, 432, true );
+    
+    add_image_size( 'atlas-project-large', 1200, 800, true );
+    add_image_size( 'atlas-project-medium', 800, 533, true );
+    add_image_size( 'atlas-project-small', 400, 267, true );
+    
+    add_image_size( 'atlas-thumbnail-large', 600, 400, true );
+    add_image_size( 'atlas-thumbnail-medium', 300, 200, true );
+    add_image_size( 'atlas-thumbnail-small', 150, 100, true );
+}
+add_action( 'init', 'atlas_theme_image_optimization' );
+
+/**
+ * Add WebP Support Detection
+ */
+function atlas_theme_webp_support() {
+    ?>
+    <script>
+    // Detect WebP support
+    function supportsWebP() {
+        var elem = document.createElement('canvas');
+        if (!!(elem.getContext && elem.getContext('2d'))) {
+            return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+        }
+        return false;
+    }
+    
+    // Add webp class to body if supported
+    if (supportsWebP()) {
+        document.documentElement.classList.add('webp');
+    } else {
+        document.documentElement.classList.add('no-webp');
+    }
+    </script>
+    <?php
+}
+add_action( 'wp_head', 'atlas_theme_webp_support', 1 );
+
+/**
  * Regenerate image sizes on theme activation
  */
 function atlas_regenerate_image_sizes() {
@@ -140,6 +205,7 @@ require_once ATLAS_THEME_INC . '/custom-post-types.php';
 require_once ATLAS_THEME_INC . '/options-page.php'; // Classic options page
 require_once ATLAS_THEME_INC . '/template-functions.php';
 require_once ATLAS_THEME_INC . '/enqueue.php';
+require_once ATLAS_THEME_INC . '/shortpixel-optimization.php'; // ShortPixel image optimization
 
 // Include block files
 require_once ATLAS_THEME_INC . '/blocks/hero-block.php';
