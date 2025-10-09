@@ -1,0 +1,64 @@
+---
+# Atlas Invencível Theme - cPanel Deployment Configuration
+# Este arquivo configura o deploy automático do tema WordPress
+
+deployment:
+  tasks:
+    # Definir caminho de deploy para o tema WordPress
+    - export DEPLOYPATH=/home/atlasinv/public_html/wp-content/themes/AtlasTheme/
+    
+    # Criar backup antes do deploy
+    - /bin/mkdir -p $DEPLOYPATH../AtlasTheme-backup-$(date +%Y%m%d-%H%M%S)
+    - /bin/cp -R $DEPLOYPATH* $DEPLOYPATH../AtlasTheme-backup-$(date +%Y%m%d-%H%M%S)/ 2>/dev/null || true
+    
+    # Deploy dos arquivos principais do tema
+    - /bin/cp style.css $DEPLOYPATH
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp functions.php $DEPLOYPATH
+    - /bin/cp front-page.php $DEPLOYPATH
+    - /bin/cp page.php $DEPLOYPATH
+    - /bin/cp single.php $DEPLOYPATH
+    - /bin/cp archive.php $DEPLOYPATH
+    - /bin/cp header.php $DEPLOYPATH
+    - /bin/cp footer.php $DEPLOYPATH
+    - /bin/cp page-services.php $DEPLOYPATH
+    - /bin/cp single-atlas_project.php $DEPLOYPATH
+    - /bin/cp template-services-integrated.php $DEPLOYPATH
+    
+    # Deploy de diretórios
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R inc $DEPLOYPATH
+    - /bin/cp -R parts $DEPLOYPATH
+    - /bin/cp -R patterns $DEPLOYPATH
+    - /bin/cp -R templates $DEPLOYPATH
+    - /bin/cp -R languages $DEPLOYPATH
+    - /bin/cp -R images $DEPLOYPATH
+    
+    # Deploy de arquivos de configuração
+    - /bin/cp theme.json $DEPLOYPATH
+    - /bin/cp screenshot.png $DEPLOYPATH
+    - /bin/cp README.md $DEPLOYPATH
+    - /bin/cp readme.txt $DEPLOYPATH
+    - /bin/cp LICENSE $DEPLOYPATH
+    - /bin/cp CHANGELOG.md $DEPLOYPATH
+    - /bin/cp RELEASE-NOTES.md $DEPLOYPATH
+    - /bin/cp sample-content.xml $DEPLOYPATH
+    
+    # Deploy de scripts de deploy
+    - /bin/cp deploy.sh $DEPLOYPATH
+    - /bin/cp server-deploy.sh $DEPLOYPATH
+    - /bin/cp GIT-SYNC-GUIDE.md $DEPLOYPATH
+    
+    # Definir permissões corretas
+    - /bin/chmod -R 755 $DEPLOYPATH
+    - /bin/chmod 644 $DEPLOYPATH*.php
+    - /bin/chmod 644 $DEPLOYPATH*.css
+    - /bin/chmod 644 $DEPLOYPATH*.js
+    - /bin/chmod 644 $DEPLOYPATH*.json
+    - /bin/chmod 644 $DEPLOYPATH*.md
+    - /bin/chmod 644 $DEPLOYPATH*.txt
+    - /bin/chmod 644 $DEPLOYPATH*.xml
+    - /bin/chmod 644 $DEPLOYPATH*.png
+    
+    # Log do deploy
+    - echo "Atlas Theme deployed successfully at $(date)" >> $DEPLOYPATH../deploy.log
