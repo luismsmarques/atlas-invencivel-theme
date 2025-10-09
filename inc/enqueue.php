@@ -30,18 +30,6 @@ function atlas_theme_enqueue_assets() {
     // Main JavaScript
     wp_enqueue_script( 'atlas-theme-main', ATLAS_THEME_URI . '/assets/js/main.js', array(), ATLAS_THEME_VERSION, true );
     
-    // Services page specific assets
-    if ( is_page_template( 'page-services.php' ) || is_page_template( 'template-services-integrated.php' ) ) {
-        wp_enqueue_style( 'atlas-theme-services', ATLAS_THEME_URI . '/assets/css/services.css', array('atlas-theme-main'), ATLAS_THEME_VERSION );
-        wp_enqueue_script( 'atlas-theme-services', ATLAS_THEME_URI . '/assets/js/services.js', array(), ATLAS_THEME_VERSION, true );
-    }
-    
-    // Contact page specific assets
-    if ( is_page_template( 'page-contact.php' ) || is_page( 'contact' ) ) {
-        wp_enqueue_style( 'atlas-theme-contact', ATLAS_THEME_URI . '/assets/css/contact.css', array('atlas-theme-main'), ATLAS_THEME_VERSION );
-        wp_enqueue_script( 'atlas-theme-contact', ATLAS_THEME_URI . '/assets/js/contact.js', array(), ATLAS_THEME_VERSION, true );
-    }
-    
     // Localize script for AJAX
     wp_localize_script( 'atlas-theme-main', 'atlas_theme_ajax', array(
         'ajax_url' => admin_url( 'admin-ajax.php' ),
@@ -64,15 +52,7 @@ function atlas_theme_conditional_assets() {
     // Load specific assets based on page type
     // REMOVED homepage.js - functionality is in main.js
     
-    // Load case-study.css for project pages
-    if ( is_singular( 'atlas_project' ) ) {
-        wp_enqueue_style( 'atlas-theme-case-study', ATLAS_THEME_URI . '/assets/css/case-study.css', array(), ATLAS_THEME_VERSION );
-        wp_enqueue_style( 'atlas-theme-project', ATLAS_THEME_URI . '/assets/css/project.css', array(), ATLAS_THEME_VERSION );
-    }
-    
-    if ( is_singular( 'atlas_service' ) ) {
-        wp_enqueue_style( 'atlas-theme-service', ATLAS_THEME_URI . '/assets/css/service.css', array(), ATLAS_THEME_VERSION );
-    }
+    // REMOVED: All specific page assets - Theme only uses front page
 }
 add_action( 'wp_enqueue_scripts', 'atlas_theme_conditional_assets' );
 
