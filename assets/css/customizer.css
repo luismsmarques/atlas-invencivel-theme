@@ -1,0 +1,210 @@
+/**
+ * Customizer Styles for Atlas Invencível Theme
+ * Live preview styles for the WordPress Customizer
+ */
+
+/* Customizer Preview Styles */
+.customize-previewing .header {
+    transition: all 0.3s ease;
+}
+
+.customize-previewing .logo-text {
+    transition: color 0.3s ease;
+}
+
+.customize-previewing .hero-title {
+    transition: color 0.3s ease;
+}
+
+.customize-previewing .hero-role {
+    transition: color 0.3s ease;
+}
+
+.customize-previewing .section-title {
+    transition: color 0.3s ease;
+}
+
+.customize-previewing .footer {
+    transition: background-color 0.3s ease;
+}
+
+/* Customizer Control Styles */
+.customize-control-atlas-repeater .repeater-item {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 15px;
+    background: #f9f9f9;
+}
+
+.customize-control-atlas-repeater .repeater-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.customize-control-atlas-repeater .repeater-item-title {
+    font-weight: 600;
+    margin: 0;
+}
+
+.customize-control-atlas-repeater .repeater-item-remove {
+    background: #dc3232;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.customize-control-atlas-repeater .repeater-item-remove:hover {
+    background: #a00;
+}
+
+.customize-control-atlas-repeater .repeater-add {
+    background: #0073aa;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.customize-control-atlas-repeater .repeater-add:hover {
+    background: #005a87;
+}
+
+/* Color Picker Styles */
+.customize-control-color .wp-picker-container {
+    width: 100%;
+}
+
+.customize-control-color .wp-picker-input-wrap {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Image Upload Styles */
+.customize-control-image .current {
+    margin-bottom: 10px;
+}
+
+.customize-control-image .current img {
+    max-width: 100%;
+    height: auto;
+}
+
+.customize-control-image .actions {
+    margin-top: 10px;
+}
+
+.customize-control-image .button {
+    margin-right: 10px;
+}
+
+/* Textarea Styles */
+.customize-control-textarea textarea {
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Select Styles */
+.customize-control-select select {
+    width: 100%;
+}
+
+/* Range Slider Styles */
+.customize-control-range .range-slider {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.customize-control-range .range-value {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+/* Toggle Switch Styles */
+.customize-control-toggle .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.customize-control-toggle .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.customize-control-toggle .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.customize-control-toggle .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.customize-control-toggle input:checked + .slider {
+    background-color: #2196F3;
+}
+
+.customize-control-toggle input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Section Styles */
+.customize-control-section-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+/* Description Styles */
+.customize-control-description {
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+/* Responsive Customizer */
+@media (max-width: 768px) {
+    .customize-control-atlas-repeater .repeater-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .customize-control-atlas-repeater .repeater-item-remove {
+        margin-top: 10px;
+    }
+    
+    .customize-control-color .wp-picker-input-wrap {
+        display: block;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}

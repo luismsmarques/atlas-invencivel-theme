@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+    xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:wp="http://wordpress.org/export/1.2/">
+
+<channel>
+    <title>Atlas Invencível - Sample Content</title>
+    <link>https://atlasinvencivel.com</link>
+    <description>Sample content for Atlas Invencível WordPress theme</description>
+    <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+    <language>en-US</language>
+    <wp:wxr_version>1.2</wp:wxr_version>
+    <wp:base_site_url>https://atlasinvencivel.com</wp:base_site_url>
+    <wp:base_blog_url>https://atlasinvencivel.com</wp:base_blog_url>
+
+    <!-- Sample Projects -->
+    <item>
+        <title>Musical Covers</title>
+        <link>https://atlasinvencivel.com/project/musical-covers/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/project/musical-covers/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Award-winning web platform for the music industry, connecting artists with cover song opportunities and licensing.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[<p>Web Platform | Music Industry</p>]]></excerpt:encoded>
+        <wp:post_id>1</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>musical-covers</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>atlas_project</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_project_url</wp:meta_key>
+            <wp:meta_value><![CDATA[https://musicalcovers.com]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_project_category</wp:meta_key>
+            <wp:meta_value><![CDATA[Web Platform | Music Industry]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>MADS Network</title>
+        <link>https://atlasinvencivel.com/project/mads-network/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/project/mads-network/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Leading digital marketing agency with innovative content strategies and cutting-edge website architecture.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[<p>CTO & Digital Marketing</p>]]></excerpt:encoded>
+        <wp:post_id>2</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>mads-network</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>atlas_project</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_project_url</wp:meta_key>
+            <wp:meta_value><![CDATA[https://madsnetwork.com]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_project_category</wp:meta_key>
+            <wp:meta_value><![CDATA[CTO & Digital Marketing]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>AngelsWay Investment</title>
+        <link>https://atlasinvencivel.com/project/angelsway-investment/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/project/angelsway-investment/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Angel investment platform supporting innovative startups with social impact and scalable growth potential.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[<p>Angel Investor | Startups</p>]]></excerpt:encoded>
+        <wp:post_id>3</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>angelsway-investment</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>atlas_project</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_project_url</wp:meta_key>
+            <wp:meta_value><![CDATA[https://angelsway.com]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_project_category</wp:meta_key>
+            <wp:meta_value><![CDATA[Angel Investor | Startups]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>Atlas Invencível</title>
+        <link>https://atlasinvencivel.com/project/atlas-invencivel/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/project/atlas-invencivel/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Leading company strategy and business development with innovative solutions and entrepreneurial vision.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[<p>CEO | Company Leadership</p>]]></excerpt:encoded>
+        <wp:post_id>4</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>atlas-invencivel</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>atlas_project</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_project_url</wp:meta_key>
+            <wp:meta_value><![CDATA[https://atlasinvencivel.com]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_project_category</wp:meta_key>
+            <wp:meta_value><![CDATA[CEO | Company Leadership]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <!-- Sample Skills -->
+    <item>
+        <title>WordPress</title>
+        <link>https://atlasinvencivel.com/skill/wordpress/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/skill/wordpress/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Expert in WordPress development, theme creation, and plugin development with 15+ years of experience.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>5</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>wordpress</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>1</wp:menu_order>
+        <wp:post_type>atlas_skill</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_skill_icon</wp:meta_key>
+            <wp:meta_value><![CDATA[wordpress]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_skill_abbreviation</wp:meta_key>
+            <wp:meta_value><![CDATA[WP]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_skill_bg_color</wp:meta_key>
+            <wp:meta_value><![CDATA[#21759B]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>Programming</title>
+        <link>https://atlasinvencivel.com/skill/programming/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/skill/programming/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Full-stack development expertise in PHP, JavaScript, Python, and modern web technologies.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>6</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>programming</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>2</wp:menu_order>
+        <wp:post_type>atlas_skill</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_skill_icon</wp:meta_key>
+            <wp:meta_value><![CDATA[programming-atlas]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_skill_abbreviation</wp:meta_key>
+            <wp:meta_value><![CDATA[CODE]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_skill_bg_color</wp:meta_key>
+            <wp:meta_value><![CDATA[#FEB21A]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>Artificial Intelligence</title>
+        <link>https://atlasinvencivel.com/skill/artificial-intelligence/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/skill/artificial-intelligence/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>AI and machine learning implementation for business automation and intelligent solutions.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>7</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>artificial-intelligence</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>3</wp:menu_order>
+        <wp:post_type>atlas_skill</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_skill_icon</wp:meta_key>
+            <wp:meta_value><![CDATA[artificial-intelligence]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_skill_abbreviation</wp:meta_key>
+            <wp:meta_value><![CDATA[AI]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_skill_bg_color</wp:meta_key>
+            <wp:meta_value><![CDATA[#1572B6]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>Digital Marketing</title>
+        <link>https://atlasinvencivel.com/skill/digital-marketing/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/skill/digital-marketing/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Comprehensive digital marketing strategies including SEO, SEM, social media, and content marketing.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>8</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>digital-marketing</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>4</wp:menu_order>
+        <wp:post_type>atlas_skill</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_skill_icon</wp:meta_key>
+            <wp:meta_value><![CDATA[digital-marketing]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_skill_abbreviation</wp:meta_key>
+            <wp:meta_value><![CDATA[DM]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_skill_bg_color</wp:meta_key>
+            <wp:meta_value><![CDATA[#ED3F27]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>Content Strategy</title>
+        <link>https://atlasinvencivel.com/skill/content-strategy/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/skill/content-strategy/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Strategic content planning and execution for brand building and audience engagement across multiple platforms.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>9</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>content-strategy</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>5</wp:menu_order>
+        <wp:post_type>atlas_skill</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_skill_icon</wp:meta_key>
+            <wp:meta_value><![CDATA[content-strategy]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_skill_abbreviation</wp:meta_key>
+            <wp:meta_value><![CDATA[STRAT]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_skill_bg_color</wp:meta_key>
+            <wp:meta_value><![CDATA[#ED3F27]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <!-- Sample Timeline Items -->
+    <item>
+        <title>EDIT. - DISRUPTIVE DIGITAL EDUCATION</title>
+        <link>https://atlasinvencivel.com/timeline/edit-disruptive-digital-education/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/timeline/edit-disruptive-digital-education/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Digital Marketing & Strategy</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[<p>Digital Marketing & Strategy</p>]]></excerpt:encoded>
+        <wp:post_id>10</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>edit-disruptive-digital-education</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>atlas_timeline</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_timeline_date</wp:meta_key>
+            <wp:meta_value><![CDATA[2020-2021]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_timeline_type</wp:meta_key>
+            <wp:meta_value><![CDATA[education]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>ISMAI - INSTITUTO SUPERIOR DA MAIA</title>
+        <link>https://atlasinvencivel.com/timeline/ismai-instituto-superior-da-maia/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/timeline/ismai-instituto-superior-da-maia/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Aplicações de Informática Gestão</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[<p>Aplicações de Informática Gestão</p>]]></excerpt:encoded>
+        <wp:post_id>11</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>ismai-instituto-superior-da-maia</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>atlas_timeline</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_timeline_date</wp:meta_key>
+            <wp:meta_value><![CDATA[2012-2013]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_timeline_type</wp:meta_key>
+            <wp:meta_value><![CDATA[education]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>PRÉMIOS NOVOS - INTERNET</title>
+        <link>https://atlasinvencivel.com/timeline/premios-novos-internet/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/timeline/premios-novos-internet/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Vencedor na categoria de Internet com o projeto Musical Covers</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[<p>Vencedor na categoria de Internet com o projeto Musical Covers</p>]]></excerpt:encoded>
+        <wp:post_id>12</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>premios-novos-internet</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>atlas_timeline</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_timeline_date</wp:meta_key>
+            <wp:meta_value><![CDATA[2014]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_timeline_type</wp:meta_key>
+            <wp:meta_value><![CDATA[education]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>CEO - ATLAS INVENCÍVEL</title>
+        <link>https://atlasinvencivel.com/timeline/ceo-atlas-invencivel/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/timeline/ceo-atlas-invencivel/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Leading company strategy and business development</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[<p>Leading company strategy and business development</p>]]></excerpt:encoded>
+        <wp:post_id>13</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>ceo-atlas-invencivel</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>atlas_timeline</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_timeline_date</wp:meta_key>
+            <wp:meta_value><![CDATA[2025 - Present]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_timeline_type</wp:meta_key>
+            <wp:meta_value><![CDATA[experience]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>ANGEL INVESTOR - ANGELSWAY</title>
+        <link>https://atlasinvencivel.com/timeline/angel-investor-angelsway/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/timeline/angel-investor-angelsway/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Supporting innovative startups with social impact and scalable growth</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[<p>Supporting innovative startups with social impact and scalable growth</p>]]></excerpt:encoded>
+        <wp:post_id>14</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>angel-investor-angelsway</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>atlas_timeline</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_timeline_date</wp:meta_key>
+            <wp:meta_value><![CDATA[2024 - Present]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_timeline_type</wp:meta_key>
+            <wp:meta_value><![CDATA[experience]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>CTO & DIGITAL MARKETER - MADS NETWORK</title>
+        <link>https://atlasinvencivel.com/timeline/cto-digital-marketer-mads-network/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/timeline/cto-digital-marketer-mads-network/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Developed content marketing strategies and guided website architecture</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[<p>Developed content marketing strategies and guided website architecture</p>]]></excerpt:encoded>
+        <wp:post_id>15</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>cto-digital-marketer-mads-network</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>atlas_timeline</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_timeline_date</wp:meta_key>
+            <wp:meta_value><![CDATA[2021-2025]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_timeline_type</wp:meta_key>
+            <wp:meta_value><![CDATA[experience]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>WEBMASTER - CLEVER ADVERTISING</title>
+        <link>https://atlasinvencivel.com/timeline/webmaster-clever-advertising/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/timeline/webmaster-clever-advertising/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Built functional websites and collaborated on digital campaigns</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[<p>Built functional websites and collaborated on digital campaigns</p>]]></excerpt:encoded>
+        <wp:post_id>16</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>webmaster-clever-advertising</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type>atlas_timeline</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_timeline_date</wp:meta_key>
+            <wp:meta_value><![CDATA[2015-2021]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_timeline_type</wp:meta_key>
+            <wp:meta_value><![CDATA[experience]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <!-- Sample Services -->
+    <item>
+        <title>UX Design</title>
+        <link>https://atlasinvencivel.com/service/ux-design/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/service/ux-design/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Etiam facilisis ligula nec velit posuere egestas. Nam dictum lectus, sed dignissim purus luctus quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>17</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>ux-design</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>1</wp:menu_order>
+        <wp:post_type>atlas_service</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_service_number</wp:meta_key>
+            <wp:meta_value><![CDATA[1]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_service_icon_type</wp:meta_key>
+            <wp:meta_value><![CDATA[ux]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_service_featured</wp:meta_key>
+            <wp:meta_value><![CDATA[0]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>UI Design</title>
+        <link>https://atlasinvencivel.com/service/ui-design/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/service/ui-design/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Etiam facilisis ligula nec velit posuere egestas. Nam dictum lectus, sed dignissim purus luctus quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>18</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>ui-design</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>2</wp:menu_order>
+        <wp:post_type>atlas_service</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_service_number</wp:meta_key>
+            <wp:meta_value><![CDATA[2]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_service_icon_type</wp:meta_key>
+            <wp:meta_value><![CDATA[ui]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_service_featured</wp:meta_key>
+            <wp:meta_value><![CDATA[0]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>Graphic Design</title>
+        <link>https://atlasinvencivel.com/service/graphic-design/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/service/graphic-design/</guid>
+        <description></description>
+        <content:encoded><![CDATA[<p>Etiam facilisis ligula nec velit posuere egestas. Nam dictum lectus, sed dignissim purus luctus quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>19</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>graphic-design</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>3</wp:menu_order>
+        <wp:post_type>atlas_service</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_service_number</wp:meta_key>
+            <wp:meta_value><![CDATA[3]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_service_icon_type</wp:meta_key>
+            <wp:meta_value><![CDATA[graphic]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_service_featured</wp:meta_key>
+            <wp:meta_value><![CDATA[1]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <!-- Sample Company Logos -->
+    <item>
+        <title>TechCorp</title>
+        <link>https://atlasinvencivel.com/company-logo/techcorp/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/company-logo/techcorp/</guid>
+        <description></description>
+        <content:encoded><![CDATA[]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>20</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>techcorp</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>1</wp:menu_order>
+        <wp:post_type>atlas_company_logo</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_logo_shape_type</wp:meta_key>
+            <wp:meta_value><![CDATA[shape-1]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_logo_shape_letter</wp:meta_key>
+            <wp:meta_value><![CDATA[]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>StartupHub</title>
+        <link>https://atlasinvencivel.com/company-logo/startuphub/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/company-logo/startuphub/</guid>
+        <description></description>
+        <content:encoded><![CDATA[]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>21</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>startuphub</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>2</wp:menu_order>
+        <wp:post_type>atlas_company_logo</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_logo_shape_type</wp:meta_key>
+            <wp:meta_value><![CDATA[shape-2]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_logo_shape_letter</wp:meta_key>
+            <wp:meta_value><![CDATA[S]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>DigitalAgency</title>
+        <link>https://atlasinvencivel.com/company-logo/digitalagency/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/company-logo/digitalagency/</guid>
+        <description></description>
+        <content:encoded><![CDATA[]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>22</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>digitalagency</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>3</wp:menu_order>
+        <wp:post_type>atlas_company_logo</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_logo_shape_type</wp:meta_key>
+            <wp:meta_value><![CDATA[shape-3]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_logo_shape_letter</wp:meta_key>
+            <wp:meta_value><![CDATA[]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>WebStudio</title>
+        <link>https://atlasinvencivel.com/company-logo/webstudio/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/company-logo/webstudio/</guid>
+        <description></description>
+        <content:encoded><![CDATA[]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>23</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>webstudio</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>4</wp:menu_order>
+        <wp:post_type>atlas_company_logo</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_logo_shape_type</wp:meta_key>
+            <wp:meta_value><![CDATA[shape-4]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_logo_shape_letter</wp:meta_key>
+            <wp:meta_value><![CDATA[W]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <item>
+        <title>InnovateLab</title>
+        <link>https://atlasinvencivel.com/company-logo/innovatelab/</link>
+        <pubDate>Mon, 27 Jan 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://atlasinvencivel.com/company-logo/innovatelab/</guid>
+        <description></description>
+        <content:encoded><![CDATA[]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>24</wp:post_id>
+        <wp:post_date>2025-01-27 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2025-01-27 12:00:00</wp:post_date_gmt>
+        <wp:post_modified>2025-01-27 12:00:00</wp:post_modified>
+        <wp:post_modified_gmt>2025-01-27 12:00:00</wp:post_modified_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>innovatelab</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>5</wp:menu_order>
+        <wp:post_type>atlas_company_logo</wp:post_type>
+        <wp:post_password></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_logo_shape_type</wp:meta_key>
+            <wp:meta_value><![CDATA[shape-5]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+            <wp:meta_key>_atlas_logo_shape_letter</wp:meta_key>
+            <wp:meta_value><![CDATA[]]></wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+</channel>
+</rss>

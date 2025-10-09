@@ -1,0 +1,666 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Atlas Invencível 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-27 12:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: functions.php:45
+msgid "Primary Navigation"
+msgstr ""
+
+#: functions.php:46
+msgid "Footer Navigation"
+msgstr ""
+
+#: functions.php:52
+msgid "Atlas Theme Options"
+msgstr ""
+
+#: functions.php:58
+msgid "Atlas Theme"
+msgstr ""
+
+#: inc/custom-post-types.php:15
+msgid "Projects"
+msgstr ""
+
+#: inc/custom-post-types.php:16
+msgid "Project"
+msgstr ""
+
+#: inc/custom-post-types.php:18
+msgid "Add New"
+msgstr ""
+
+#: inc/custom-post-types.php:19
+msgid "Add New Project"
+msgstr ""
+
+#: inc/custom-post-types.php:20
+msgid "New Project"
+msgstr ""
+
+#: inc/custom-post-types.php:21
+msgid "Edit Project"
+msgstr ""
+
+#: inc/custom-post-types.php:22
+msgid "View Project"
+msgstr ""
+
+#: inc/custom-post-types.php:23
+msgid "All Projects"
+msgstr ""
+
+#: inc/custom-post-types.php:24
+msgid "Search Projects"
+msgstr ""
+
+#: inc/custom-post-types.php:25
+msgid "Parent Projects:"
+msgstr ""
+
+#: inc/custom-post-types.php:26
+msgid "No projects found."
+msgstr ""
+
+#: inc/custom-post-types.php:27
+msgid "No projects found in Trash."
+msgstr ""
+
+#: inc/custom-post-types.php:60
+msgid "Skills"
+msgstr ""
+
+#: inc/custom-post-types.php:61
+msgid "Skill"
+msgstr ""
+
+#: inc/custom-post-types.php:63
+msgid "Add New Skill"
+msgstr ""
+
+#: inc/custom-post-types.php:64
+msgid "New Skill"
+msgstr ""
+
+#: inc/custom-post-types.php:65
+msgid "Edit Skill"
+msgstr ""
+
+#: inc/custom-post-types.php:66
+msgid "View Skill"
+msgstr ""
+
+#: inc/custom-post-types.php:67
+msgid "All Skills"
+msgstr ""
+
+#: inc/custom-post-types.php:68
+msgid "Search Skills"
+msgstr ""
+
+#: inc/custom-post-types.php:69
+msgid "Parent Skills:"
+msgstr ""
+
+#: inc/custom-post-types.php:70
+msgid "No skills found."
+msgstr ""
+
+#: inc/custom-post-types.php:71
+msgid "No skills found in Trash."
+msgstr ""
+
+#: inc/custom-post-types.php:105
+msgid "Timeline Items"
+msgstr ""
+
+#: inc/custom-post-types.php:106
+msgid "Timeline Item"
+msgstr ""
+
+#: inc/custom-post-types.php:108
+msgid "Timeline"
+msgstr ""
+
+#: inc/custom-post-types.php:110
+msgid "Add New Timeline Item"
+msgstr ""
+
+#: inc/custom-post-types.php:111
+msgid "New Timeline Item"
+msgstr ""
+
+#: inc/custom-post-types.php:112
+msgid "Edit Timeline Item"
+msgstr ""
+
+#: inc/custom-post-types.php:113
+msgid "View Timeline Item"
+msgstr ""
+
+#: inc/custom-post-types.php:114
+msgid "All Timeline Items"
+msgstr ""
+
+#: inc/custom-post-types.php:115
+msgid "Search Timeline Items"
+msgstr ""
+
+#: inc/custom-post-types.php:116
+msgid "Parent Timeline Items:"
+msgstr ""
+
+#: inc/custom-post-types.php:117
+msgid "No timeline items found."
+msgstr ""
+
+#: inc/custom-post-types.php:118
+msgid "No timeline items found in Trash."
+msgstr ""
+
+#: inc/custom-post-types.php:152
+msgid "Services"
+msgstr ""
+
+#: inc/custom-post-types.php:153
+msgid "Service"
+msgstr ""
+
+#: inc/custom-post-types.php:155
+msgid "Add New Service"
+msgstr ""
+
+#: inc/custom-post-types.php:156
+msgid "New Service"
+msgstr ""
+
+#: inc/custom-post-types.php:157
+msgid "Edit Service"
+msgstr ""
+
+#: inc/custom-post-types.php:158
+msgid "View Service"
+msgstr ""
+
+#: inc/custom-post-types.php:159
+msgid "All Services"
+msgstr ""
+
+#: inc/custom-post-types.php:160
+msgid "Search Services"
+msgstr ""
+
+#: inc/custom-post-types.php:161
+msgid "Parent Services:"
+msgstr ""
+
+#: inc/custom-post-types.php:162
+msgid "No services found."
+msgstr ""
+
+#: inc/custom-post-types.php:163
+msgid "No services found in Trash."
+msgstr ""
+
+#: inc/custom-post-types.php:197
+msgid "Company Logos"
+msgstr ""
+
+#: inc/custom-post-types.php:198
+msgid "Company Logo"
+msgstr ""
+
+#: inc/custom-post-types.php:200
+msgid "Add New Company Logo"
+msgstr ""
+
+#: inc/custom-post-types.php:201
+msgid "New Company Logo"
+msgstr ""
+
+#: inc/custom-post-types.php:202
+msgid "Edit Company Logo"
+msgstr ""
+
+#: inc/custom-post-types.php:203
+msgid "View Company Logo"
+msgstr ""
+
+#: inc/custom-post-types.php:204
+msgid "All Company Logos"
+msgstr ""
+
+#: inc/custom-post-types.php:205
+msgid "Search Company Logos"
+msgstr ""
+
+#: inc/custom-post-types.php:206
+msgid "Parent Company Logos:"
+msgstr ""
+
+#: inc/custom-post-types.php:207
+msgid "No company logos found."
+msgstr ""
+
+#: inc/custom-post-types.php:208
+msgid "No company logos found in Trash."
+msgstr ""
+
+#: inc/custom-post-types.php:220
+msgid "Project Categories"
+msgstr ""
+
+#: inc/custom-post-types.php:221
+msgid "Project Category"
+msgstr ""
+
+#: inc/custom-post-types.php:223
+msgid "Search Project Categories"
+msgstr ""
+
+#: inc/custom-post-types.php:224
+msgid "All Project Categories"
+msgstr ""
+
+#: inc/custom-post-types.php:225
+msgid "Parent Project Category"
+msgstr ""
+
+#: inc/custom-post-types.php:226
+msgid "Parent Project Category:"
+msgstr ""
+
+#: inc/custom-post-types.php:227
+msgid "Edit Project Category"
+msgstr ""
+
+#: inc/custom-post-types.php:228
+msgid "Update Project Category"
+msgstr ""
+
+#: inc/custom-post-types.php:229
+msgid "Add New Project Category"
+msgstr ""
+
+#: inc/custom-post-types.php:230
+msgid "New Project Category Name"
+msgstr ""
+
+#: inc/custom-post-types.php:231
+msgid "Categories"
+msgstr ""
+
+#: inc/custom-post-types.php:250
+msgid "Timeline Types"
+msgstr ""
+
+#: inc/custom-post-types.php:251
+msgid "Timeline Type"
+msgstr ""
+
+#: inc/custom-post-types.php:253
+msgid "Search Timeline Types"
+msgstr ""
+
+#: inc/custom-post-types.php:254
+msgid "All Timeline Types"
+msgstr ""
+
+#: inc/custom-post-types.php:255
+msgid "Parent Timeline Type"
+msgstr ""
+
+#: inc/custom-post-types.php:256
+msgid "Parent Timeline Type:"
+msgstr ""
+
+#: inc/custom-post-types.php:257
+msgid "Edit Timeline Type"
+msgstr ""
+
+#: inc/custom-post-types.php:258
+msgid "Update Timeline Type"
+msgstr ""
+
+#: inc/custom-post-types.php:259
+msgid "Add New Timeline Type"
+msgstr ""
+
+#: inc/custom-post-types.php:260
+msgid "New Timeline Type Name"
+msgstr ""
+
+#: inc/custom-post-types.php:261
+msgid "Types"
+msgstr ""
+
+#: inc/custom-post-types.php:275
+msgid "Project Details"
+msgstr ""
+
+#: inc/custom-post-types.php:282
+msgid "Skill Details"
+msgstr ""
+
+#: inc/custom-post-types.php:289
+msgid "Timeline Details"
+msgstr ""
+
+#: inc/custom-post-types.php:296
+msgid "Service Details"
+msgstr ""
+
+#: inc/custom-post-types.php:303
+msgid "Company Logo Details"
+msgstr ""
+
+#: inc/custom-post-types.php:310
+msgid "Project URL"
+msgstr ""
+
+#: inc/custom-post-types.php:314
+msgid "Project Category"
+msgstr ""
+
+#: inc/custom-post-types.php:322
+msgid "Icon Class"
+msgstr ""
+
+#: inc/custom-post-types.php:327
+msgid "Abbreviation"
+msgstr ""
+
+#: inc/custom-post-types.php:332
+msgid "Background Color"
+msgstr ""
+
+#: inc/custom-post-types.php:340
+msgid "Date/Period"
+msgstr ""
+
+#: inc/custom-post-types.php:345
+msgid "Type"
+msgstr ""
+
+#: inc/custom-post-types.php:348
+msgid "Education"
+msgstr ""
+
+#: inc/custom-post-types.php:349
+msgid "Experience"
+msgstr ""
+
+#: inc/custom-post-types.php:356
+msgid "Service Number"
+msgstr ""
+
+#: inc/custom-post-types.php:361
+msgid "Icon Type"
+msgstr ""
+
+#: inc/custom-post-types.php:368
+msgid "Featured Service"
+msgstr ""
+
+#: inc/custom-post-types.php:375
+msgid "Shape Type"
+msgstr ""
+
+#: inc/custom-post-types.php:378
+msgid "Shape 1 (Diamond)"
+msgstr ""
+
+#: inc/custom-post-types.php:379
+msgid "Shape 2 (Circle)"
+msgstr ""
+
+#: inc/custom-post-types.php:380
+msgid "Shape 3 (Hexagon)"
+msgstr ""
+
+#: inc/custom-post-types.php:381
+msgid "Shape 4 (Square)"
+msgstr ""
+
+#: inc/custom-post-types.php:382
+msgid "Shape 5 (Octagon)"
+msgstr ""
+
+#: inc/custom-post-types.php:387
+msgid "Shape Letter/Icon"
+msgstr ""
+
+#: inc/template-functions.php:12
+msgid "Home"
+msgstr ""
+
+#: inc/template-functions.php:13
+msgid "About"
+msgstr ""
+
+#: inc/template-functions.php:14
+msgid "Projects"
+msgstr ""
+
+#: inc/template-functions.php:15
+msgid "Contacts"
+msgstr ""
+
+#: inc/template-functions.php:25
+msgid "HOME"
+msgstr ""
+
+#: inc/template-functions.php:26
+msgid "ABOUT"
+msgstr ""
+
+#: inc/template-functions.php:27
+msgid "PROJECTS"
+msgstr ""
+
+#: inc/template-functions.php:28
+msgid "CONTACTS"
+msgstr ""
+
+#: inc/template-functions.php:200
+msgid "MY SERVICES"
+msgstr ""
+
+#: inc/template-functions.php:220
+msgid "Skip to content"
+msgstr ""
+
+#: inc/template-functions.php:240
+msgid "Search for:"
+msgstr ""
+
+#: inc/template-functions.php:241
+msgid "Search..."
+msgstr ""
+
+#: inc/template-functions.php:242
+msgid "Search"
+msgstr ""
+
+#: header.php:15
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:20
+msgid "Primary Navigation"
+msgstr ""
+
+#: header.php:35
+msgid "LinkedIn"
+msgstr ""
+
+#: header.php:38
+msgid "Twitter"
+msgstr ""
+
+#: header.php:41
+msgid "Dribbble"
+msgstr ""
+
+#: header.php:44
+msgid "Instagram"
+msgstr ""
+
+#: footer.php:15
+msgid "Footer Navigation"
+msgstr ""
+
+#: index.php:35
+msgid "by"
+msgstr ""
+
+#: index.php:45
+msgid "Read More"
+msgstr ""
+
+#: index.php:55
+msgid "Nothing Found"
+msgstr ""
+
+#: index.php:56
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: front-page.php:45
+msgid "Hey, my name is"
+msgstr ""
+
+#: front-page.php:50
+msgid "Years of experience in Tech & Digital"
+msgstr ""
+
+#: front-page.php:55
+msgid "Companies Founded and Led"
+msgstr ""
+
+#: front-page.php:60
+msgid "Social Media Communities & Content Managed"
+msgstr ""
+
+#: front-page.php:120
+msgid "MY LATEST PROJECTS"
+msgstr ""
+
+#: front-page.php:121
+msgid "Explore my journey as a webmaster, builder, and entrepreneur. From creating award-winning platforms to leading companies and investing in innovative startups."
+msgstr ""
+
+#: front-page.php:200
+msgid "EDUCATION & EXPERIENCE"
+msgstr ""
+
+#: page.php:20
+msgid "Pages:"
+msgstr ""
+
+#: page.php:30
+msgid "Edit"
+msgstr ""
+
+#: single.php:20
+msgid "by"
+msgstr ""
+
+#: single.php:25
+msgid "in"
+msgstr ""
+
+#: single.php:40
+msgid "Pages:"
+msgstr ""
+
+#: single.php:50
+msgid "Tags:"
+msgstr ""
+
+#: single.php:60
+msgid "Edit"
+msgstr ""
+
+#: single.php:70
+msgid "Previous:"
+msgstr ""
+
+#: single.php:71
+msgid "Next:"
+msgstr ""
+
+#: archive.php:55
+msgid "Nothing Found"
+msgstr ""
+
+#: archive.php:56
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: page-services.php:15
+msgid "MY SERVICES"
+msgstr ""
+
+#: page-services.php:16
+msgid "VIEW ALL"
+msgstr ""
+
+#: page-services.php:120
+msgid "Have a great idea?"
+msgstr ""
+
+#: page-services.php:121
+msgid "LET'S TALK ABOUT YOUR PROJECT"
+msgstr ""
+
+#: page-services.php:122
+msgid "CONTACT ME"
+msgstr ""
+
+#: page-services.php:125
+msgid "Contact Me"
+msgstr ""
+
+#: template-services-integrated.php:20
+msgid "Pages:"
+msgstr ""
+
+#: template-services-integrated.php:30
+msgid "MY SERVICES"
+msgstr ""
+
+#: template-services-integrated.php:31
+msgid "VIEW ALL"
+msgstr ""
+
+#: template-services-integrated.php:120
+msgid "Have a great idea?"
+msgstr ""
+
+#: template-services-integrated.php:121
+msgid "LET'S TALK ABOUT YOUR PROJECT"
+msgstr ""
+
+#: template-services-integrated.php:122
+msgid "CONTACT ME"
+msgstr ""
+
+#: template-services-integrated.php:125
+msgid "Contact Me"
+msgstr ""

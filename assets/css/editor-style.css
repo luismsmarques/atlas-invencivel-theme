@@ -1,0 +1,227 @@
+/**
+ * Editor Styles for Atlas Invencível Theme
+ * Styles for the block editor (Gutenberg)
+ */
+
+/* Editor Typography */
+.editor-styles-wrapper {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #FDF4E3;
+}
+
+/* Editor Color Palette */
+.editor-styles-wrapper .has-primary-color {
+    color: #134686;
+}
+
+.editor-styles-wrapper .has-secondary-color {
+    color: #FEB21A;
+}
+
+.editor-styles-wrapper .has-background-color {
+    background-color: #FDF4E3;
+}
+
+.editor-styles-wrapper .has-foreground-color {
+    color: #333333;
+}
+
+.editor-styles-wrapper .has-white-color {
+    color: #ffffff;
+}
+
+.editor-styles-wrapper .has-primary-background-color {
+    background-color: #134686;
+}
+
+.editor-styles-wrapper .has-secondary-background-color {
+    background-color: #FEB21A;
+}
+
+.editor-styles-wrapper .has-background-background-color {
+    background-color: #FDF4E3;
+}
+
+.editor-styles-wrapper .has-foreground-background-color {
+    background-color: #333333;
+}
+
+.editor-styles-wrapper .has-white-background-color {
+    background-color: #ffffff;
+}
+
+/* Editor Gradients */
+.editor-styles-wrapper .has-hero-gradient-background {
+    background: linear-gradient(135deg, #134686 0%, #0d2f5a 100%);
+}
+
+.editor-styles-wrapper .has-featured-gradient-background {
+    background: linear-gradient(135deg, #2D5A5A 0%, #1a3d3d 100%);
+}
+
+/* Editor Font Sizes */
+.editor-styles-wrapper .has-small-font-size {
+    font-size: 14px;
+}
+
+.editor-styles-wrapper .has-medium-font-size {
+    font-size: 16px;
+}
+
+.editor-styles-wrapper .has-large-font-size {
+    font-size: 18px;
+}
+
+.editor-styles-wrapper .has-x-large-font-size {
+    font-size: 24px;
+}
+
+.editor-styles-wrapper .has-huge-font-size {
+    font-size: 36px;
+}
+
+.editor-styles-wrapper .has-gigantic-font-size {
+    font-size: 48px;
+}
+
+/* Editor Spacing */
+.editor-styles-wrapper .has-small-spacing {
+    margin-bottom: 0.5rem;
+}
+
+.editor-styles-wrapper .has-medium-spacing {
+    margin-bottom: 1rem;
+}
+
+.editor-styles-wrapper .has-large-spacing {
+    margin-bottom: 1.5rem;
+}
+
+.editor-styles-wrapper .has-x-large-spacing {
+    margin-bottom: 2rem;
+}
+
+.editor-styles-wrapper .has-huge-spacing {
+    margin-bottom: 3rem;
+}
+
+.editor-styles-wrapper .has-gigantic-spacing {
+    margin-bottom: 4rem;
+}
+
+/* Editor Block Styles */
+.editor-styles-wrapper .wp-block-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.editor-styles-wrapper .wp-block-paragraph {
+    margin-bottom: 1rem;
+}
+
+.editor-styles-wrapper .wp-block-button .wp-block-button__link {
+    background-color: #134686;
+    color: white;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.editor-styles-wrapper .wp-block-button .wp-block-button__link:hover {
+    background-color: #0d2f5a;
+}
+
+/* Editor Custom Block Styles */
+.editor-styles-wrapper .atlas-hero-block {
+    background: linear-gradient(135deg, #134686 0%, #0d2f5a 100%);
+    color: white;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.editor-styles-wrapper .atlas-skill-card {
+    background: #FDF4E3;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.editor-styles-wrapper .atlas-project-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.editor-styles-wrapper .atlas-timeline-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.editor-styles-wrapper .atlas-timeline-dot {
+    width: 12px;
+    height: 12px;
+    background: #134686;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 8px;
+}
+
+.editor-styles-wrapper .atlas-service-card {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 15px;
+    padding: 40px 30px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.editor-styles-wrapper .atlas-service-card.featured {
+    background: linear-gradient(135deg, #2D5A5A 0%, #1a3d3d 100%);
+    border: none;
+    color: white;
+}
+
+/* Editor Responsive */
+@media (max-width: 768px) {
+    .editor-styles-wrapper .atlas-hero-block {
+        padding: 60px 0;
+    }
+    
+    .editor-styles-wrapper .atlas-skill-card,
+    .editor-styles-wrapper .atlas-service-card {
+        padding: 20px 15px;
+    }
+}
+
+/* Editor Focus Styles */
+.editor-styles-wrapper .wp-block:focus {
+    outline: 2px solid #134686;
+    outline-offset: 2px;
+}
+
+/* Editor Selection Styles */
+.editor-styles-wrapper ::selection {
+    background-color: #134686;
+    color: white;
+}
+
+/* Editor Link Styles */
+.editor-styles-wrapper a {
+    color: #134686;
+    text-decoration: none;
+}
+
+.editor-styles-wrapper a:hover {
+    color: #0d2f5a;
+    text-decoration: underline;
+}

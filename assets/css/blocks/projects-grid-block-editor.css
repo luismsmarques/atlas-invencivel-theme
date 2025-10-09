@@ -1,0 +1,52 @@
+/**
+ * Projects Grid Block Editor Styles
+ * 
+ * @package AtlasTheme
+ * @since 1.0.0
+ */
+
+.atlas-projects-grid-block-editor {
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.atlas-projects-grid-block-editor .components-rich-text {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 4px 8px;
+    transition: border-color 0.2s ease;
+}
+
+.atlas-projects-grid-block-editor .components-rich-text:focus {
+    border-color: #007cba;
+    outline: none;
+    box-shadow: 0 0 0 1px #007cba;
+}
+
+.atlas-projects-grid-block-editor .components-rich-text:hover {
+    border-color: #ccc;
+}
+
+.atlas-projects-grid-block-editor > div > div > div {
+    transition: transform 0.2s ease;
+}
+
+.atlas-projects-grid-block-editor > div > div > div:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments for editor */
+@media (max-width: 768px) {
+    .atlas-projects-grid-block-editor > div > div {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .atlas-projects-grid-block-editor > div > div {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+}

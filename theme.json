@@ -1,0 +1,235 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 2,
+    "title": "Atlas Invencível",
+    "description": "A modern portfolio WordPress theme with Full Site Editing support",
+    "settings": {
+        "appearanceTools": true,
+        "useRootPaddingAwareAlignments": true,
+        "layout": {
+            "contentSize": "1200px",
+            "wideSize": "1400px"
+        },
+        "color": {
+            "palette": [
+                {
+                    "slug": "primary",
+                    "color": "#134686",
+                    "name": "Primary"
+                },
+                {
+                    "slug": "secondary",
+                    "color": "#FEB21A",
+                    "name": "Secondary"
+                },
+                {
+                    "slug": "background",
+                    "color": "#FDF4E3",
+                    "name": "Background"
+                },
+                {
+                    "slug": "foreground",
+                    "color": "#333333",
+                    "name": "Foreground"
+                },
+                {
+                    "slug": "white",
+                    "color": "#ffffff",
+                    "name": "White"
+                },
+                {
+                    "slug": "gray-light",
+                    "color": "#f8f9fa",
+                    "name": "Gray Light"
+                },
+                {
+                    "slug": "gray-medium",
+                    "color": "#6c757d",
+                    "name": "Gray Medium"
+                },
+                {
+                    "slug": "gray-dark",
+                    "color": "#343a40",
+                    "name": "Gray Dark"
+                }
+            ],
+            "gradients": [
+                {
+                    "slug": "hero-gradient",
+                    "gradient": "linear-gradient(135deg, #134686 0%, #0d2f5a 100%)",
+                    "name": "Hero Gradient"
+                },
+                {
+                    "slug": "featured-gradient",
+                    "gradient": "linear-gradient(135deg, #2D5A5A 0%, #1a3d3d 100%)",
+                    "name": "Featured Gradient"
+                }
+            ]
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFamily": "Inter, sans-serif",
+                    "slug": "inter",
+                    "name": "Inter"
+                },
+                {
+                    "fontFamily": "system-ui, -apple-system, sans-serif",
+                    "slug": "system",
+                    "name": "System"
+                }
+            ],
+            "fontSizes": [
+                {
+                    "name": "Small",
+                    "size": "14px",
+                    "slug": "small"
+                },
+                {
+                    "name": "Medium",
+                    "size": "16px",
+                    "slug": "medium"
+                },
+                {
+                    "name": "Large",
+                    "size": "18px",
+                    "slug": "large"
+                },
+                {
+                    "name": "Extra Large",
+                    "size": "24px",
+                    "slug": "x-large"
+                },
+                {
+                    "name": "Huge",
+                    "size": "36px",
+                    "slug": "huge"
+                },
+                {
+                    "name": "Gigantic",
+                    "size": "48px",
+                    "slug": "gigantic"
+                }
+            ],
+            "lineHeight": {
+                "default": 1.6
+            }
+        },
+        "spacing": {
+            "spacingScale": {
+                "steps": 0,
+                "operator": "*",
+                "increment": 1.5,
+                "steps": 7,
+                "mediumStep": 1.5,
+                "unit": "rem"
+            },
+            "spacingSizes": [
+                {
+                    "name": "Small",
+                    "size": "0.5rem",
+                    "slug": "small"
+                },
+                {
+                    "name": "Medium",
+                    "size": "1rem",
+                    "slug": "medium"
+                },
+                {
+                    "name": "Large",
+                    "size": "1.5rem",
+                    "slug": "large"
+                },
+                {
+                    "name": "Extra Large",
+                    "size": "2rem",
+                    "slug": "x-large"
+                },
+                {
+                    "name": "Huge",
+                    "size": "3rem",
+                    "slug": "huge"
+                },
+                {
+                    "name": "Gigantic",
+                    "size": "4rem",
+                    "slug": "gigantic"
+                }
+            ]
+        },
+        "border": {
+            "radius": true,
+            "color": true,
+            "style": true,
+            "width": true
+        },
+        "shadow": {
+            "presets": [
+                {
+                    "name": "Natural",
+                    "slug": "natural",
+                    "shadow": "6px 6px 9px rgba(0, 0, 0, 0.2)"
+                },
+                {
+                    "name": "Deep",
+                    "slug": "deep",
+                    "shadow": "12px 12px 50px rgba(0, 0, 0, 0.4)"
+                },
+                {
+                    "name": "Sharp",
+                    "slug": "sharp",
+                    "shadow": "6px 6px 0px rgba(0, 0, 0, 0.2)"
+                },
+                {
+                    "name": "Outlined",
+                    "slug": "outlined",
+                    "shadow": "6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1)"
+                },
+                {
+                    "name": "Crisp",
+                    "slug": "crisp",
+                    "shadow": "6px 6px 0px rgba(0, 0, 0, 1)"
+                }
+            ]
+        }
+    },
+    "styles": {
+        "color": {
+            "background": "var(--wp--preset--color--background)",
+            "text": "var(--wp--preset--color--foreground)"
+        },
+        "typography": {
+            "fontFamily": "var(--wp--preset--font-family--inter)",
+            "fontSize": "var(--wp--preset--font-size--medium)",
+            "lineHeight": "1.6"
+        },
+        "spacing": {
+            "blockGap": "var(--wp--preset--spacing--large)"
+        },
+        "elements": {
+            "link": {
+                "color": {
+                    "text": "var(--wp--preset--color--primary)"
+                }
+            },
+            "heading": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--inter)",
+                    "fontWeight": "700"
+                }
+            }
+        }
+    },
+    "templateParts": [
+        {
+            "name": "header",
+            "title": "Header",
+            "area": "header"
+        },
+        {
+            "name": "footer",
+            "title": "Footer",
+            "area": "footer"
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"section","className":"page-hero","style":{"color":{"gradient":"var(--wp--preset--gradient--hero-gradient)"}},"layout":{"type":"constrained"}} -->
+<section class="wp-block-group page-hero">
+    <div class="page-hero-bg">
+        <div class="wave-lines"></div>
+    </div>
+    
+    <!-- wp:group {"className":"page-hero-content","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group page-hero-content">
+        <!-- wp:group {"className":"breadcrumbs","layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"bottom":"30px"}}}} -->
+        <div class="wp-block-group breadcrumbs">
+            <!-- wp:html -->
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item">
+                        <a href="/" class="breadcrumb-link">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-separator">
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+                    <li class="breadcrumb-item current" aria-current="page">
+                        <span><?php the_title(); ?></span>
+                    </li>
+                </ol>
+            </nav>
+            <!-- /wp:html -->
+        </div>
+        <!-- /wp:group -->
+        
+        <!-- wp:group {"className":"page-hero-text","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group page-hero-text">
+            <!-- wp:post-title {"level":1,"className":"page-title","style":{"typography":{"fontSize":"48px","fontWeight":"800"},"color":{"text":"#ffffff"}}} /-->
+            
+            <!-- wp:post-excerpt {"className":"page-subtitle","style":{"typography":{"fontSize":"18px","fontWeight":"400"},"color":{"text":"rgba(255,255,255,0.9)"}}} /-->
+        </div>
+        <!-- /wp:group -->
+        
+        <!-- wp:group {"className":"page-meta","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"},"style":{"spacing":{"gap":"30px"}}} -->
+        <div class="wp-block-group page-meta">
+            <!-- wp:group {"className":"page-meta-item","layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"gap":"8px"}}} -->
+            <div class="wp-block-group page-meta-item">
+                <!-- wp:html -->
+                <i class="fas fa-calendar-alt" style="color: #FEB21A; font-size: 16px;"></i>
+                <span style="color: rgba(255,255,255,0.8); font-size: 14px;"><?php echo esc_html( get_the_date() ); ?></span>
+                <!-- /wp:html -->
+            </div>
+            <!-- /wp:group -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:group -->
+</section>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"section","className":"page-content-section","style":{"color":{"background":"var(--wp--preset--color--background)"}},"layout":{"type":"constrained"}} -->
+<section class="wp-block-group page-content-section">
+    <!-- wp:group {"className":"page-content-wrapper","layout":{"type":"grid","columnCount":2,"columns":["1fr","300px"]}} -->
+    <div class="wp-block-group page-content-wrapper">
+        <!-- wp:group {"tagName":"article","className":"page-article","style":{"color":{"background":"#ffffff"},"border":{"radius":"15px"},"spacing":{"padding":{"top":"40px","right":"40px","bottom":"40px","left":"40px"}}},"layout":{"type":"constrained"}} -->
+        <article class="wp-block-group page-article">
+            <!-- wp:post-content {"className":"page-content","layout":{"type":"constrained"}} /-->
+        </article>
+        <!-- /wp:group -->
+        
+        <!-- wp:group {"className":"page-sidebar","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"gap":"30px"}}} -->
+        <aside class="wp-block-group page-sidebar">
+            <!-- wp:group {"className":"contact-cta","style":{"color":{"gradient":"var(--wp--preset--gradient--hero-gradient)"},"border":{"radius":"15px"},"spacing":{"padding":{"top":"30px","right":"30px","bottom":"30px","left":"30px"}}},"layout":{"type":"constrained"}} -->
+            <div class="wp-block-group contact-cta">
+                <!-- wp:heading {"level":3,"className":"sidebar-title","style":{"typography":{"fontSize":"18px","fontWeight":"700"},"color":{"text":"#ffffff"},"spacing":{"margin":{"bottom":"20px"}}}} -->
+                <h3 class="wp-block-heading sidebar-title">Get In Touch</h3>
+                <!-- /wp:heading -->
+                
+                <!-- wp:paragraph {"className":"contact-cta-text","style":{"typography":{"fontSize":"14px"},"color":{"text":"rgba(255,255,255,0.9)"},"spacing":{"margin":{"bottom":"20px"}}}} -->
+                <p class="contact-cta-text">Have questions or want to work together?</p>
+                <!-- /wp:paragraph -->
+                
+                <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+                <div class="wp-block-buttons">
+                    <!-- wp:button {"className":"contact-cta-button","style":{"color":{"background":"#FEB21A","text":"#333333"},"border":{"radius":"25px"},"spacing":{"padding":{"top":"12px","right":"24px","bottom":"12px","left":"24px"}}},"fontSize":"medium"} -->
+                    <div class="wp-block-button contact-cta-button">
+                        <a class="wp-block-button__link has-medium-font-size wp-element-button" href="/contact" style="border-radius:25px;color:#333333;background-color:#FEB21A;padding-top:12px;padding-right:24px;padding-bottom:12px;padding-left:24px">
+                            <!-- wp:html -->
+                            <i class="fas fa-envelope"></i> Contact Me
+                            <!-- /wp:html -->
+                        </a>
+                    </div>
+                    <!-- /wp:button -->
+                </div>
+                <!-- /wp:buttons -->
+            </div>
+            <!-- /wp:group -->
+        </aside>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:group -->
+</section>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
