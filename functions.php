@@ -29,7 +29,7 @@ require_once ATLAS_THEME_INC . '/customizer.php';
 require_once ATLAS_THEME_INC . '/custom-post-types.php';
 require_once ATLAS_THEME_INC . '/template-functions.php';
 require_once ATLAS_THEME_INC . '/widgets.php';
-require_once ATLAS_THEME_INC . '/cache-busting.php';
+// require_once ATLAS_THEME_INC . '/cache-busting.php'; // Temporarily disabled
 require_once ATLAS_THEME_INC . '/options-page.php';
 require_once ATLAS_THEME_INC . '/shortpixel-optimization.php';
 
