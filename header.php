@@ -30,21 +30,23 @@ if ( ! defined( 'ABSPATH' ) ) {
     <header id="masthead" class="site-header header">
         <div class="container">
             <div class="site-branding logo">
-                <?php
-                $custom_logo_id = get_option( 'custom_logo' );
-                $logo_icon = get_option( 'atlas_logo_icon', 'A' );
-                $logo_text = get_option( 'atlas_logo_text', get_bloginfo( 'name' ) );
-                
-                if ( $custom_logo_id ) {
-                    $logo = wp_get_attachment_image_src( $custom_logo_id, 'full' );
-                    if ( $logo ) {
-                        echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '" class="custom-logo">';
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo-link">
+                    <?php
+                    $custom_logo_id = get_option( 'custom_logo' );
+                    $logo_icon = get_option( 'atlas_logo_icon', 'A' );
+                    $logo_text = get_option( 'atlas_logo_text', get_bloginfo( 'name' ) );
+                    
+                    if ( $custom_logo_id ) {
+                        $logo = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+                        if ( $logo ) {
+                            echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '" class="custom-logo">';
+                        }
+                    } else {
+                        echo '<div class="logo-icon">' . esc_html( $logo_icon ) . '</div>';
                     }
-                } else {
-                    echo '<div class="logo-icon">' . esc_html( $logo_icon ) . '</div>';
-                }
-                ?>
-                <span class="logo-text"><?php echo esc_html( $logo_text ); ?></span>
+                    ?>
+                    <span class="logo-text"><?php echo esc_html( $logo_text ); ?></span>
+                </a>
             </div>
 
             <nav id="site-navigation" class="main-navigation nav" role="navigation" aria-label="<?php esc_attr_e( 'Primary Navigation', 'atlas-theme' ); ?>">

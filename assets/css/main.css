@@ -47,6 +47,19 @@ body {
     gap: 10px;
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
 .logo-icon {
     width: 40px;
     height: 40px;
@@ -1117,9 +1130,15 @@ body {
     align-items: center;
 }
 
-.footer-left p {
+.footer-left  {
     font-size: 14px;
     color: #666;
+}
+
+.footer-left p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
 }
 
 .footer-logo {
@@ -2584,8 +2603,6 @@ body {
     /* Centralizar último elemento quando há número ímpar de skill-cards */
     .skill-card:nth-child(odd):last-child {
         grid-column: 1 / -1;
-        justify-self: center;
-        max-width: 50%;
     }
     
     .projects-grid {
