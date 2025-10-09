@@ -110,8 +110,9 @@ function atlas_theme_add_cache_busting_js( $html, $handle, $href ) {
     return $html;
 }
 
-add_filter( 'style_loader_tag', 'atlas_theme_add_cache_busting_css', 10, 4 );
-add_filter( 'script_loader_tag', 'atlas_theme_add_cache_busting_js', 10, 3 );
+// Temporarily disable all cache busting filters to prevent errors
+// add_filter( 'style_loader_tag', 'atlas_theme_add_cache_busting_css', 10, 4 );
+// add_filter( 'script_loader_tag', 'atlas_theme_add_cache_busting_js', 10, 3 );
 
 /**
  * Add meta tags to prevent caching on contact page
