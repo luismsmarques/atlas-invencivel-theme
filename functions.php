@@ -4,6 +4,10 @@
  *
  * @package AtlasTheme
  * @since 1.0.0
+ * 
+ * NOTE: This theme uses ONLY PHP templates and does NOT support FSE (Full Site Editor).
+ * All block editor features, templates, patterns, and parts have been removed.
+ * The theme uses traditional WordPress template hierarchy with .php files.
  */
 
 // Prevent direct access
@@ -35,16 +39,18 @@ function atlas_theme_setup() {
         'script',
     ) );
     add_theme_support( 'customize-selective-refresh-widgets' );
-    add_theme_support( 'wp-block-styles' );
-    add_theme_support( 'align-wide' );
-    add_theme_support( 'editor-styles' );
-    add_theme_support( 'responsive-embeds' );
-    add_theme_support( 'custom-spacing' );
-    add_theme_support( 'custom-units' );
-    add_theme_support( 'appearance-tools' );
     
-    // Add editor styles
-    add_editor_style( 'assets/css/editor-style.css' );
+    // REMOVED: FSE support - Theme uses only PHP templates
+    // add_theme_support( 'wp-block-styles' );
+    // add_theme_support( 'align-wide' );
+    // add_theme_support( 'editor-styles' );
+    // add_theme_support( 'responsive-embeds' );
+    // add_theme_support( 'custom-spacing' );
+    // add_theme_support( 'custom-units' );
+    // add_theme_support( 'appearance-tools' );
+    
+    // REMOVED: Editor styles - Theme uses only PHP templates
+    // add_editor_style( 'assets/css/editor-style.css' );
     
     // Set content width
     $GLOBALS['content_width'] = 1200;
@@ -335,7 +341,8 @@ function atlas_theme_register_block_patterns() {
         );
     }
 }
-add_action( 'init', 'atlas_theme_register_block_patterns' );
+// REMOVED: Block patterns disabled - Theme uses only PHP templates
+// add_action( 'init', 'atlas_theme_register_block_patterns' );
 
 /**
  * Register Block Pattern Categories
@@ -348,7 +355,8 @@ function atlas_theme_register_block_pattern_categories() {
         );
     }
 }
-add_action( 'init', 'atlas_theme_register_block_pattern_categories' );
+// REMOVED: Block pattern categories disabled - Theme uses only PHP templates
+// add_action( 'init', 'atlas_theme_register_block_pattern_categories' );
 
 /**
  * Add Custom Body Classes

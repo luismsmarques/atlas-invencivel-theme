@@ -51,13 +51,9 @@ function atlas_theme_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'atlas_theme_enqueue_assets' );
 
 /**
- * Enqueue Block Editor Assets
+ * REMOVED: Block Editor Assets - Theme uses only PHP templates
+ * All editor assets have been removed to disable FSE completely
  */
-function atlas_theme_enqueue_editor_assets() {
-    wp_enqueue_style( 'atlas-theme-editor', ATLAS_THEME_URI . '/assets/css/editor-style.css', array(), ATLAS_THEME_VERSION );
-    wp_enqueue_script( 'atlas-theme-editor', ATLAS_THEME_URI . '/assets/js/editor.js', array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ), ATLAS_THEME_VERSION, true );
-}
-add_action( 'enqueue_block_editor_assets', 'atlas_theme_enqueue_editor_assets' );
 
 // Customizer assets removed - using classic options page instead
 
