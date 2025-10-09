@@ -12,7 +12,7 @@ O repositório [atlas-invencivel-theme](https://github.com/luismsmarques/atlas-i
    ```bash
    # Configurar credenciais (se ainda não fez)
    git config --global user.name "Luis Marques"
-   git config --global user.email "seu-email@exemplo.com"
+   git config --global user.email "iamluismsmarques@gmail.com"
    ```
 
 2. **Push inicial**:

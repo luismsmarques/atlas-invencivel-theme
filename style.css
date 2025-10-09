@@ -564,7 +564,6 @@ body {
 
 /* Education & Experience Section */
 .education-experience {
-    padding: 80px 0;
     background: #FDF4E3;
 }
 
@@ -677,10 +676,6 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        gap: 20px;
-    }
     
     .nav {
         gap: 20px;
