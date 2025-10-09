@@ -40,7 +40,7 @@ get_header(); ?>
                     <?php
                     $hero_image = get_option( 'atlas_hero_image' );
                     if ( $hero_image ) {
-                        echo wp_get_attachment_image( $hero_image, 'medium', false, array( 'class' => 'profile-img' ) );
+                        echo wp_get_attachment_image( $hero_image, 'atlas-hero', false, array( 'class' => 'profile-img' ) );
                     } else {
                         echo '<img src="' . esc_url( get_template_directory_uri() . '/assets/images/luis-marques-profile.png' ) . '" alt="' . esc_attr( $hero_name ) . '" class="profile-img">';
                     }
@@ -190,9 +190,9 @@ get_header(); ?>
                         <a href="<?php echo esc_url( get_permalink() ); ?>" class="project-link">
                             <div class="project-image">
                                 <?php if ( has_post_thumbnail() ) : ?>
-                                    <?php the_post_thumbnail( 'medium' ); ?>
+                                    <?php the_post_thumbnail( 'atlas-project' ); ?>
                                 <?php else : ?>
-                                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=300&fit=crop" alt="<?php the_title_attribute(); ?>">
+                                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop&q=80" alt="<?php the_title_attribute(); ?>">
                                 <?php endif; ?>
                                 
                                 <div class="project-overlay">
@@ -227,7 +227,7 @@ get_header(); ?>
                     echo '<div class="project-card">';
                     echo '<a href="' . esc_url( $project_url ) . '" class="project-link">';
                     echo '<div class="project-image">';
-                    echo '<img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=300&fit=crop" alt="' . esc_attr( $project['title'] ) . '">';
+                    echo '<img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop&q=80" alt="' . esc_attr( $project['title'] ) . '">';
                     echo '<div class="project-overlay">';
                     echo '<h3 class="project-title">' . esc_html( $project['title'] ) . '</h3>';
                     echo '<p class="project-category">' . esc_html( $project['category'] ) . '</p>';

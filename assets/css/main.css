@@ -15,6 +15,17 @@ body {
     background-color: #fff;
 }
 
+/* Global Image Optimization */
+img {
+    max-width: 100%;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -758,6 +769,11 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 .hero-right {
@@ -889,6 +905,11 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 .project-card:hover .project-image img {

@@ -57,8 +57,38 @@ function atlas_theme_setup() {
         'primary' => esc_html__( 'Primary Navigation', 'atlas-theme' ),
         'footer'  => esc_html__( 'Footer Navigation', 'atlas-theme' ),
     ) );
+    
+    // Add custom image sizes for better image quality
+    add_image_size( 'atlas-hero', 500, 700, true ); // Hero profile image
+    add_image_size( 'atlas-project', 600, 400, true ); // Project cards
+    add_image_size( 'atlas-project-large', 1200, 800, true ); // Project detail pages
+    add_image_size( 'atlas-thumbnail', 300, 200, true ); // Small thumbnails
 }
 add_action( 'after_setup_theme', 'atlas_theme_setup' );
+
+/**
+ * Regenerate image sizes on theme activation
+ */
+function atlas_regenerate_image_sizes() {
+    if ( ! get_option( 'atlas_image_sizes_regenerated' ) ) {
+        // Regenerate all image sizes
+        if ( function_exists( 'wp_generate_attachment_metadata' ) ) {
+            $attachments = get_posts( array(
+                'post_type' => 'attachment',
+                'post_mime_type' => 'image',
+                'numberposts' => -1,
+                'post_status' => 'any'
+            ) );
+            
+            foreach ( $attachments as $attachment ) {
+                wp_generate_attachment_metadata( $attachment->ID, get_attached_file( $attachment->ID ) );
+            }
+        }
+        
+        update_option( 'atlas_image_sizes_regenerated', true );
+    }
+}
+add_action( 'after_switch_theme', 'atlas_regenerate_image_sizes' );
 
 /**
  * Enqueue Scripts and Styles
