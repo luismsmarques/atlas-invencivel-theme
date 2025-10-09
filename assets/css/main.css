@@ -2390,6 +2390,11 @@ body {
     .hero-right {
         flex-direction: row;
         justify-content: space-around;
+        align-items: center;
+    }
+    
+    .stat {
+        text-align: center;
     }
     
     .skills-grid {
@@ -2594,6 +2599,11 @@ body {
     .hero-right {
         flex-direction: column;
         gap: 20px;
+        align-items: center;
+    }
+    
+    .stat {
+        text-align: center;
     }
     
     /* Page Mobile Styles */
