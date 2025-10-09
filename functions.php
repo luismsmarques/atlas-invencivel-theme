@@ -254,7 +254,6 @@ require_once ATLAS_THEME_INC . '/enqueue.php';
 require_once ATLAS_THEME_INC . '/widgets.php';
 require_once ATLAS_THEME_INC . '/shortpixel-optimization.php'; // ShortPixel image optimization
 require_once ATLAS_THEME_INC . '/contact-form.php'; // Contact form handler
-require_once ATLAS_THEME_INC . '/cache-busting.php'; // Cache busting for updates
 
 // Include block files
 require_once ATLAS_THEME_INC . '/blocks/hero-block.php';

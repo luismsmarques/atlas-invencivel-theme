@@ -38,9 +38,8 @@ function atlas_theme_enqueue_assets() {
     
     // Contact page specific assets
     if ( is_page_template( 'page-contact.php' ) || is_page( 'contact' ) ) {
-        $contact_version = get_option( 'atlas_theme_cache_version', ATLAS_THEME_VERSION );
-        wp_enqueue_style( 'atlas-theme-contact', ATLAS_THEME_URI . '/assets/css/contact.css', array('atlas-theme-main'), $contact_version );
-        wp_enqueue_script( 'atlas-theme-contact', ATLAS_THEME_URI . '/assets/js/contact.js', array(), $contact_version, true );
+        wp_enqueue_style( 'atlas-theme-contact', ATLAS_THEME_URI . '/assets/css/contact.css', array('atlas-theme-main'), ATLAS_THEME_VERSION );
+        wp_enqueue_script( 'atlas-theme-contact', ATLAS_THEME_URI . '/assets/js/contact.js', array(), ATLAS_THEME_VERSION, true );
     }
     
     // Localize script for AJAX
