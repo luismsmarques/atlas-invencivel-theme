@@ -10,6 +10,9 @@
     position: absolute !important;
     width: 1px;
     word-wrap: normal !important;
+    /* Modern browser fallback */
+    opacity: 0;
+    visibility: hidden;
 }
 
 .screen-reader-text:focus {
@@ -30,12 +33,19 @@
     top: 5px;
     width: auto;
     z-index: 100000;
+    /* Modern browser fallback */
+    opacity: 1;
+    visibility: visible;
 }
 
 .skip-link {
     left: -9999px;
     position: absolute;
     top: -9999px;
+    /* Modern browser fallback */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100vw);
 }
 
 .skip-link:focus {
@@ -52,6 +62,10 @@
     top: 7px;
     width: auto;
     z-index: 100000;
+    /* Modern browser fallback */
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
 }
 
 /* Global Image Optimization */
