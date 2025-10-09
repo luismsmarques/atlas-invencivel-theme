@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle functionality
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
     const body = document.body;
     
     if (mobileMenuToggle && mobileMenuOverlay) {
@@ -87,6 +88,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 openMobileMenu();
             }
         });
+        
+        // Close button functionality
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', function() {
+                closeMobileMenu();
+            });
+        }
         
         // Close mobile menu when clicking on a navigation link
         const mobileNavLinks = document.querySelectorAll('.mobile-menu-nav a');
@@ -107,7 +115,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener('click', function(e) {
             if (mobileMenuOverlay.classList.contains('active') && 
                 !mobileMenuOverlay.contains(e.target) && 
-                !mobileMenuToggle.contains(e.target)) {
+                !mobileMenuToggle.contains(e.target) &&
+                !mobileMenuClose.contains(e.target)) {
                 closeMobileMenu();
             }
         });

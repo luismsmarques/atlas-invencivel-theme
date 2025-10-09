@@ -93,6 +93,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <button class="mobile-menu-close" aria-label="<?php esc_attr_e( 'Close mobile menu', 'atlas-theme' ); ?>">
+            <i class="fas fa-times"></i>
+        </button>
         <div class="mobile-menu-content">
             <nav class="mobile-menu-nav">
                 <?php
