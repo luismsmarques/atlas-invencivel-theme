@@ -253,6 +253,7 @@ require_once ATLAS_THEME_INC . '/template-functions.php';
 require_once ATLAS_THEME_INC . '/enqueue.php';
 require_once ATLAS_THEME_INC . '/widgets.php';
 require_once ATLAS_THEME_INC . '/shortpixel-optimization.php'; // ShortPixel image optimization
+require_once ATLAS_THEME_INC . '/contact-form.php'; // Contact form handler
 
 // Include block files
 require_once ATLAS_THEME_INC . '/blocks/hero-block.php';

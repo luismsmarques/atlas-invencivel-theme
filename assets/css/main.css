@@ -710,7 +710,7 @@ img {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    background: linear-gradient(transparent, rgb(0 0 0));
     padding: 30px 20px 20px;
     color: white;
 }
@@ -2347,6 +2347,7 @@ img {
     
     .section-title {
         font-size: 28px;
+        padding-top: 30px;
     }
     
     .skills-grid {
@@ -2543,6 +2544,8 @@ img {
         justify-content: center;
     }
 }
+
+/* Contact Page Styles - Imported via enqueue.php */
 
 /* Footer Widget Styles */
 .footer-section .widget {

@@ -36,6 +36,12 @@ function atlas_theme_enqueue_assets() {
         wp_enqueue_script( 'atlas-theme-services', ATLAS_THEME_URI . '/assets/js/services.js', array(), ATLAS_THEME_VERSION, true );
     }
     
+    // Contact page specific assets
+    if ( is_page_template( 'page-contact.php' ) || is_page( 'contact' ) ) {
+        wp_enqueue_style( 'atlas-theme-contact', ATLAS_THEME_URI . '/assets/css/contact.css', array('atlas-theme-main'), ATLAS_THEME_VERSION );
+        wp_enqueue_script( 'atlas-theme-contact', ATLAS_THEME_URI . '/assets/js/contact.js', array(), ATLAS_THEME_VERSION, true );
+    }
+    
     // Localize script for AJAX
     wp_localize_script( 'atlas-theme-main', 'atlas_theme_ajax', array(
         'ajax_url' => admin_url( 'admin-ajax.php' ),
