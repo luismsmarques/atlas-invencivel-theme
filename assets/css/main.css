@@ -2581,6 +2581,13 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
     
+    /* Centralizar último elemento quando há número ímpar de skill-cards */
+    .skill-card:nth-child(odd):last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: 50%;
+    }
+    
     .projects-grid {
         grid-template-columns: 1fr;
     }
@@ -2600,6 +2607,7 @@ body {
         flex-direction: column;
         gap: 20px;
         align-items: center;
+        padding-bottom: 30px;
     }
     
     .stat {
