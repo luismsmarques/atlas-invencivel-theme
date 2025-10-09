@@ -1,0 +1,42 @@
+# Atlas Theme Cache Busting Rules
+# Force cache refresh for contact page updates
+
+<IfModule mod_expires.c>
+    # Disable caching for contact page
+    <FilesMatch "page-contact\.php$">
+        ExpiresActive Off
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+    
+    # Short cache for CSS/JS files
+    <FilesMatch "\.(css|js)$">
+        ExpiresActive On
+        ExpiresByType text/css "access plus 1 hour"
+        ExpiresByType application/javascript "access plus 1 hour"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Force refresh for contact page assets
+    <FilesMatch "contact\.(css|js)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+    
+    # Add version header for debugging
+    <FilesMatch "\.(css|js|php)$">
+        Header set X-Atlas-Version "1.0.0-contact-update"
+    </FilesMatch>
+</IfModule>
+
+# Prevent caching of contact page template
+<Files "page-contact.php">
+    <IfModule mod_headers.c>
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </IfModule>
+</Files>
