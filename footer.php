@@ -156,22 +156,22 @@ if ( ! defined( 'ABSPATH' ) ) {
                             'twitter' => array(
                                 'url' => get_option( 'atlas_social_twitter', 'https://x.com/luismsmarques' ),
                                 'icon' => 'fab fa-x-twitter',
-                                'label' => 'Twitter'
+                                'label' => 'X (Twitter)'
+                            ),
+                            'linkedin' => array(
+                                'url' => get_option( 'atlas_social_linkedin', 'https://linkedin.com/in/luismsmarques' ),
+                                'icon' => 'fab fa-linkedin-in',
+                                'label' => 'LinkedIn'
+                            ),
+                            'github' => array(
+                                'url' => get_option( 'atlas_social_github', 'https://github.com/luismsmarques' ),
+                                'icon' => 'fab fa-github',
+                                'label' => 'GitHub'
                             ),
                             'instagram' => array(
                                 'url' => get_option( 'atlas_social_instagram', '' ),
                                 'icon' => 'fab fa-instagram',
                                 'label' => 'Instagram'
-                            ),
-                            'facebook' => array(
-                                'url' => get_option( 'atlas_social_facebook', '' ),
-                                'icon' => 'fab fa-facebook-f',
-                                'label' => 'Facebook'
-                            ),
-                            'pinterest' => array(
-                                'url' => get_option( 'atlas_social_pinterest', '' ),
-                                'icon' => 'fab fa-pinterest-p',
-                                'label' => 'Pinterest'
                             ),
                         );
                         
@@ -181,6 +181,11 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 echo '<i class="' . esc_attr( $data['icon'] ) . '"></i>';
                                 echo '</a>';
                             }
+                        }
+                        
+                        // Debug: Show if Font Awesome is loaded
+                        if ( current_user_can( 'manage_options' ) ) {
+                            echo '<!-- Font Awesome loaded: ' . ( wp_style_is( 'atlas-theme-fontawesome', 'done' ) ? 'Yes' : 'No' ) . ' -->';
                         }
                         ?>
                     </div>

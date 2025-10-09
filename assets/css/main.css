@@ -427,15 +427,24 @@ img {
     gap: 20px;
 }
 
-.social-icon {
+.footer-social .social-icon {
     color: white;
     font-size: 18px;
     text-decoration: none;
     transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
 }
 
-.social-icon:hover {
-    color: #3498db;
+.footer-social .social-icon:hover {
+    color: #FEB21A;
+    background: rgba(254, 178, 26, 0.2);
+    transform: translateY(-2px);
 }
 
 /* Footer Bottom Section - Copyright */
@@ -489,21 +498,6 @@ img {
     margin-bottom: 20px;
 }
 
-.footer-social {
-    display: flex;
-    gap: 15px;
-}
-
-.footer-social a {
-    color: #FEB21A;
-    font-size: 18px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.footer-social a:hover {
-    color: white;
-    transform: translateY(-2px);
-}
 
 .footer-title {
     font-size: 16px;
