@@ -1,19 +1,17 @@
 # Atlas Invencível WordPress Theme
 
-A modern portfolio WordPress theme with Full Site Editing support, featuring dynamic content management through Custom Post Types and comprehensive Customizer controls.
+A modern portfolio WordPress theme featuring dynamic content management through Custom Post Types and easy-to-use options page.
 
 ## Overview
 
-Atlas Invencível is a cutting-edge WordPress theme designed for professionals, entrepreneurs, and businesses looking to showcase their portfolio, services, and achievements. Built with WordPress 2025 best practices, this hybrid theme supports both classic templating and Full Site Editing (FSE).
+Atlas Invencível is a cutting-edge WordPress theme designed for professionals, entrepreneurs, and businesses looking to showcase their portfolio, services, and achievements. Built with WordPress 2025 best practices, this theme uses traditional PHP templating for optimal performance and simplicity.
 
 ## Key Features
 
-- **Hybrid Architecture**: Supports both classic PHP templates and block-based Full Site Editing
+- **Pure PHP Architecture**: Traditional WordPress templating for maximum performance
 - **Custom Post Types**: Projects, Skills, Timeline Items, Services, and Company Logos
 - **Dynamic Content Management**: Easy-to-use admin interface for managing portfolio content
-- **Comprehensive Customizer**: Extensive customization options for colors, typography, and content
-- **Block Patterns**: Pre-designed layouts for quick page building
-- **Custom Gutenberg Blocks**: Specialized blocks for portfolio sections
+- **Options Page**: Easy-to-use admin interface for theme customization
 - **Responsive Design**: Mobile-first approach with perfect display on all devices
 - **Accessibility Ready**: WCAG AA compliant with semantic HTML and ARIA labels
 - **Translation Ready**: Full internationalization support with .pot file
@@ -36,15 +34,16 @@ Atlas Invencível is a cutting-edge WordPress theme designed for professionals, 
 ## Quick Start
 
 ### 1. Configure Site Identity
-- Go to Appearance > Customize > Site Identity
+- Go to Settings > General
 - Upload your logo
 - Set site title and tagline
 
-### 2. Customize Colors
-- Go to Appearance > Customize > Colors
+### 2. Customize Theme Settings
+- Go to Atlas Theme Settings (in WordPress admin menu)
 - Set primary color (default: #134686)
 - Set secondary color (default: #FEB21A)
 - Set background color (default: #FDF4E3)
+- Configure hero section, social links, and other options
 
 ### 3. Add Your Content
 
@@ -73,14 +72,10 @@ Atlas Invencível is a cutting-edge WordPress theme designed for professionals, 
 
 ### 4. Build Your Pages
 
-#### Using Block Editor (FSE)
-- Create new pages using the block editor
-- Use the provided block patterns for quick layouts
-- Customize using the theme's custom blocks
-
-#### Using Classic Templates
-- Use the provided PHP templates as fallback
-- Customize through the WordPress Customizer
+#### Using PHP Templates
+- Use the provided PHP templates for all pages
+- Customize through the Options Page (Atlas Theme Settings)
+- Edit template files directly for advanced customization
 
 ## File Structure
 
@@ -88,55 +83,28 @@ Atlas Invencível is a cutting-edge WordPress theme designed for professionals, 
 atlas-theme/
 ├── style.css                 # Theme header and main styles
 ├── functions.php             # Theme setup and functionality
-├── theme.json               # FSE configuration
 ├── readme.txt               # WordPress theme documentation
 ├── README.md                # This file
 ├── CHANGELOG.md             # Version history
 ├── LICENSE                  # GPL v2 license
 ├── screenshot.png           # Theme screenshot
 ├── sample-content.xml       # Demo content import
-├── templates/               # FSE templates
-│   ├── page.html
-│   ├── single.html
-│   ├── archive.html
-│   └── index.html
-├── parts/                   # FSE template parts
-│   ├── header.html
-│   └── footer.html
-├── patterns/                # Block patterns
-│   ├── hero-section.php
-│   ├── skills-grid.php
-│   ├── projects-showcase.php
-│   ├── timeline.php
-│   ├── company-logos.php
-│   ├── services-grid.php
-│   └── full-homepage.php
-├── inc/                     # Theme functionality
+├── front-page.php           # Homepage template
+├── header.php               # Header template
+├── footer.php               # Footer template
+├── page-contact.php         # Contact page template
+├── index.php                # Fallback template
+├── inc/                     # Theme includes
 │   ├── custom-post-types.php
-│   ├── customizer.php
 │   ├── enqueue.php
 │   ├── template-functions.php
-│   ├── options-page.php
-│   └── blocks/              # Custom blocks
-│       ├── hero-block.php
-│       ├── skills-grid-block.php
-│       ├── projects-grid-block.php
-│       ├── timeline-block.php
-│       ├── company-logos-block.php
-│       └── services-grid-block.php
-├── assets/                  # CSS, JS, images
-│   ├── css/
-│   │   ├── main.css
-│   │   ├── editor-style.css
-│   │   ├── services.css
-│   │   ├── case-study.css
-│   │   └── blocks/          # Block-specific styles
-│   ├── js/
-│   │   ├── main.js
-│   │   ├── editor.js
-│   │   ├── services.js
-│   │   └── blocks/          # Block-specific scripts
-│   └── images/
+│   ├── widgets.php
+│   └── options-page.php
+├── assets/                  # Theme assets
+│   ├── css/                 # Stylesheets
+│   ├── js/                  # JavaScript files
+│   ├── fonts/               # Font files
+│   └── images/              # Image assets
 ├── languages/               # Translation files
 │   └── atlas-theme.pot
 └── dev-tools/               # Development tools

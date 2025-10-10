@@ -1,6 +1,6 @@
 === Atlas Invencível ===
 Contributors: luismsmarques
-Tags: portfolio, business, custom-post-types, block-patterns, full-site-editing, customizer, responsive, accessibility-ready, translation-ready
+Tags: portfolio, business, custom-post-types, responsive, accessibility-ready, translation-ready
 Requires at least: 6.4
 Tested up to: 6.5
 Requires PHP: 7.4
@@ -8,20 +8,18 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A modern portfolio WordPress theme with Full Site Editing support, featuring dynamic content management through Custom Post Types and comprehensive Customizer controls.
+A modern portfolio WordPress theme featuring dynamic content management through Custom Post Types and easy-to-use options page.
 
 == Description ==
 
-Atlas Invencível is a cutting-edge WordPress theme designed for professionals, entrepreneurs, and businesses looking to showcase their portfolio, services, and achievements. Built with WordPress 2025 best practices, this hybrid theme supports both classic templating and Full Site Editing (FSE).
+Atlas Invencível is a cutting-edge WordPress theme designed for professionals, entrepreneurs, and businesses looking to showcase their portfolio, services, and achievements. Built with WordPress 2025 best practices, this theme uses traditional PHP templating for optimal performance and simplicity.
 
 **Key Features:**
 
-* **Hybrid Architecture**: Supports both classic PHP templates and block-based Full Site Editing
+* **Pure PHP Architecture**: Traditional WordPress templating for maximum performance
 * **Custom Post Types**: Projects, Skills, Timeline Items, Services, and Company Logos
 * **Dynamic Content Management**: Easy-to-use admin interface for managing portfolio content
-* **Comprehensive Customizer**: Extensive customization options for colors, typography, and content
-* **Block Patterns**: Pre-designed layouts for quick page building
-* **Custom Gutenberg Blocks**: Specialized blocks for portfolio sections
+* **Options Page**: Easy-to-use admin interface for theme customization
 * **Responsive Design**: Mobile-first approach with perfect display on all devices
 * **Accessibility Ready**: WCAG AA compliant with semantic HTML and ARIA labels
 * **Translation Ready**: Full internationalization support with .pot file

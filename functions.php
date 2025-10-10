@@ -8,6 +8,8 @@
  * NOTE: This theme uses ONLY PHP templates and does NOT support FSE (Full Site Editor).
  * All block editor features, templates, patterns, and parts have been removed.
  * The theme uses traditional WordPress template hierarchy with .php files.
+ * 
+ * CONVERTED: From hybrid theme to pure PHP theme for better performance and simplicity.
  */
 
 // Prevent direct access
@@ -16,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define theme constants
-define( 'ATLAS_THEME_VERSION', '1.0.4' );
+define( 'ATLAS_THEME_VERSION', '1.1.0' );
 define( 'ATLAS_THEME_DIR', get_template_directory() );
 define( 'ATLAS_THEME_URI', get_template_directory_uri() );
 define( 'ATLAS_THEME_INC', ATLAS_THEME_DIR . '/inc' );
@@ -25,20 +27,14 @@ define( 'ATLAS_THEME_INC', ATLAS_THEME_DIR . '/inc' );
  * Include Theme Files
  */
 require_once ATLAS_THEME_INC . '/enqueue.php';
-require_once ATLAS_THEME_INC . '/customizer.php';
+// REMOVED: WordPress Customizer - Theme uses options page instead
 require_once ATLAS_THEME_INC . '/custom-post-types.php';
 require_once ATLAS_THEME_INC . '/template-functions.php';
 require_once ATLAS_THEME_INC . '/widgets.php';
 require_once ATLAS_THEME_INC . '/options-page.php';
 require_once ATLAS_THEME_INC . '/shortpixel-optimization.php';
 
-// Include block files
-require_once ATLAS_THEME_INC . '/blocks/hero-block.php';
-require_once ATLAS_THEME_INC . '/blocks/skills-grid-block.php';
-require_once ATLAS_THEME_INC . '/blocks/projects-grid-block.php';
-require_once ATLAS_THEME_INC . '/blocks/timeline-block.php';
-require_once ATLAS_THEME_INC . '/blocks/services-grid-block.php';
-require_once ATLAS_THEME_INC . '/blocks/company-logos-block.php';
+// REMOVED: Gutenberg blocks - Theme uses only PHP templates
 
 /**
  * Theme Setup
@@ -279,102 +275,11 @@ require_once ATLAS_THEME_INC . '/enqueue.php';
 require_once ATLAS_THEME_INC . '/widgets.php';
 require_once ATLAS_THEME_INC . '/shortpixel-optimization.php'; // ShortPixel image optimization
 
-// Include block files
-require_once ATLAS_THEME_INC . '/blocks/hero-block.php';
-require_once ATLAS_THEME_INC . '/blocks/skills-grid-block.php';
-require_once ATLAS_THEME_INC . '/blocks/projects-grid-block.php';
-require_once ATLAS_THEME_INC . '/blocks/timeline-block.php';
-require_once ATLAS_THEME_INC . '/blocks/company-logos-block.php';
-require_once ATLAS_THEME_INC . '/blocks/services-grid-block.php';
+// REMOVED: Gutenberg blocks - Theme uses only PHP templates
 
-/**
- * Register Block Patterns
- */
-function atlas_theme_register_block_patterns() {
-    if ( function_exists( 'register_block_pattern' ) ) {
-        // Hero Section Pattern
-        register_block_pattern(
-            'atlas-theme/hero-section',
-            array(
-                'title'       => esc_html__( 'Hero Section', 'atlas-theme' ),
-                'description' => esc_html__( 'A hero section with name, role, and profile image', 'atlas-theme' ),
-                'content'     => '<!-- wp:atlas-theme/hero-block /-->',
-                'categories'  => array( 'atlas-theme' ),
-            )
-        );
-        
-        // Skills Grid Pattern
-        register_block_pattern(
-            'atlas-theme/skills-grid',
-            array(
-                'title'       => esc_html__( 'Skills Grid', 'atlas-theme' ),
-                'description' => esc_html__( 'A grid of skill cards with icons', 'atlas-theme' ),
-                'content'     => '<!-- wp:atlas-theme/skills-grid-block /-->',
-                'categories'  => array( 'atlas-theme' ),
-            )
-        );
-        
-        // Projects Showcase Pattern
-        register_block_pattern(
-            'atlas-theme/projects-showcase',
-            array(
-                'title'       => esc_html__( 'Projects Showcase', 'atlas-theme' ),
-                'description' => esc_html__( 'A showcase of portfolio projects', 'atlas-theme' ),
-                'content'     => '<!-- wp:atlas-theme/projects-grid-block /-->',
-                'categories'  => array( 'atlas-theme' ),
-            )
-        );
-        
-        // Timeline Pattern
-        register_block_pattern(
-            'atlas-theme/timeline',
-            array(
-                'title'       => esc_html__( 'Timeline', 'atlas-theme' ),
-                'description' => esc_html__( 'Education and experience timeline', 'atlas-theme' ),
-                'content'     => '<!-- wp:atlas-theme/timeline-block /-->',
-                'categories'  => array( 'atlas-theme' ),
-            )
-        );
-        
-        // Company Logos Pattern
-        register_block_pattern(
-            'atlas-theme/company-logos',
-            array(
-                'title'       => esc_html__( 'Company Logos', 'atlas-theme' ),
-                'description' => esc_html__( 'A grid of company logos with hover effects', 'atlas-theme' ),
-                'content'     => '<!-- wp:atlas-theme/company-logos-block /-->',
-                'categories'  => array( 'atlas-theme' ),
-            )
-        );
-        
-        // Services Grid Pattern
-        register_block_pattern(
-            'atlas-theme/services-grid',
-            array(
-                'title'       => esc_html__( 'Services Grid', 'atlas-theme' ),
-                'description' => esc_html__( 'A grid of service cards with featured service', 'atlas-theme' ),
-                'content'     => '<!-- wp:atlas-theme/services-grid-block /-->',
-                'categories'  => array( 'atlas-theme' ),
-            )
-        );
-    }
-}
-// REMOVED: Block patterns disabled - Theme uses only PHP templates
-// add_action( 'init', 'atlas_theme_register_block_patterns' );
+// REMOVED: Block patterns - Theme uses only PHP templates
 
-/**
- * Register Block Pattern Categories
- */
-function atlas_theme_register_block_pattern_categories() {
-    if ( function_exists( 'register_block_pattern_category' ) ) {
-        register_block_pattern_category(
-            'atlas-theme',
-            array( 'label' => esc_html__( 'Atlas Theme', 'atlas-theme' ) )
-        );
-    }
-}
-// REMOVED: Block pattern categories disabled - Theme uses only PHP templates
-// add_action( 'init', 'atlas_theme_register_block_pattern_categories' );
+// REMOVED: Block pattern categories - Theme uses only PHP templates
 
 /**
  * Add Custom Body Classes
