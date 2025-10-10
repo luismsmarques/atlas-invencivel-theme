@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define theme constants
-define( 'ATLAS_THEME_VERSION', '1.0.0' );
+define( 'ATLAS_THEME_VERSION', '1.0.1' );
 define( 'ATLAS_THEME_DIR', get_template_directory() );
 define( 'ATLAS_THEME_URI', get_template_directory_uri() );
 define( 'ATLAS_THEME_INC', ATLAS_THEME_DIR . '/inc' );
