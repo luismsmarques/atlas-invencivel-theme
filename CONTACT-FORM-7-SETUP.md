@@ -40,7 +40,7 @@ Este guia explica como configurar o Contact Form 7 para funcionar com o tema Atl
         [textarea* contact-message id:contact-message placeholder "Sua mensagem aqui..."]
     </div>
     
-    [submit class:btn class:btn-primary "Enviar Mensagem"]
+    [submit class:wpcf7-submit "Enviar Mensagem"]
 </div>
 ```
 
