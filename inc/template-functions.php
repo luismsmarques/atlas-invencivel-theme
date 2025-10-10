@@ -316,6 +316,38 @@ function atlas_theme_get_services() {
 }
 
 /**
+ * Get Project Navigation Links
+ */
+function atlas_theme_get_project_navigation( $current_post_id ) {
+    $navigation = array(
+        'prev' => null,
+        'next' => null
+    );
+    
+    // Get previous project
+    $prev_post = get_previous_post( false, '', 'atlas_project' );
+    if ( $prev_post ) {
+        $navigation['prev'] = array(
+            'id'    => $prev_post->ID,
+            'title' => $prev_post->post_title,
+            'url'   => get_permalink( $prev_post->ID )
+        );
+    }
+    
+    // Get next project
+    $next_post = get_next_post( false, '', 'atlas_project' );
+    if ( $next_post ) {
+        $navigation['next'] = array(
+            'id'    => $next_post->ID,
+            'title' => $next_post->post_title,
+            'url'   => get_permalink( $next_post->ID )
+        );
+    }
+    
+    return $navigation;
+}
+
+/**
  * Get Company Logos
  */
 function atlas_theme_get_company_logos( $limit = 5 ) {

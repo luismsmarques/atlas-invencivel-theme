@@ -31,6 +31,11 @@ function atlas_theme_enqueue_assets() {
     wp_enqueue_style( 'atlas-theme-contact', ATLAS_THEME_URI . '/assets/css/contact.css', array('atlas-theme-main'), ATLAS_THEME_VERSION );
     wp_enqueue_script( 'atlas-theme-contact', ATLAS_THEME_URI . '/assets/js/contact.js', array('jquery'), ATLAS_THEME_VERSION, true );
     
+    // Case study CSS - Load on single project pages
+    if ( is_singular( 'atlas_project' ) ) {
+        wp_enqueue_style( 'atlas-theme-case-study', ATLAS_THEME_URI . '/assets/css/case-study.css', array('atlas-theme-main'), ATLAS_THEME_VERSION );
+    }
+    
     // Main JavaScript
     wp_enqueue_script( 'atlas-theme-main', ATLAS_THEME_URI . '/assets/js/main.js', array(), ATLAS_THEME_VERSION, true );
     

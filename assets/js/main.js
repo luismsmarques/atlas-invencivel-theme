@@ -48,6 +48,23 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', updateActiveNav);
     updateActiveNav(); // Initial call
     
+    // Scroll Reveal Animation for Case Studies
+    const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+    
+    function revealOnScroll() {
+        scrollRevealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementVisible = 150;
+            
+            if (elementTop < window.innerHeight - elementVisible) {
+                element.classList.add('revealed');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Initial call
+    
     // Intersection Observer for animations
     const observerOptions = {
         threshold: 0.1,
