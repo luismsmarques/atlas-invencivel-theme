@@ -11,8 +11,9 @@
     width: 1px;
     word-wrap: normal !important;
     /* Modern browser fallback */
-    opacity: 0;
-    visibility: hidden;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    display: none !important;
 }
 
 .screen-reader-text:focus {
@@ -22,7 +23,7 @@
     clip: auto !important;
     clip-path: none;
     color: #21759b;
-    display: block;
+    display: block !important;
     font-size: 14px;
     font-weight: bold;
     height: auto;
@@ -34,8 +35,8 @@
     width: auto;
     z-index: 100000;
     /* Modern browser fallback */
-    opacity: 1;
-    visibility: visible;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .skip-link {
@@ -64,6 +65,44 @@
     width: auto;
     z-index: 100000;
     /* Modern browser fallback */
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(0) !important;
+}
+
+/* Additional skip link variations */
+a[href="#content"],
+a[href="#main"],
+a[href="#primary"],
+.skip-link.screen-reader-text,
+.screen-reader-text.skip-link {
+    left: -9999px !important;
+    position: absolute !important;
+    top: -9999px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateX(-100vw) !important;
+    display: none !important;
+}
+
+a[href="#content"]:focus,
+a[href="#main"]:focus,
+a[href="#primary"]:focus,
+.skip-link.screen-reader-text:focus,
+.screen-reader-text.skip-link:focus {
+    background: #000;
+    color: #fff;
+    display: block !important;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    left: 6px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 7px;
+    width: auto;
+    z-index: 100000;
     opacity: 1 !important;
     visibility: visible !important;
     transform: translateX(0) !important;
