@@ -39,19 +39,20 @@
 }
 
 .skip-link {
-    left: -9999px;
-    position: absolute;
-    top: -9999px;
+    left: -9999px !important;
+    position: absolute !important;
+    top: -9999px !important;
     /* Modern browser fallback */
-    opacity: 0;
-    visibility: hidden;
-    transform: translateX(-100vw);
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateX(-100vw) !important;
+    display: none !important;
 }
 
 .skip-link:focus {
     background: #000;
     color: #fff;
-    display: block;
+    display: block !important;
     font-size: 14px;
     font-weight: bold;
     height: auto;
@@ -63,9 +64,9 @@
     width: auto;
     z-index: 100000;
     /* Modern browser fallback */
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(0) !important;
 }
 
 /* Global Image Optimization */
