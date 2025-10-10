@@ -1,0 +1,100 @@
+# Git Attributes for Atlas Theme
+# WordPress Theme Version Control Configuration
+
+# =============================================================================
+# Text Files - Normalize line endings
+# =============================================================================
+*.php text
+*.css text
+*.js text
+*.html text
+*.htm text
+*.txt text
+*.md text
+*.json text
+*.xml text
+*.yml text
+*.yaml text
+
+# =============================================================================
+# Binary Files - Don't diff these files
+# =============================================================================
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.otf binary
+*.pdf binary
+*.zip binary
+*.tar.gz binary
+*.rar binary
+*.7z binary
+
+# =============================================================================
+# WordPress Specific Files
+# =============================================================================
+# Theme files
+style.css text
+functions.php text
+index.php text
+header.php text
+footer.php text
+single*.php text
+page*.php text
+archive*.php text
+search*.php text
+404.php text
+
+# =============================================================================
+# CSS and JavaScript
+# =============================================================================
+*.css text diff=css
+*.js text diff=javascript
+
+# =============================================================================
+# Configuration Files
+# =============================================================================
+.gitignore text
+.gitattributes text
+composer.json text
+package.json text
+webpack.config.js text
+gulpfile.js text
+
+# =============================================================================
+# Documentation
+# =============================================================================
+README.md text
+CHANGELOG.md text
+LICENSE text
+*.md text
+
+# =============================================================================
+# Language Files
+# =============================================================================
+*.pot text
+*.po text
+*.mo binary
+
+# =============================================================================
+# Development Tools
+# =============================================================================
+deploy.sh text
+server-deploy.sh text
+optimize-images.sh text
+replace-optimized-images.sh text
+
+# =============================================================================
+# Exclude from export
+# =============================================================================
+# These files won't be included in git archive
+dev-tools/ export-ignore
+*.md export-ignore
+.gitignore export-ignore
+.gitattributes export-ignore
