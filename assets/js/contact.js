@@ -10,8 +10,9 @@
     'use strict';
     
     $(document).ready(function() {
-        const contactForm = $('.contact-form');
-        const submitBtn = contactForm.find('button[type="submit"]');
+        // Support both custom form and Contact Form 7
+        const contactForm = $('.contact-form, .wpcf7-form');
+        const submitBtn = contactForm.find('button[type="submit"], .wpcf7-submit');
         const btnText = submitBtn.find('.btn-text');
         const btnLoading = submitBtn.find('.btn-loading');
         
@@ -32,7 +33,7 @@
                 
                 if (!value) {
                     errorElement.text('This field is required.');
-                    field.closest('.form-group').addClass('error');
+                    field.closest('.form-group, .wpcf7-form-control-wrap').addClass('error');
                     isValid = false;
                 }
             });
@@ -44,7 +45,7 @@
             
             if (emailValue && !isValidEmail(emailValue)) {
                 emailError.text('Please enter a valid email address.');
-                emailField.closest('.form-group').addClass('error');
+                emailField.closest('.form-group, .wpcf7-form-control-wrap').addClass('error');
                 isValid = false;
             }
             
@@ -66,18 +67,18 @@
             
             // Clear previous error
             errorElement.text('');
-            field.closest('.form-group').removeClass('error');
+            field.closest('.form-group, .wpcf7-form-control-wrap').removeClass('error');
             
             // Validate if required
             if (field.prop('required') && !value) {
                 errorElement.text('This field is required.');
-                field.closest('.form-group').addClass('error');
+                field.closest('.form-group, .wpcf7-form-control-wrap').addClass('error');
             }
             
             // Validate email
             if (field.attr('type') === 'email' && value && !isValidEmail(value)) {
                 errorElement.text('Please enter a valid email address.');
-                field.closest('.form-group').addClass('error');
+                field.closest('.form-group, .wpcf7-form-control-wrap').addClass('error');
             }
         });
         
@@ -88,7 +89,7 @@
             const errorElement = $('#' + fieldId + '-error');
             
             errorElement.text('');
-            field.closest('.form-group').removeClass('error');
+            field.closest('.form-group, .wpcf7-form-control-wrap').removeClass('error');
         });
         
         // Form submission

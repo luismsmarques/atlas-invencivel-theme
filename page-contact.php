@@ -263,129 +263,19 @@ get_header(); ?>
                 </div>
                 
                 <?php
-                // Handle form submission
-                $form_submitted = false;
-                $form_error = '';
-                $form_success = '';
-                
-                if ( isset( $_POST['atlas_contact_submit'] ) && wp_verify_nonce( $_POST['atlas_contact_nonce'], 'atlas_contact_form' ) ) {
-                    $form_submitted = true;
-                    
-                    // Sanitize and validate form data
-                    $name = sanitize_text_field( $_POST['contact_name'] ?? '' );
-                    $email = sanitize_email( $_POST['contact_email'] ?? '' );
-                    $subject = sanitize_text_field( $_POST['contact_subject'] ?? '' );
-                    $message = sanitize_textarea_field( $_POST['contact_message'] ?? '' );
-                    
-                    // Validation
-                    if ( empty( $name ) || empty( $email ) || empty( $subject ) || empty( $message ) ) {
-                        $form_error = __( 'All fields are required.', 'atlas-theme' );
-                    } elseif ( ! is_email( $email ) ) {
-                        $form_error = __( 'Please enter a valid email address.', 'atlas-theme' );
-                    } else {
-                        // Send email
-                        $to = get_option( 'admin_email' );
-                        $email_subject = sprintf( __( 'Contact Form: %s', 'atlas-theme' ), $subject );
-                        $email_message = sprintf(
-                            __( "Name: %s\nEmail: %s\nSubject: %s\n\nMessage:\n%s", 'atlas-theme' ),
-                            $name,
-                            $email,
-                            $subject,
-                            $message
-                        );
-                        $headers = array(
-                            'Content-Type: text/plain; charset=UTF-8',
-                            'From: ' . get_bloginfo( 'name' ) . ' <' . get_option( 'admin_email' ) . '>',
-                            'Reply-To: ' . $name . ' <' . $email . '>'
-                        );
-                        
-                        if ( wp_mail( $to, $email_subject, $email_message, $headers ) ) {
-                            $form_success = __( 'Thank you! Your message has been sent successfully.', 'atlas-theme' );
-                        } else {
-                            $form_error = __( 'Sorry, there was an error sending your message. Please try again.', 'atlas-theme' );
-                        }
-                    }
+                // Check if Contact Form 7 is active
+                if ( function_exists( 'wpcf7_contact_form' ) ) {
+                    // Use Contact Form 7 shortcode
+                    echo do_shortcode( '[contact-form-7 id="5d3b3ca" title="Contact 1.0"]' );
+                } else {
+                    // Fallback to custom form if Contact Form 7 is not available
+                    ?>
+                    <div class="cf7-fallback-notice">
+                        <p><?php esc_html_e( 'Contact Form 7 plugin is required for this form to work properly. Please install and activate Contact Form 7.', 'atlas-theme' ); ?></p>
+                    </div>
+                    <?php
                 }
                 ?>
-                
-                <form class="contact-form" method="post" action="">
-                    <?php wp_nonce_field( 'atlas_contact_form', 'atlas_contact_nonce' ); ?>
-                    
-                    <?php if ( $form_success ) : ?>
-                        <div class="form-message form-success">
-                            <i class="fas fa-check-circle"></i>
-                            <span><?php echo esc_html( $form_success ); ?></span>
-                        </div>
-                    <?php endif; ?>
-                    
-                    <?php if ( $form_error ) : ?>
-                        <div class="form-message form-error">
-                            <i class="fas fa-exclamation-circle"></i>
-                            <span><?php echo esc_html( $form_error ); ?></span>
-                        </div>
-                    <?php endif; ?>
-                    
-                    <div class="form-group">
-                        <label for="contact-name"><?php esc_html_e( 'Name', 'atlas-theme' ); ?> <span class="required">*</span></label>
-                        <input 
-                            type="text" 
-                            id="contact-name" 
-                            name="contact_name" 
-                            value="<?php echo esc_attr( $form_submitted ? ( $_POST['contact_name'] ?? '' ) : '' ); ?>"
-                            required 
-                            aria-describedby="contact-name-error"
-                        >
-                        <div id="contact-name-error" class="field-error" role="alert"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="contact-email"><?php esc_html_e( 'Email', 'atlas-theme' ); ?> <span class="required">*</span></label>
-                        <input 
-                            type="email" 
-                            id="contact-email" 
-                            name="contact_email" 
-                            value="<?php echo esc_attr( $form_submitted ? ( $_POST['contact_email'] ?? '' ) : '' ); ?>"
-                            required 
-                            aria-describedby="contact-email-error"
-                        >
-                        <div id="contact-email-error" class="field-error" role="alert"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="contact-subject"><?php esc_html_e( 'Subject', 'atlas-theme' ); ?> <span class="required">*</span></label>
-                        <input 
-                            type="text" 
-                            id="contact-subject" 
-                            name="contact_subject" 
-                            value="<?php echo esc_attr( $form_submitted ? ( $_POST['contact_subject'] ?? '' ) : '' ); ?>"
-                            required 
-                            aria-describedby="contact-subject-error"
-                        >
-                        <div id="contact-subject-error" class="field-error" role="alert"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="contact-message"><?php esc_html_e( 'Message', 'atlas-theme' ); ?> <span class="required">*</span></label>
-                        <textarea 
-                            id="contact-message" 
-                            name="contact_message" 
-                            rows="6" 
-                            required 
-                            aria-describedby="contact-message-error"
-                        ><?php echo esc_textarea( $form_submitted ? ( $_POST['contact_message'] ?? '' ) : '' ); ?></textarea>
-                        <div id="contact-message-error" class="field-error" role="alert"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <button type="submit" name="atlas_contact_submit" class="btn btn-primary">
-                            <span class="btn-text"><?php esc_html_e( 'Send Message', 'atlas-theme' ); ?></span>
-                            <span class="btn-loading" style="display: none;">
-                                <i class="fas fa-spinner fa-spin"></i>
-                                <?php esc_html_e( 'Sending...', 'atlas-theme' ); ?>
-                            </span>
-                        </button>
-                    </div>
-                </form>
             </div>
             
             <!-- Contact Information -->
@@ -404,8 +294,8 @@ get_header(); ?>
                         <div class="contact-info-content">
                             <h3><?php esc_html_e( 'Email', 'atlas-theme' ); ?></h3>
                             <p>
-                                <a href="mailto:<?php echo esc_attr( get_option( 'admin_email' ) ); ?>">
-                                    <?php echo esc_html( get_option( 'admin_email' ) ); ?>
+                                <a href="mailto:lm@atlasinvencivel.pt">
+                                    lm@atlasinvencivel.pt
                                 </a>
                             </p>
                         </div>
