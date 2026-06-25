@@ -5,9 +5,9 @@
 
 deployment:
   tasks:
-    # 1) Caminho do tema em produção — AJUSTA se o teu utilizador/pasta for diferente.
-    - export DEPLOYPATH=/home/atlasinv/public_html/wp-content/themes/AtlasTheme/
-    - export BACKUPDIR="${DEPLOYPATH}../AtlasTheme-backup-$(date +%Y%m%d-%H%M%S)"
+    # 1) Caminho do tema em produção.
+    - export DEPLOYPATH=/home/atlasinv/public_html/wp-content/themes/atlas-invencivel-theme/
+    - export BACKUPDIR="${DEPLOYPATH}../atlas-invencivel-theme-backup-$(date +%Y%m%d-%H%M%S)"
 
     # 2) Garantir que a pasta do tema existe.
     - /bin/mkdir -p "$DEPLOYPATH"
