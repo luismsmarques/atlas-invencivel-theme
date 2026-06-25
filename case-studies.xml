@@ -330,8 +330,8 @@
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/project/readycv/</guid>
         <description></description>
-        <content:encoded><![CDATA[<p>A aposta foi tirar a fricção: importar um PDF e deixar a IA preencher o perfil, escolher um template por área, e publicar ao mesmo tempo uma página pessoal (com ligação própria) e um PDF coerente. Sem subscrição nem renovação automática — um modelo de créditos para quem quer a camada de IA.</p>]]></content:encoded>
-        <excerpt:encoded><![CDATA[Construtor de CV que gera um perfil profissional partilhável como página pessoal ou exportável em PDF, com importação por IA e revisão por créditos.]]></excerpt:encoded>
+        <content:encoded><![CDATA[<p>Peguei na plataforma de vibecoding que andava a testar (Base44) e recriei o produto para resolver o meu próprio problema — e o de quem passa pelo mesmo. Foi também uma prova de conceito do quão rápido se constrói hoje: o projeto saiu em duas a três horas, só com prompts, e ficou 100% funcional.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[Gerador de CV que entrega um currículo moderno e organizado — sem a paywall-surpresa de 99 cêntimos no momento do download.]]></excerpt:encoded>
         <wp:post_id>5006</wp:post_id>
         <wp:post_date>2026-06-03 12:00:00</wp:post_date>
         <wp:post_date_gmt>2026-06-03 12:00:00</wp:post_date_gmt>
@@ -352,19 +352,19 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_category</wp:meta_key>
-            <wp:meta_value><![CDATA[SAAS / WEB]]></wp:meta_value>
+            <wp:meta_value><![CDATA[VIBECODING / WEB]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_date</wp:meta_key>
-            <wp:meta_value><![CDATA[—]]></wp:meta_value>
+            <wp:meta_value><![CDATA[2026]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_client</wp:meta_key>
-            <wp:meta_value><![CDATA[Eng · Produto]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Conceção & Dev (Base44)]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_technologies</wp:meta_key>
-            <wp:meta_value><![CDATA[—]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Base44 (vibecoding / low-code) · construído por prompts]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_status</wp:meta_key>
@@ -372,15 +372,15 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_challenges</wp:meta_key>
-            <wp:meta_value><![CDATA[Criar um CV profissional e uma presença online continua a ser trabalhoso e cheio de subscrições. O desafio era reduzir isso a minutos — e manter a versão sempre atual para quem recruta.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Nasceu de uma frustração real. A minha namorada andava a candidatar-se a empregos e quis modernizar o CV. Usámos um daqueles geradores “gratuitos” — e, no último passo, mesmo antes do download, apareceu a paywall: 99 cêntimos. Pensei: nesta era da IA, não pago isto. E se calhar mais gente tropeça no mesmo — quer um CV moderno e bem organizado e topa com um pedido de pagamento no fim.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_solutions</wp:meta_key>
-            <wp:meta_value><![CDATA[Plataforma com perfil/página pessoal indexável, exportação PDF, templates, analytics, e IA (revisão de CV com sugestões e versões adaptadas a vagas) através de um modelo de créditos.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Preenches os dados, escolhes um template moderno e descarregas o CV pronto — sem cobrança no momento do download. Simples, bonito e direto ao objetivo.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_results</wp:meta_key>
-            <wp:meta_value><![CDATA[Produto funcional em produção com camada gratuita (perfil, PDF, templates, analytics) e funcionalidades pagas por créditos; perfis públicos partilháveis e atualizáveis a qualquer momento.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Prova de conceito construída em 2–3 horas, apenas com prompts, e 100% funcional: gera e entrega currículos de ponta a ponta. Resolveu um problema real e imediato e fica disponível para quem procura um gerador bonito sem a armadilha do pagamento no fim. (Sem métricas de adoção.)]]></wp:meta_value>
         </wp:postmeta>
     </item>
 

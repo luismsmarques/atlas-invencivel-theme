@@ -184,30 +184,30 @@ Aplicação funcional em produção com um conjunto alargado de funcionalidades.
 - **slug**: `readycv`
 - **url**: https://readycv.pro/
 - **repo**: —
-- **categoria**: SAAS / WEB
-- **ano**: —
-- **função**: Eng · Produto
-- **stack**: —
+- **categoria**: VIBECODING / WEB
+- **ano**: 2026
+- **função**: Conceção & Dev (Base44)
+- **stack**: Base44 (vibecoding / low-code) · construído por prompts
 - **estado**: ● em produção
-- **resumo**: Construtor de CV que gera um perfil profissional partilhável como página pessoal ou exportável em PDF, com importação por IA e revisão por créditos.
+- **resumo**: Gerador de CV que entrega um currículo moderno e organizado — sem a paywall-surpresa de 99 cêntimos no momento do download.
 
 **Desafio**
 
-Criar um CV profissional e uma presença online continua a ser trabalhoso e cheio de subscrições. O desafio era reduzir isso a minutos — e manter a versão sempre atual para quem recruta.
+Nasceu de uma frustração real. A minha namorada andava a candidatar-se a empregos e quis modernizar o CV. Usámos um daqueles geradores “gratuitos” — e, no último passo, mesmo antes do download, apareceu a paywall: 99 cêntimos. Pensei: nesta era da IA, não pago isto. E se calhar mais gente tropeça no mesmo — quer um CV moderno e bem organizado e topa com um pedido de pagamento no fim.
 
 **Abordagem**
 
-A aposta foi tirar a fricção: importar um PDF e deixar a IA preencher o perfil, escolher um template por área, e publicar ao mesmo tempo uma página pessoal (com ligação própria) e um PDF coerente. Sem subscrição nem renovação automática — um modelo de créditos para quem quer a camada de IA.
+Peguei na plataforma de vibecoding que andava a testar (Base44) e recriei o produto para resolver o meu próprio problema — e o de quem passa pelo mesmo. Foi também uma prova de conceito do quão rápido se constrói hoje: o projeto saiu em duas a três horas, só com prompts, e ficou 100% funcional.
 
 **Solução**
 
-Plataforma com perfil/página pessoal indexável, exportação PDF, templates, analytics, e IA (revisão de CV com sugestões e versões adaptadas a vagas) através de um modelo de créditos.
+Preenches os dados, escolhes um template moderno e descarregas o CV pronto — sem cobrança no momento do download. Simples, bonito e direto ao objetivo.
 
 **Resultados**
 
-Produto funcional em produção com camada gratuita (perfil, PDF, templates, analytics) e funcionalidades pagas por créditos; perfis públicos partilháveis e atualizáveis a qualquer momento.
+Prova de conceito construída em 2–3 horas, apenas com prompts, e 100% funcional: gera e entrega currículos de ponta a ponta. Resolveu um problema real e imediato e fica disponível para quem procura um gerador bonito sem a armadilha do pagamento no fim. (Sem métricas de adoção.)
 
-**Notas**: A pesquisa também devolveu readycv.org com conteúdo idêntico (possível domínio alternativo — a confirmar). Stack por confirmar.
+**Notas**: Projeto próprio. Prova de conceito em Base44 (vibecoding), construído em ~2–3h só com prompts. Nasceu de uma paywall de €0,99 num gerador “gratuito”. Ano a confirmar.
 
 ---
 
