@@ -137,10 +137,10 @@
 - **slug**: `up-and-go-sup`
 - **url**: https://upandgosup.com/
 - **repo**: —
-- **categoria**: WEBSITE / RESERVAS
+- **categoria**: WORDPRESS / WEBSITE
 - **ano**: — *(a confirmar)*
-- **função**: Desenvolvimento web e presença digital
-- **stack**: — *(não confirmado; padrão de URLs compatível com construtor tipo Wix, por verificar)*
+- **função**: Tema WordPress à medida · Desenvolvimento web
+- **stack**: WordPress · tema à medida (PHP)
 - **estado**: ● em produção
 - **resumo**: Site da escola de surf e Stand Up Paddle "Up and Go" em Azurara, Vila do Conde, com apresentação de aulas e tours e pedidos de reserva online.
 - **desafio**: Dar presença online a uma escola náutica local, comunicar a oferta de aulas/experiências e captar reservas de clientes individuais e em grupo.
@@ -151,24 +151,27 @@
 
 ---
 
-## 08 · MVC Bio  ⚠️ PRECISA DE INFORMAÇÃO
+## 08 · MVC Bio
 - **slug**: `mvc-bio`
 - **url**: http://mvcbio.com/
 - **repo**: —
-- **categoria**: —
-- **ano**: —
-- **função**: —
-- **stack**: —
-- **estado**: —
-- **resumo**: —
-- **desafio / abordagem / solução / resultados**: —
-- **notas**: Não foi possível obter qualquer facto observável: o domínio não respondeu (bloqueio de rede) e a pesquisa web não devolveu conteúdo real do site (só homónimos). **Para incluir este case study preciso que descrevas o projeto** (o que é, stack, ano, papel) ou que partilhes prints/README.
+- **categoria**: VIBECODING / MENTORIA
+- **ano**: — *(a confirmar)*
+- **função**: Mentoria · Formação · Desenvolvimento conjunto
+- **stack**: Base44 (vibecoding / low-code)
+- **estado**: ● em produção
+- **resumo**: Site profissional construído em conjunto com a cliente numa plataforma de vibecoding (Base44), com formação e mentoria incluídas.
+- **desafio**: A cliente queria uma presença profissional online e, ao mesmo tempo, aprender a criar e manter o próprio site sem depender de terceiros.
+- **abordagem**: Desenvolvimento colaborativo (pair-building) numa plataforma de vibecoding/low-code (Base44), com sessões de formação e mentoria sobre como conceber, construir e gerir um site nestas ferramentas — transferindo conhecimento à medida que se construía.
+- **solução**: Site profissional publicado e, sobretudo, capacitação da cliente para autonomia na edição e evolução contínua do site.
+- **resultados**: Site em produção e cliente autónoma para gerir e fazer evoluir a sua presença online. *(Sem métricas.)*
+- **notas**: Confirmado pelo Luís — projeto de mentoria + build em conjunto com a cliente.
 
 ---
 
-### Pendentes para ti confirmares
-1. **MVC Bio** — sem dados; preciso de descrição.
-2. **Anos / Função** — confirma os marcados a "—" ou "inferido".
-3. **Stack** de ReadyCV e Up and Go SUP — por confirmar (sites inacessíveis ao fetch).
-4. **Imagens de capa** por projeto (recomendo featured image + galeria) — dizes-me se as tens ou se uso placeholders por agora.
-5. **Ordem** — propus a ordem acima (mais técnico/recente primeiro). Ajusto se quiseres.
+### Pendentes (atualizado)
+- ✅ **MVC Bio** — descrito (vibecoding/Base44 + mentoria).
+- ✅ **Up and Go SUP** — tema WordPress à medida.
+- ✅ **Imagens de capa** — placeholders por agora (sem featured image; adicionas depois no WP).
+- ✅ **Ordem** — confirmada.
+- ⏳ **Anos** de ReadyCV / Up and Go SUP / MVC Bio ficam vazios (preenches no WP quando souberes).
