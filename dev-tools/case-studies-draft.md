@@ -246,29 +246,29 @@ A escola saiu de uma mensalidade alta no Wix para um site próprio, mais barato 
 - **slug**: `mvc-bio`
 - **url**: http://mvcbio.com/
 - **repo**: —
-- **categoria**: VIBECODING / MENTORIA
+- **categoria**: VIBECODING / WEB
 - **ano**: —
-- **função**: Mentoria · Formação · Dev
-- **stack**: Base44 (vibecoding / low-code)
+- **função**: Cliente · Conceção & Dev (Base44)
+- **stack**: Base44 (vibecoding / low-code) · formulário de contacto por email
 - **estado**: ● em produção
-- **resumo**: Site profissional construído em conjunto com a cliente numa plataforma de vibecoding (Base44), com formação e mentoria incluídas.
+- **resumo**: Portfólio online de uma biotecnóloga: site limpo, moderno e profissional em Base44, com percurso académico e profissional e contacto por email.
 
 **Desafio**
 
-A cliente queria uma presença profissional online — e, mais do que um site entregue, queria aprender a fazê-lo e a mantê-lo sozinha.
+A Maria Valívia Cruz, biotecnóloga, queria uma presença profissional online — um sítio onde reunir o portefólio, o percurso académico e a experiência, e onde lhe pudessem chegar contactos.
 
 **Abordagem**
 
-Em vez de entregar e sair, construímos juntos. Pair-building numa plataforma de vibecoding (Base44), com formação e mentoria à medida que se avançava — para a cliente perceber as decisões e ganhar autonomia real sobre o seu site.
+Nesta era da IA, propus uma solução em Base44 (vibecoding): rápida de montar, fácil de manter e sem custos pesados. Mais do que entregar e sair, mostrei-lhe o caminho — construímos uma base limpa e profissional que ela percebe e pode evoluir.
 
 **Solução**
 
-Site profissional publicado e, sobretudo, capacitação da cliente para autonomia na edição e evolução contínua do site.
+Um site limpo, moderno e profissional com portefólio, histórico académico e de trabalho, e uma página de contactos que envia email diretamente para a Maria. Integrei ainda o currículo gerado no projeto ReadyCV — os dois projetos a falarem um com o outro.
 
 **Resultados**
 
-Site em produção e cliente autónoma para gerir e fazer evoluir a sua presença online. (Sem métricas.)
+A Maria passou a ter um portefólio profissional online, próprio e fácil de manter, com um canal de contacto direto. Mais um exemplo de como o vibecoding entrega presença digital de qualidade, depressa e sem custos pesados. (Sem métricas.)
 
-**Notas**: Projeto de mentoria + build em conjunto com a cliente (confirmado pelo Luís).
+**Notas**: Cliente: Maria Valívia Cruz (MVC), biotecnóloga. Site Base44 (vibecoding) com portefólio, percurso académico/profissional e contacto por email; integra o CV gerado no ReadyCV. Inclui componente de formação/mentoria. Ano a confirmar.
 
 ---

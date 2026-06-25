@@ -452,8 +452,8 @@
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/project/mvc-bio/</guid>
         <description></description>
-        <content:encoded><![CDATA[<p>Em vez de entregar e sair, construímos juntos. Pair-building numa plataforma de vibecoding (Base44), com formação e mentoria à medida que se avançava — para a cliente perceber as decisões e ganhar autonomia real sobre o seu site.</p>]]></content:encoded>
-        <excerpt:encoded><![CDATA[Site profissional construído em conjunto com a cliente numa plataforma de vibecoding (Base44), com formação e mentoria incluídas.]]></excerpt:encoded>
+        <content:encoded><![CDATA[<p>Nesta era da IA, propus uma solução em Base44 (vibecoding): rápida de montar, fácil de manter e sem custos pesados. Mais do que entregar e sair, mostrei-lhe o caminho — construímos uma base limpa e profissional que ela percebe e pode evoluir.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[Portfólio online de uma biotecnóloga: site limpo, moderno e profissional em Base44, com percurso académico e profissional e contacto por email.]]></excerpt:encoded>
         <wp:post_id>5008</wp:post_id>
         <wp:post_date>2026-06-01 12:00:00</wp:post_date>
         <wp:post_date_gmt>2026-06-01 12:00:00</wp:post_date_gmt>
@@ -474,7 +474,7 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_category</wp:meta_key>
-            <wp:meta_value><![CDATA[VIBECODING / MENTORIA]]></wp:meta_value>
+            <wp:meta_value><![CDATA[VIBECODING / WEB]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_date</wp:meta_key>
@@ -482,11 +482,11 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_client</wp:meta_key>
-            <wp:meta_value><![CDATA[Mentoria · Formação · Dev]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Cliente · Conceção & Dev (Base44)]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_technologies</wp:meta_key>
-            <wp:meta_value><![CDATA[Base44 (vibecoding / low-code)]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Base44 (vibecoding / low-code) · formulário de contacto por email]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_status</wp:meta_key>
@@ -494,15 +494,15 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_challenges</wp:meta_key>
-            <wp:meta_value><![CDATA[A cliente queria uma presença profissional online — e, mais do que um site entregue, queria aprender a fazê-lo e a mantê-lo sozinha.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[A Maria Valívia Cruz, biotecnóloga, queria uma presença profissional online — um sítio onde reunir o portefólio, o percurso académico e a experiência, e onde lhe pudessem chegar contactos.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_solutions</wp:meta_key>
-            <wp:meta_value><![CDATA[Site profissional publicado e, sobretudo, capacitação da cliente para autonomia na edição e evolução contínua do site.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Um site limpo, moderno e profissional com portefólio, histórico académico e de trabalho, e uma página de contactos que envia email diretamente para a Maria. Integrei ainda o currículo gerado no projeto ReadyCV — os dois projetos a falarem um com o outro.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_results</wp:meta_key>
-            <wp:meta_value><![CDATA[Site em produção e cliente autónoma para gerir e fazer evoluir a sua presença online. (Sem métricas.)]]></wp:meta_value>
+            <wp:meta_value><![CDATA[A Maria passou a ter um portefólio profissional online, próprio e fácil de manter, com um canal de contacto direto. Mais um exemplo de como o vibecoding entrega presença digital de qualidade, depressa e sem custos pesados. (Sem métricas.)]]></wp:meta_value>
         </wp:postmeta>
     </item>
 
