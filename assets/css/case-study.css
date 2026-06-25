@@ -328,6 +328,8 @@
 
 /* SOLUTION gallery (mockups handle their own framing) */
 .cs-mock-tall { margin-top: 0; }
+.cs-mock + .cs-mock { margin-top: 24px; }
+.cs-mock + .cs-shots-2 { margin-top: 24px; }
 
 .cs-shots-2 {
     display: grid;
