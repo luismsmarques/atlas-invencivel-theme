@@ -25,8 +25,8 @@
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/project/how-to-invest/</guid>
         <description></description>
-        <content:encoded><![CDATA[<p>Reconstrução em WordPress com estratégia SEO-first para captar tráfego orgânico, sob um princípio de arquitetura não-negociável: <strong>as regras decidem (arquétipo + alocação); o LLM apenas explica</strong>. A lógica determinística governa os resultados; a IA dá só contexto.</p><p>Restrições firmes: o output é por classes de ativos (nunca instrumentos nomeados), com disclaimers contextuais em todos os resultados, chave Gemini sempre server-side, e RGPD (export/delete) como prioridade.</p>]]></content:encoded>
-        <excerpt:encoded><![CDATA[Apura o perfil de investidor por questionário e devolve uma alocação ilustrativa por classe de ativos, num enquadramento educativo.]]></excerpt:encoded>
+        <content:encoded><![CDATA[<p>Trabalho com WordPress há mais de 15 anos, por isso a escolha foi óbvia: encaixava nas minhas competências e nas necessidades do projeto — em especial na distribuição. Queríamos que cada artigo e cada conceito fossem indexáveis e trouxessem tráfego orgânico composto.</p><p>A decisão de arquitetura mais importante foi de confiança: <strong>as regras decidem (arquétipo + alocação); o LLM apenas explica.</strong> A lógica de recomendação é determinística e auditável; o Gemini entra só para dar contexto em linguagem simples, nunca para escolher por ti.</p><p>A partir daí, as restrições escreveram-se sozinhas: output só por classes de ativos (nunca instrumentos nomeados), disclaimers em todos os resultados, a chave da IA sempre no servidor, e o RGPD (exportar/apagar dados) como prioridade desde o primeiro dia.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[App de educação financeira reconstruída de React para WordPress, com um princípio firme: as regras decidem a alocação; a IA apenas explica.]]></excerpt:encoded>
         <wp:post_id>5001</wp:post_id>
         <wp:post_date>2026-06-08 12:00:00</wp:post_date>
         <wp:post_date_gmt>2026-06-08 12:00:00</wp:post_date_gmt>
@@ -51,7 +51,7 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_date</wp:meta_key>
-            <wp:meta_value><![CDATA[2026]]></wp:meta_value>
+            <wp:meta_value><![CDATA[2025—26]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_client</wp:meta_key>
@@ -59,23 +59,23 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_technologies</wp:meta_key>
-            <wp:meta_value><![CDATA[WordPress (FSE) · plugin hti-engine (PHP 8) · MySQL · JavaScript · API REST · Google Gemini · PDF em PHP · Cloudflare]]></wp:meta_value>
+            <wp:meta_value><![CDATA[WordPress (FSE) · plugin hti-engine (PHP 8) · MySQL · JavaScript · API REST · Google Gemini · PDF em PHP · Brevo · GA4 · Cloudflare]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_status</wp:meta_key>
-            <wp:meta_value><![CDATA[● MVP em desenvolvimento]]></wp:meta_value>
+            <wp:meta_value><![CDATA[● em produção]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_challenges</wp:meta_key>
-            <wp:meta_value><![CDATA[Os iniciados têm pouca confiança para investir devido à complexidade e ao medo de errar. A app original (React/Base44) tinha fraca descoberta orgânica, limitando a aquisição a canais pagos/diretos e travando o crescimento composto.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Investir assusta quem nunca o fez — e o mercado fala por jargão. O primeiro desafio era esse: dar a iniciados a confiança para o primeiro passo. O segundo era pessoal e técnico: usar esta era da IA para desenvolver novas competências — começar o produto em vibecoding (Base44) e, a partir daí, levá-lo a um desenvolvimento completo e próprio.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_solutions</wp:meta_key>
-            <wp:meta_value><![CDATA[Tema de blocos nativo (FSE) + plugin hti-engine que expõe endpoints REST (recomendação, reclamação de perfil, conta, exportação). Frontend em JavaScript vanilla com gráficos leves na página de resultados e geração de PDF em PHP. Contas WordPress opcionais para guardar perfis. Integração Gemini server-side (JSON mode validado por schema) para explicações. Conteúdo editável (artigos e glossário) a suportar o SEO.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Um tema de blocos nativo (FSE) e um plugin próprio — o hti-engine — que expõe a API REST: recomendação, reclamar perfil, conta e exportação. Frontend em JavaScript vanilla, com gráficos leves só onde acrescentam e geração de PDF em PHP. Em torno do motor há um ecossistema: um plugin de notícias que agrega RSS e gera artigos, imagens sociais e reels; leitura de eventos interna e via GA4; e newsletters diárias e semanais ligadas ao Brevo. A camada de conteúdo — artigos e glossário — é editável sem código, porque é ela que alimenta o SEO.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_results</wp:meta_key>
-            <wp:meta_value><![CDATA[Em fase de MVP, com iteração intensa. O PRD define metas-alvo (início de questionário ≥8%, conclusão ≥60%, sucesso do motor ≥98%, resultado <8s p95) que são objetivos documentados, não desempenho medido.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Online desde junho de 2025 (começou em Base44, hoje em desenvolvimento próprio). Os dados do GA4 (jan 2025 – jun 2026) mostram cerca de 3.300 utilizadores ativos e 28.369 eventos, com alcance em dezenas de países e conteúdo em vários idiomas (PT, EN, ES, FR, DE e mais). O questionário — o coração do produto — tem uma taxa de rejeição de apenas ~3%: quem entra, completa. A maior aprendizagem: a escolha de plataforma foi tanto uma decisão de marketing como de engenharia.]]></wp:meta_value>
         </wp:postmeta>
     </item>
 
@@ -86,7 +86,7 @@
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/project/tos-summarizer/</guid>
         <description></description>
-        <content:encoded><![CDATA[<p>Extensão Chrome em Manifest V3 (frontend JS vanilla, UI Material Design) suportada por backend Node/Express na Vercel. A análise é delegada à API Google Gemini; a persistência (histórico, contas, créditos) assenta em PostgreSQL.</p><p>Autenticação por JWT e monetização via Stripe. Arquitetura modular (extensão, backend, dashboard) com processamento assíncrono. A v1.3.0 trouxe endurecimento de segurança (sem credenciais hardcoded, configuração por variáveis de ambiente).</p>]]></content:encoded>
+        <content:encoded><![CDATA[<p>O MVP nasceu depressa, com o Cursor como co-piloto. Mas percebi cedo o verdadeiro travão à adoção: obrigar cada pessoa a colar a sua própria chave de API era uma barreira. A meta passou a ser dupla — acessível a qualquer pessoa e, acima de tudo, seguro.</p><p>O “experimento” tornou-se o meu maior projeto até à data. Construí a infraestrutura à volta disso: deploy completo na Vercel, pagamentos por créditos com Stripe, um sistema de gestão segura das chaves de API (a chave nunca sai do servidor) e um dashboard de gestão. A análise é feita pelo Google Gemini; o histórico e as contas vivem em base de dados.</p>]]></content:encoded>
         <excerpt:encoded><![CDATA[Extensão Chrome que resume Termos de Serviço e Políticas de Privacidade com IA — e classifica o risco antes de aceitares.]]></excerpt:encoded>
         <wp:post_id>5002</wp:post_id>
         <wp:post_date>2026-06-07 12:00:00</wp:post_date>
@@ -120,7 +120,7 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_technologies</wp:meta_key>
-            <wp:meta_value><![CDATA[JavaScript · Chrome Extension (Manifest V3) · Node.js · Express · PostgreSQL · Google Gemini · Stripe · JWT · Vercel]]></wp:meta_value>
+            <wp:meta_value><![CDATA[JavaScript · Chrome Extension (Manifest V3) · Node.js · Express · Supabase/PostgreSQL · Google Gemini · Stripe · JWT · Cursor (IA) · Vercel]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_status</wp:meta_key>
@@ -128,15 +128,15 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_challenges</wp:meta_key>
-            <wp:meta_value><![CDATA[Os Termos de Serviço e Políticas de Privacidade são longos, densos e jurídicos — quase ninguém os lê antes de aceitar. Aceita-se cláusulas sobre dados pessoais e partilha com terceiros sem perceber o que está em causa. O projeto ataca esse fosso de legibilidade no próprio contexto em que o utilizador encontra o documento.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Tudo começou num post do Pedro Fonseca: e se a IA resumisse os Termos de Serviço? A ideia ficou-me — porque não trazer isso para o browser, a um clique? Havia dois desafios. O do utilizador: ninguém lê os ToS (longos, densos, jurídicos) e aceitamos cláusulas sobre os nossos dados às cegas. E o meu, pessoal: este foi o meu primeiro projeto construído inteiramente com IA, e quis usá-lo para provar que dominava uma integração completa de ponta a ponta — pagamentos, gestão segura de chaves e deploy real em produção.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_solutions</wp:meta_key>
-            <wp:meta_value><![CDATA[Sobre um ToS/Política, o utilizador recebe um resumo estruturado em Markdown (visão geral, pontos-chave, alertas de privacidade). Um sistema classifica risco, complexidade e boas práticas (1–10) com indicadores tipo semáforo. Permite escolher o foco (privacidade/termos/equilibrado), gerir histórico com filtros e exportar (JSON/CSV/TXT). Sistema de créditos flexível (API partilhada ou chave Gemini pessoal) e dashboard administrativo.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Sobre qualquer ToS ou política, devolve um resumo estruturado (visão geral, pontos-chave, alertas de privacidade) e classifica risco, complexidade e boas práticas de 1 a 10, com indicadores tipo semáforo. Escolhes o foco (privacidade, termos ou equilibrado), guardas histórico com filtros e exportas em JSON/CSV/TXT. Um sistema de créditos com Stripe e gestão segura de chaves deixa usar a API partilhada — sem cada pessoa configurar a sua — ou a própria chave Gemini. Tudo coroado por um dashboard de gestão.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_results</wp:meta_key>
-            <wp:meta_value><![CDATA[Em produção, distribuído via Chrome Web Store, com backend operacional na Vercel. Torna documentos legais imediatamente legíveis no contexto de navegação e dá ao utilizador controlo sobre foco, histórico e exportação. (Sem métricas verificadas independentemente.)]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Mais do que adoção, este projeto provou capacidade — mas a adoção também apareceu. Publicada na Chrome Web Store, a extensão soma cerca de 356 instalações com apenas 3 desinstalações: retenção quase total. Foi o meu primeiro produto construído inteiramente com IA e a primeira vez que liguei, de ponta a ponta, pagamentos (Stripe), gestão segura de chaves de API e deploy em produção na Vercel. O método que daqui saiu — validar a ideia, construir com IA como co-piloto e levar à produção com segurança — passou a ser a base de tudo o que construí depois.]]></wp:meta_value>
         </wp:postmeta>
     </item>
 
@@ -147,7 +147,7 @@
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/project/vibesell/</guid>
         <description></description>
-        <content:encoded><![CDATA[<p>Manter o humano no comando — a ferramenta apenas sugere. Um botão “Engage” injetado nas threads gera três rascunhos de 1–3 frases a partir do contexto do produto (nome, one-liner, objetivo) e de um nível de diretividade (subtle/balanced/direct). O utilizador escolhe, ajusta, copia e publica.</p><p>Modelo freemium com limites diários (5 grátis / 50 Pro) e funcionalidades avançadas no plano pago (auto-discovery, voice match, direct mode).</p>]]></content:encoded>
+        <content:encoded><![CDATA[<p>O princípio é o oposto do slop: <strong>a ferramenta sugere, o humano decide.</strong> Nada é publicado automaticamente. Um botão “Engage” nas threads gera três rascunhos curtos e relevantes (1–3 frases), personalizados ao produto e a um nível de diretividade à escolha — copias, ajustas e publicas tu.</p><p>A inteligência vem da API da Anthropic (Claude). Por baixo, uma arquitetura enxuta: site estático, backend Express com API REST, login por magic link e pagamentos Stripe para o modelo SaaS — tudo na Vercel, com deploy contínuo e limites de uso por plano.</p>]]></content:encoded>
         <excerpt:encoded><![CDATA[Extensão Chrome que, ao clicar em “Engage” num post do Reddit, devolve três rascunhos de resposta humanos e personalizados ao produto — copia, edita e publica tu.]]></excerpt:encoded>
         <wp:post_id>5003</wp:post_id>
         <wp:post_date>2026-06-06 12:00:00</wp:post_date>
@@ -181,7 +181,7 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_technologies</wp:meta_key>
-            <wp:meta_value><![CDATA[JavaScript · HTML/CSS/JS vanilla · Node.js/Express (API REST) · auth por magic link + token Bearer · checkout/portal de faturação · Vercel]]></wp:meta_value>
+            <wp:meta_value><![CDATA[JavaScript · HTML/CSS/JS vanilla · Node.js/Express (API REST) · API Anthropic (Claude) · auth por magic link · Stripe (SaaS) · Vercel]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_status</wp:meta_key>
@@ -189,15 +189,15 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_challenges</wp:meta_key>
-            <wp:meta_value><![CDATA[Fazer marketing orgânico no Reddit sem cair em spam nem violar regras de subreddits: respostas relevantes, curtas e credíveis em escala, mantendo o controlo editorial humano e evitando auto-publicação ou link-stuffing.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[O Reddit está inundado de comentários gerados por IA — slop óbvio, que ninguém respeita e que as comunidades penalizam. Mas continua a ser um dos sítios com maior intenção de compra. O desafio: ajudar product owners a participar de forma genuína e em escala, sem cair no spam — com uma pessoa sempre a decidir antes de publicar.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_solutions</wp:meta_key>
-            <wp:meta_value><![CDATA[Extensão Chrome de drafting dentro do Reddit + site institucional (hero, how-it-works, features, pricing) + área de conta com login por magic link, dashboard de plano e medidor de uso. Backend Express serve a API REST de autenticação, perfil, uso e faturação; deploy contínuo na Vercel.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Extensão Chrome de drafting dentro do Reddit, site institucional e área de conta com login por magic link, dashboard de plano e medidor de uso. Monetização SaaS com Stripe (planos e limites diários); o plano pago abre auto-discovery, voice match e direct mode.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_results</wp:meta_key>
-            <wp:meta_value><![CDATA[Projeto em pré-lançamento (repo privado, sem métricas públicas). Qualitativamente: produto funcional com proposta de valor clara (engagement orgânico assistido, anti-spam, controlo humano) e arquitetura completa ponta-a-ponta (extensão, site, auth, faturação).]]></wp:meta_value>
+            <wp:meta_value><![CDATA[A prova veio do mundo real: usei a própria extensão para promover o meu projeto How To Invest no Reddit. Mesmo com um primeiro MVP, esse canal trouxe mais de 150 utilizadores e cerca de 200 sessões (GA4) — uma das maiores fontes de tráfego do projeto. É o argumento central do VibeSell: participação genuína, com controlo humano, gera visitas reais sem queimar a marca. O produto está em pré-lançamento, com a stack SaaS completa (extensão, auth, pagamentos).]]></wp:meta_value>
         </wp:postmeta>
     </item>
 
@@ -208,8 +208,8 @@
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/project/super-portistas/</guid>
         <description></description>
-        <content:encoded><![CDATA[<p>Arquitetura modular <strong>tema + quatro plugins</strong>, separando apresentação de lógica de domínio:</p><ul><li><strong>super-portistas-wordpress-theme</strong> — apresentação (frontend HTMX + Alpine.js, sidebars contextuais, dashboard de utilizador, opções de tema). Depende do Core.</li><li><strong>super-portistas-core</strong> — domínio: REST API sp/v1, gamificação + leaderboard, prognósticos, sondagens, auth e push via Firebase, integração Brevo (double opt-in, resumos, alertas, conquistas).</li><li><strong>rss-manager</strong> — ingestão automática (WP Cron) de RSS, YouTube, X/Twitter e capas de jornais para o CPT ai_news_article, com deduplicação por hash, filtros, logs e proteção SSRF.</li><li><strong>ai-news</strong> — camada editorial de IA (Gemini): artigos pre/post-match a partir de dados de jogos, “Resumo do dia”, conteúdo curado e “Source Studio” (artigos a partir de URL/texto).</li><li><strong>api-sportmonks</strong> — ponte de dados: sincroniza jogos no CPT aps_jogo, mapeia equipas/ligas, minutos ao vivo, e helpers consumidos pelo tema e pelo AI News.</li></ul>]]></content:encoded>
-        <excerpt:encoded><![CDATA[Portal WordPress dos adeptos do FC Porto que junta agregação RSS, geração editorial por IA, dados SportMonks, gamificação e push numa só plataforma.]]></excerpt:encoded>
+        <content:encoded><![CDATA[<p>A decisão de base foi modular: um tema fino para a apresentação e quatro plugins próprios para o domínio, para que cada peça evoluísse sem partir as outras.</p><ul><li><strong>super-portistas-wordpress-theme</strong> — apresentação (frontend HTMX + Alpine.js, sidebars contextuais, dashboard de utilizador, opções de tema). Depende do Core.</li><li><strong>super-portistas-core</strong> — domínio: REST API sp/v1, gamificação + leaderboard, prognósticos, sondagens, auth e push via Firebase, integração Brevo (double opt-in, resumos, alertas, conquistas).</li><li><strong>rss-manager</strong> — ingestão automática (WP Cron) de RSS, YouTube, X/Twitter e capas de jornais para o CPT ai_news_article, com deduplicação por hash, filtros, logs e proteção SSRF.</li><li><strong>ai-news</strong> — camada editorial de IA (Gemini): artigos pre/post-match a partir de dados de jogos, “Resumo do dia”, conteúdo curado e “Source Studio” (artigos a partir de URL/texto).</li><li><strong>api-sportmonks</strong> — ponte de dados: sincroniza jogos no CPT aps_jogo, mapeia equipas/ligas, minutos ao vivo, e helpers consumidos pelo tema e pelo AI News.</li></ul>]]></content:encoded>
+        <excerpt:encoded><![CDATA[A maior comunidade de adeptos do FC Porto, agora como plataforma própria: agregação RSS, artigos por IA, dados SportMonks, gamificação e push em WordPress.]]></excerpt:encoded>
         <wp:post_id>5004</wp:post_id>
         <wp:post_date>2026-06-05 12:00:00</wp:post_date>
         <wp:post_date_gmt>2026-06-05 12:00:00</wp:post_date_gmt>
@@ -234,11 +234,11 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_date</wp:meta_key>
-            <wp:meta_value><![CDATA[2026]]></wp:meta_value>
+            <wp:meta_value><![CDATA[2014—26]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_client</wp:meta_key>
-            <wp:meta_value><![CDATA[Tema + 4 plugins · Eng · Produto]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Co-fundador · Tema + 4 plugins · Eng]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_technologies</wp:meta_key>
@@ -246,11 +246,11 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_status</wp:meta_key>
-            <wp:meta_value><![CDATA[● em produção]]></wp:meta_value>
+            <wp:meta_value><![CDATA[● em produção (comunidade em beta)]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_challenges</wp:meta_key>
-            <wp:meta_value><![CDATA[Manter um portal desportivo de alto débito com cobertura quase em tempo real (notícias, capas de jornais, vídeos, redes sociais e dados de jogos) sem trabalho manual constante, gerando conteúdo editorial consistente e fidelizando uma comunidade — tudo dentro do WordPress.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Este é o meu projeto-bebé há mais de 12 anos. Eu e o meu sócio Pedro Andrade comprámos a página de fãs no Facebook quando o mercado ainda não estava saturado; ele fê-la crescer até hoje, para mais de 400 mil seguidores — a maior comunidade de adeptos do FC Porto. Ao longo dos anos testámos, acertámos e errámos em várias versões do site. O desafio desta versão é o mais ambicioso: transformar uma audiência social gigante numa plataforma e comunidade próprias, e manter um meio desportivo de alto ritmo quase em piloto automático, sem perder qualidade editorial.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_solutions</wp:meta_key>
@@ -258,7 +258,7 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_results</wp:meta_key>
-            <wp:meta_value><![CDATA[Site em produção e ativo, com cobertura diária do FC Porto (notícias, resumos, capas, vídeos, modalidades), prognósticos e newsletter. Conjunto de plugins maduro e mantido (changelogs, testes PHPUnit, documentação de arquitetura/REST, endurecimento de segurança). Métricas de audiência não disponíveis nas fontes.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Não é um projeto novo — é uma audiência provada ao longo de uma década. Mais de 400 mil seguidores no Facebook e, no GA4 (2016–2026), mais de 515 mil utilizadores, 1,2 milhões de page views e 854 mil sessões só de social orgânico. Esta versão é a aposta madura: converter essa audiência numa comunidade própria. A camada de registo, gamificação e push está em fase de beta — primeiros 10 registos e sinais promissores — assente numa base técnica (tema + 4 plugins) madura e documentada (changelogs, testes PHPUnit, segurança).]]></wp:meta_value>
         </wp:postmeta>
     </item>
 
@@ -269,7 +269,7 @@
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/project/lotarias-pt/</guid>
         <description></description>
-        <content:encoded><![CDATA[<p>Backend sobre a plataforma low-code Base44 (entidades, funções serverless, SDK) com frontend React/Vite próprio e UI shadcn/ui. Resultados por scraping agendado (EuroMilhões/M1lhão), verificação automática das apostas guardadas e notificação por push e email (Brevo).</p><p>Leitura de talões combina OCR no cliente (web worker) com extração por LLM. Monetização via Stripe (checkout, portal, webhooks) com paywall, limites e programa de referência.</p>]]></content:encoded>
+        <content:encoded><![CDATA[<p>A decisão que destravou tudo foi usar uma plataforma low-code (Base44) como backend — entidades, funções serverless e SDK — e investir o tempo no que diferencia: um frontend React/Vite próprio e a automação. Os resultados chegam por scraping agendado; as apostas guardadas são verificadas automaticamente; e os alertas saem por push e email (Brevo).</p><p>A leitura de talões combina OCR no cliente com extração por LLM. A monetização (Stripe) traz paywall, limites e um programa de referência.</p>]]></content:encoded>
         <excerpt:encoded><![CDATA[App web para jogadores de lotaria em Portugal: gerar números, guardar apostas, verificar talões por OCR e consultar resultados, estatísticas e alertas.]]></excerpt:encoded>
         <wp:post_id>5005</wp:post_id>
         <wp:post_date>2026-06-04 12:00:00</wp:post_date>
@@ -311,7 +311,7 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_challenges</wp:meta_key>
-            <wp:meta_value><![CDATA[Entregar uma plataforma de lotarias completa para o mercado português — geração e verificação de apostas, resultados sempre atualizados, estatísticas, notificações e camada premium paga — com fiabilidade em produção e sem construir todo o backend de raiz.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Construir uma plataforma de lotarias completa para Portugal — gerar e verificar apostas, resultados sempre atualizados, estatísticas, alertas e uma camada premium — sem montar todo o backend de raiz nem comprometer a fiabilidade em produção.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_solutions</wp:meta_key>
@@ -319,7 +319,7 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_results</wp:meta_key>
-            <wp:meta_value><![CDATA[Aplicação funcional em produção com conjunto alargado de funcionalidades. Foi conduzida uma auditoria interna 360º que identificou e documentou melhorias (ex.: race condition no resgate de promo-codes, tratamento de erros/timeout no OCR) com plano de correção. Sem métricas públicas de utilização.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Aplicação funcional em produção com um conjunto alargado de funcionalidades. Foi conduzida uma auditoria interna 360º que identificou e documentou melhorias (ex.: race condition no resgate de promo-codes, tratamento de erros/timeout no OCR) com plano de correção — sinal de maturidade, não de fragilidade. Sem métricas públicas de utilização.]]></wp:meta_value>
         </wp:postmeta>
     </item>
 
@@ -330,8 +330,8 @@
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/project/readycv/</guid>
         <description></description>
-        <content:encoded><![CDATA[<p>Importação de um CV em PDF preenchido automaticamente por IA (ou preenchimento manual), templates por área, e publicação simultânea numa página pessoal com ligação personalizada e num PDF coerente.</p>]]></content:encoded>
-        <excerpt:encoded><![CDATA[Construtor de CV que gera um perfil profissional partilhável como página pessoal ou exportável em PDF, com importação por IA e revisão por créditos.]]></excerpt:encoded>
+        <content:encoded><![CDATA[<p>Peguei na plataforma de vibecoding que andava a testar (Base44) e recriei o produto para resolver o meu próprio problema — e o de quem passa pelo mesmo. Foi também uma prova de conceito do quão rápido se constrói hoje: o projeto saiu em duas a três horas, só com prompts, e ficou 100% funcional.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[Gerador de CV que entrega um currículo moderno e organizado — sem a paywall-surpresa de 99 cêntimos no momento do download.]]></excerpt:encoded>
         <wp:post_id>5006</wp:post_id>
         <wp:post_date>2026-06-03 12:00:00</wp:post_date>
         <wp:post_date_gmt>2026-06-03 12:00:00</wp:post_date_gmt>
@@ -352,19 +352,19 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_category</wp:meta_key>
-            <wp:meta_value><![CDATA[SAAS / WEB]]></wp:meta_value>
+            <wp:meta_value><![CDATA[VIBECODING / WEB]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_date</wp:meta_key>
-            <wp:meta_value><![CDATA[—]]></wp:meta_value>
+            <wp:meta_value><![CDATA[2026]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_client</wp:meta_key>
-            <wp:meta_value><![CDATA[Eng · Produto]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Conceção & Dev (Base44)]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_technologies</wp:meta_key>
-            <wp:meta_value><![CDATA[—]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Base44 (vibecoding / low-code) · construído por prompts]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_status</wp:meta_key>
@@ -372,15 +372,15 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_challenges</wp:meta_key>
-            <wp:meta_value><![CDATA[Permitir que candidatos criem rapidamente um CV profissional e uma presença online, sem fricção de subscrições e mantendo a versão sempre atualizada para recrutadores.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Nasceu de uma frustração real. A minha namorada andava a candidatar-se a empregos e quis modernizar o CV. Usámos um daqueles geradores “gratuitos” — e, no último passo, mesmo antes do download, apareceu a paywall: 99 cêntimos. Pensei: nesta era da IA, não pago isto. E se calhar mais gente tropeça no mesmo — quer um CV moderno e bem organizado e topa com um pedido de pagamento no fim.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_solutions</wp:meta_key>
-            <wp:meta_value><![CDATA[Plataforma com perfil/página pessoal indexável, exportação PDF, templates, analytics, e IA (revisão de CV com sugestões, versões adaptadas a vagas) através de um modelo de créditos sem subscrição nem renovação automática.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Preenches os dados, escolhes um template moderno e descarregas o CV pronto — sem cobrança no momento do download. Simples, bonito e direto ao objetivo.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_results</wp:meta_key>
-            <wp:meta_value><![CDATA[Produto funcional em produção com camada gratuita (perfil, PDF, templates, analytics) e funcionalidades pagas por créditos; perfis públicos partilháveis e atualizáveis.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Prova de conceito construída em 2–3 horas, apenas com prompts, e 100% funcional: gera e entrega currículos de ponta a ponta. Resolveu um problema real e imediato e fica disponível para quem procura um gerador bonito sem a armadilha do pagamento no fim. (Sem métricas de adoção.)]]></wp:meta_value>
         </wp:postmeta>
     </item>
 
@@ -391,8 +391,8 @@
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/project/up-and-go-sup/</guid>
         <description></description>
-        <content:encoded><![CDATA[<p>Tema WordPress à medida com páginas dedicadas por serviço (Stand Up Paddle, Surf) e uma página de contactos/reservas, apresentando as atividades (aulas de surf, sessões ao pôr do sol, tours de SUP no Rio Paiva com visita à Ilha dos Amores) e canais de contacto.</p>]]></content:encoded>
-        <excerpt:encoded><![CDATA[Site da escola de surf e Stand Up Paddle “Up and Go” em Azurara, Vila do Conde, com apresentação de aulas e tours e pedidos de reserva online.]]></excerpt:encoded>
+        <content:encoded><![CDATA[<p>Mais uma vez, a minha experiência de WordPress tornou a escolha óbvia: um tema à medida, com controlo total sobre o design e a estrutura — e com o SEO local no centro das decisões, porque é dele que depende um negócio de proximidade. Páginas dedicadas por serviço (Surf, Stand Up Paddle) e um fluxo de contacto/reserva direto.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[Migração de uma escola de surf e SUP do Wix para um tema WordPress à medida, com foco em SEO local e reservas online.]]></excerpt:encoded>
         <wp:post_id>5007</wp:post_id>
         <wp:post_date>2026-06-02 12:00:00</wp:post_date>
         <wp:post_date_gmt>2026-06-02 12:00:00</wp:post_date_gmt>
@@ -421,11 +421,11 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_client</wp:meta_key>
-            <wp:meta_value><![CDATA[Tema WordPress à medida · Dev]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Cliente · Tema WordPress à medida · SEO]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_technologies</wp:meta_key>
-            <wp:meta_value><![CDATA[WordPress · tema à medida (PHP)]]></wp:meta_value>
+            <wp:meta_value><![CDATA[WordPress · tema à medida (PHP) · SEO local (migração de Wix)]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_status</wp:meta_key>
@@ -433,15 +433,15 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_challenges</wp:meta_key>
-            <wp:meta_value><![CDATA[Dar presença online a uma escola náutica local, comunicar a oferta de aulas/experiências e captar reservas de clientes individuais e em grupo.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[O cliente — a escola de surf e SUP “Up and Go”, em Azurara — tinha o site no Wix e pagava caro para o manter online, com pouco controlo e fraca visibilidade. Precisava de uma presença mais barata de manter, verdadeiramente sua, e sobretudo mais encontrável por quem procura aulas e tours na zona.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_solutions</wp:meta_key>
-            <wp:meta_value><![CDATA[Website multi-página com fluxo de reservas/contacto online, descrição das experiências, localização (Praia da Azurara) e referência à certificação pela ASSUP — Associação SUP Portugal.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Website WordPress à medida, otimizado para SEO local, com as experiências bem apresentadas (aulas, sessões ao pôr do sol, tours de SUP no Rio Paiva), localização (Praia da Azurara), certificação ASSUP e um canal de contacto/reserva online.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_results</wp:meta_key>
-            <wp:meta_value><![CDATA[Escola com presença digital ativa e canal de reservas online; presença consolidada (referida em turismo local e com avaliações positivas em plataformas de terceiros).]]></wp:meta_value>
+            <wp:meta_value><![CDATA[A escola saiu de uma mensalidade alta no Wix para um site próprio, mais barato de manter e construído para ser encontrado — com presença consolidada (referida no turismo local e com avaliações positivas em plataformas de terceiros). (Sem métricas de tráfego disponíveis.)]]></wp:meta_value>
         </wp:postmeta>
     </item>
 
@@ -452,8 +452,8 @@
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/project/mvc-bio/</guid>
         <description></description>
-        <content:encoded><![CDATA[<p>Desenvolvimento colaborativo (pair-building) numa plataforma de vibecoding/low-code (Base44), com sessões de formação e mentoria sobre como conceber, construir e gerir um site nestas ferramentas — transferindo conhecimento à medida que se construía.</p>]]></content:encoded>
-        <excerpt:encoded><![CDATA[Site profissional construído em conjunto com a cliente numa plataforma de vibecoding (Base44), com formação e mentoria incluídas.]]></excerpt:encoded>
+        <content:encoded><![CDATA[<p>Nesta era da IA, propus uma solução em Base44 (vibecoding): rápida de montar, fácil de manter e sem custos pesados. Mais do que entregar e sair, mostrei-lhe o caminho — construímos uma base limpa e profissional que ela percebe e pode evoluir.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[Portfólio online de uma biotecnóloga: site limpo, moderno e profissional em Base44, com percurso académico e profissional e contacto por email.]]></excerpt:encoded>
         <wp:post_id>5008</wp:post_id>
         <wp:post_date>2026-06-01 12:00:00</wp:post_date>
         <wp:post_date_gmt>2026-06-01 12:00:00</wp:post_date_gmt>
@@ -474,7 +474,7 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_category</wp:meta_key>
-            <wp:meta_value><![CDATA[VIBECODING / MENTORIA]]></wp:meta_value>
+            <wp:meta_value><![CDATA[VIBECODING / WEB]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_date</wp:meta_key>
@@ -482,11 +482,11 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_client</wp:meta_key>
-            <wp:meta_value><![CDATA[Mentoria · Formação · Dev]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Cliente · Conceção & Dev (Base44)]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_technologies</wp:meta_key>
-            <wp:meta_value><![CDATA[Base44 (vibecoding / low-code)]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Base44 (vibecoding / low-code) · formulário de contacto por email]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_status</wp:meta_key>
@@ -494,15 +494,15 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_challenges</wp:meta_key>
-            <wp:meta_value><![CDATA[A cliente queria uma presença profissional online e, ao mesmo tempo, aprender a criar e manter o próprio site sem depender de terceiros.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[A Maria Valívia Cruz, biotecnóloga, queria uma presença profissional online — um sítio onde reunir o portefólio, o percurso académico e a experiência, e onde lhe pudessem chegar contactos.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_solutions</wp:meta_key>
-            <wp:meta_value><![CDATA[Site profissional publicado e, sobretudo, capacitação da cliente para autonomia na edição e evolução contínua do site.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Um site limpo, moderno e profissional com portefólio, histórico académico e de trabalho, e uma página de contactos que envia email diretamente para a Maria. Integrei ainda o currículo gerado no projeto ReadyCV — os dois projetos a falarem um com o outro.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_results</wp:meta_key>
-            <wp:meta_value><![CDATA[Site em produção e cliente autónoma para gerir e fazer evoluir a sua presença online. (Sem métricas.)]]></wp:meta_value>
+            <wp:meta_value><![CDATA[A Maria passou a ter um portefólio profissional online, próprio e fácil de manter, com um canal de contacto direto. Mais um exemplo de como o vibecoding entrega presença digital de qualidade, depressa e sem custos pesados. (Sem métricas.)]]></wp:meta_value>
         </wp:postmeta>
     </item>
 
