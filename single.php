@@ -39,7 +39,7 @@ while ( have_posts() ) :
             <?php
             the_content();
             wp_link_pages( array(
-                'before' => '<div class="ai-postmeta">' . esc_html__( 'Páginas:', 'atlas-theme' ) . ' ',
+                'before' => '<div class="ai-postmeta">' . esc_html( atlas_t( 'Páginas:', 'Pages:' ) ) . ' ',
                 'after'  => '</div>',
             ) );
             ?>
@@ -56,13 +56,13 @@ while ( have_posts() ) :
             if ( $ai_prev ) :
                 ?>
                 <a href="<?php echo esc_url( get_permalink( $ai_prev ) ); ?>" class="prv">
-                    <span class="lbl"><?php esc_html_e( '&larr; anterior', 'atlas-theme' ); ?></span>
+                    <span class="lbl"><?php echo esc_html( atlas_t( '← anterior', '← previous' ) ); ?></span>
                     <?php echo esc_html( get_the_title( $ai_prev ) ); ?>
                 </a>
             <?php endif; ?>
             <?php if ( $ai_next ) : ?>
                 <a href="<?php echo esc_url( get_permalink( $ai_next ) ); ?>" class="nxt">
-                    <span class="lbl"><?php esc_html_e( 'seguinte &rarr;', 'atlas-theme' ); ?></span>
+                    <span class="lbl"><?php echo esc_html( atlas_t( 'seguinte →', 'next →' ) ); ?></span>
                     <?php echo esc_html( get_the_title( $ai_next ) ); ?>
                 </a>
             <?php endif; ?>

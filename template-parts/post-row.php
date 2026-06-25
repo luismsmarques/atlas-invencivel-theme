@@ -29,6 +29,6 @@ $ai_has_thumb = has_post_thumbnail();
         </div>
         <h2 class="ai-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         <p class="ai-post-excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 28, '…' ) ); ?></p>
-        <a class="ai-post-more" href="<?php the_permalink(); ?>"><?php esc_html_e( 'ler mais', 'atlas-theme' ); ?> &rarr;</a>
+        <a class="ai-post-more" href="<?php the_permalink(); ?>"><?php atlas_te( 'ler mais', 'read more' ); ?> &rarr;</a>
     </div>
 </article>

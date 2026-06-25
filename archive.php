@@ -47,8 +47,8 @@ get_header();
         </div>
     <?php else : ?>
         <div class="ai-empty">
-            <h2><?php esc_html_e( 'Nada encontrado', 'atlas-theme' ); ?></h2>
-            <p><?php esc_html_e( 'Não há conteúdo neste arquivo.', 'atlas-theme' ); ?></p>
+            <h2><?php atlas_te( 'Nada encontrado', 'Nothing found' ); ?></h2>
+            <p><?php atlas_te( 'Não há conteúdo neste arquivo.', 'There is no content in this archive.' ); ?></p>
         </div>
     <?php endif; ?>
 
