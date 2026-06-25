@@ -1,15 +1,20 @@
 <?php
 /**
- * The header for our theme
+ * The header for our theme — Atlas Invencível 2026
  *
  * @package AtlasTheme
- * @since 1.0.0
+ * @since 2.0.0
  */
 
 // Prevent direct access
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
+
+$atlas_logo_icon = get_option( 'atlas_logo_icon', 'A' );
+$atlas_logo_text = get_option( 'atlas_logo_text', 'atlas.invencivel' );
+$atlas_custom_logo_id = get_option( 'custom_logo' );
+$atlas_contact_url = home_url( '/#contacto' );
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -17,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    
+
     <?php wp_head(); ?>
 </head>
 
@@ -26,106 +31,74 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div id="page" class="site">
 
-    <header id="masthead" class="site-header header">
-        <div class="container">
-            <div class="site-branding logo">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo-link">
+    <header id="masthead" class="site-header">
+        <div class="nav-inner">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="brand">
+                <span class="brand-mark">
                     <?php
-                    $custom_logo_id = get_option( 'custom_logo' );
-                    $logo_icon = get_option( 'atlas_logo_icon', 'A' );
-                    $logo_text = get_option( 'atlas_logo_text', get_bloginfo( 'name' ) );
-                    
-                    if ( $custom_logo_id ) {
-                        $logo = wp_get_attachment_image_src( $custom_logo_id, 'full' );
-                        if ( $logo ) {
-                            echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '" class="custom-logo">';
+                    if ( $atlas_custom_logo_id ) {
+                        $atlas_logo = wp_get_attachment_image_src( $atlas_custom_logo_id, 'full' );
+                        if ( $atlas_logo ) {
+                            echo '<img src="' . esc_url( $atlas_logo[0] ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '">';
                         }
                     } else {
-                        echo '<div class="logo-icon">' . esc_html( $logo_icon ) . '</div>';
+                        echo esc_html( $atlas_logo_icon );
                     }
                     ?>
-                    <span class="logo-text"><?php echo esc_html( $logo_text ); ?></span>
-                </a>
-            </div>
+                </span>
+                <span class="brand-name"><?php echo esc_html( $atlas_logo_text ); ?></span>
+            </a>
 
-            <nav id="site-navigation" class="main-navigation nav" role="navigation" aria-label="<?php esc_attr_e( 'Primary Navigation', 'atlas-theme' ); ?>">
+            <nav id="site-navigation" class="primary-nav" role="navigation" aria-label="<?php esc_attr_e( 'Primary Navigation', 'atlas-theme' ); ?>">
                 <?php
                 wp_nav_menu( array(
                     'theme_location' => 'primary',
                     'menu_id'        => 'primary-menu',
+                    'menu_class'     => 'menu',
                     'container'      => false,
                     'fallback_cb'    => 'atlas_theme_fallback_menu',
                     'walker'         => new Atlas_Theme_Walker_Nav_Menu(),
                 ) );
                 ?>
+                <a href="<?php echo esc_url( $atlas_contact_url ); ?>" class="nav-cta">./contacto</a>
             </nav>
 
-            <div class="header-right">
-                <div class="social-icons">
-                    <?php
-                    $linkedin_url = get_option( 'atlas_social_linkedin', '' );
-                    $twitter_url = get_option( 'atlas_social_twitter', '' );
-                    $dribbble_url = get_option( 'atlas_social_dribbble', '' );
-                    $instagram_url = get_option( 'atlas_social_instagram', '' );
-                    
-                    if ( $linkedin_url ) {
-                        echo '<a href="' . esc_url( $linkedin_url ) . '" target="_blank" rel="noopener" class="social-icon" aria-label="' . esc_attr__( 'LinkedIn', 'atlas-theme' ) . '"><i class="fab fa-linkedin-in"></i></a>';
-                    }
-                    if ( $twitter_url ) {
-                        echo '<a href="' . esc_url( $twitter_url ) . '" target="_blank" rel="noopener" class="social-icon" aria-label="' . esc_attr__( 'Twitter', 'atlas-theme' ) . '"><i class="fab fa-x-twitter"></i></a>';
-                    }
-                    if ( $dribbble_url ) {
-                        echo '<a href="' . esc_url( $dribbble_url ) . '" target="_blank" rel="noopener" class="social-icon" aria-label="' . esc_attr__( 'Dribbble', 'atlas-theme' ) . '"><i class="fab fa-dribbble"></i></a>';
-                    }
-                    if ( $instagram_url ) {
-                        echo '<a href="' . esc_url( $instagram_url ) . '" target="_blank" rel="noopener" class="social-icon" aria-label="' . esc_attr__( 'Instagram', 'atlas-theme' ) . '"><i class="fab fa-instagram"></i></a>';
-                    }
-                    ?>
-                </div>
-                
-                <button class="mobile-menu-toggle" aria-label="<?php esc_attr_e( 'Toggle mobile menu', 'atlas-theme' ); ?>" aria-expanded="false">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-            </div>
+            <button class="nav-toggle" aria-label="<?php esc_attr_e( 'Toggle menu', 'atlas-theme' ); ?>" aria-expanded="false" aria-controls="mobile-menu-overlay">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </header>
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-        <button class="mobile-menu-close" aria-label="<?php esc_attr_e( 'Close mobile menu', 'atlas-theme' ); ?>">
-            <i class="fas fa-times"></i>
-        </button>
-        <div class="mobile-menu-content">
-            <nav class="mobile-menu-nav">
-                <?php
-                wp_nav_menu( array(
-                    'theme_location' => 'primary',
-                    'menu_id'        => 'mobile-primary-menu',
-                    'container'      => false,
-                    'fallback_cb'    => 'atlas_theme_fallback_menu',
-                    'walker'         => new Atlas_Theme_Walker_Nav_Menu(),
-                ) );
-                ?>
-            </nav>
-            
-            <div class="mobile-menu-social">
-                <?php
-                if ( $linkedin_url ) {
-                    echo '<a href="' . esc_url( $linkedin_url ) . '" target="_blank" rel="noopener" class="social-icon" aria-label="' . esc_attr__( 'LinkedIn', 'atlas-theme' ) . '"><i class="fab fa-linkedin-in"></i></a>';
+        <button class="mobile-menu-close" aria-label="<?php esc_attr_e( 'Close menu', 'atlas-theme' ); ?>">[ fechar ]</button>
+        <nav class="mobile-menu-nav" aria-label="<?php esc_attr_e( 'Mobile Navigation', 'atlas-theme' ); ?>">
+            <?php
+            wp_nav_menu( array(
+                'theme_location' => 'primary',
+                'menu_id'        => 'mobile-primary-menu',
+                'menu_class'     => 'menu',
+                'container'      => false,
+                'fallback_cb'    => 'atlas_theme_fallback_menu',
+                'walker'         => new Atlas_Theme_Walker_Nav_Menu(),
+            ) );
+            ?>
+        </nav>
+        <div class="mobile-menu-social">
+            <?php
+            $atlas_socials = array(
+                'linkedin' => get_option( 'atlas_social_linkedin', 'https://www.linkedin.com/in/luismsmarques/' ),
+                'x'        => get_option( 'atlas_social_twitter', 'https://x.com/luismsmarques/' ),
+                'github'   => get_option( 'atlas_social_github', 'https://github.com/luismsmarques' ),
+            );
+            foreach ( $atlas_socials as $atlas_label => $atlas_url ) {
+                if ( ! empty( $atlas_url ) ) {
+                    echo '<a href="' . esc_url( $atlas_url ) . '" target="_blank" rel="noopener">' . esc_html( $atlas_label ) . '</a>';
                 }
-                if ( $twitter_url ) {
-                    echo '<a href="' . esc_url( $twitter_url ) . '" target="_blank" rel="noopener" class="social-icon" aria-label="' . esc_attr__( 'Twitter', 'atlas-theme' ) . '"><i class="fab fa-x-twitter"></i></a>';
-                }
-                if ( $dribbble_url ) {
-                    echo '<a href="' . esc_url( $dribbble_url ) . '" target="_blank" rel="noopener" class="social-icon" aria-label="' . esc_attr__( 'Dribbble', 'atlas-theme' ) . '"><i class="fab fa-dribbble"></i></a>';
-                }
-                if ( $instagram_url ) {
-                    echo '<a href="' . esc_url( $instagram_url ) . '" target="_blank" rel="noopener" class="social-icon" aria-label="' . esc_attr__( 'Instagram', 'atlas-theme' ) . '"><i class="fab fa-instagram"></i></a>';
-                }
-                ?>
-            </div>
+            }
+            ?>
         </div>
     </div>
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file (blog index / fallback) — Atlas Invencível 2026
+ * Search results template — Atlas Invencível 2026
  *
  * @package AtlasTheme
  * @since 2.0.0
@@ -12,18 +12,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$ai_blog_title = is_home() ? single_post_title( '', false ) : get_the_title( get_option( 'page_for_posts' ) );
-if ( empty( $ai_blog_title ) ) {
-    $ai_blog_title = __( 'Blog', 'atlas-theme' );
-}
+global $wp_query;
+$ai_found = (int) $wp_query->found_posts;
 ?>
 
 <section class="ai-page">
 
     <header class="ai-page-header">
-        <div class="ai-page-label">// BLOG.log</div>
-        <h1 class="ai-page-title"><?php echo esc_html( $ai_blog_title ); ?></h1>
-        <p class="ai-page-sub"><?php esc_html_e( 'Notas sobre engenharia, produto e o que vamos construindo.', 'atlas-theme' ); ?></p>
+        <div class="ai-page-label">// PESQUISA.grep</div>
+        <h1 class="ai-page-title">"<?php echo esc_html( get_search_query() ); ?>"</h1>
+        <div class="ai-page-sub">
+            <?php
+            printf(
+                esc_html( _n( '%s resultado encontrado.', '%s resultados encontrados.', $ai_found, 'atlas-theme' ) ),
+                esc_html( number_format_i18n( $ai_found ) )
+            );
+            ?>
+        </div>
     </header>
 
     <?php if ( have_posts() ) : ?>
@@ -47,8 +52,8 @@ if ( empty( $ai_blog_title ) ) {
         </div>
     <?php else : ?>
         <div class="ai-empty">
-            <h2><?php esc_html_e( 'Nada por aqui — ainda', 'atlas-theme' ); ?></h2>
-            <p><?php esc_html_e( 'Não há publicações de momento. Volta em breve.', 'atlas-theme' ); ?></p>
+            <h2><?php esc_html_e( 'Sem resultados', 'atlas-theme' ); ?></h2>
+            <p><?php esc_html_e( 'Tenta outros termos de pesquisa.', 'atlas-theme' ); ?></p>
             <?php get_search_form(); ?>
         </div>
     <?php endif; ?>

@@ -15,11 +15,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Fallback menu for primary navigation
  */
 function atlas_theme_fallback_menu() {
-    echo '<ul id="primary-menu" class="menu">';
-    echo '<li><a href="#home" class="nav-link active">' . esc_html__( 'Home', 'atlas-theme' ) . '</a></li>';
-    echo '<li><a href="#about" class="nav-link">' . esc_html__( 'About', 'atlas-theme' ) . '</a></li>';
-    echo '<li><a href="#projects" class="nav-link">' . esc_html__( 'Projects', 'atlas-theme' ) . '</a></li>';
-    echo '<li><a href="#contacts" class="nav-link">' . esc_html__( 'Contacts', 'atlas-theme' ) . '</a></li>';
+    $home = home_url( '/' );
+    echo '<ul class="menu">';
+    echo '<li><a class="nav-link" href="' . esc_url( $home . '#sobre' ) . '">' . esc_html__( 'sobre', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a class="nav-link" href="' . esc_url( $home . '#servicos' ) . '">' . esc_html__( 'serviços', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a class="nav-link" href="' . esc_url( $home . '#trabalho' ) . '">' . esc_html__( 'trabalho', 'atlas-theme' ) . '</a></li>';
     echo '</ul>';
 }
 
@@ -459,3 +459,69 @@ function atlas_theme_search_form( $form ) {
     return $form;
 }
 add_filter( 'get_search_form', 'atlas_theme_search_form' );
+
+/**
+ * Theme-bundled project images (fallback when no WP media is set).
+ * Looks in assets/images/projects/{slug}/ for cover.{ext} and 01..08.{ext}.
+ *
+ * @param string $slug Project post slug.
+ * @return array{cover:string, shots:string[]}
+ */
+function atlas_project_local_images( $slug ) {
+    $rel  = '/assets/images/projects/' . sanitize_file_name( $slug ) . '/';
+    $dir  = get_template_directory() . $rel;
+    $uri  = get_template_directory_uri() . $rel;
+    $exts = array( 'jpg', 'jpeg', 'png', 'webp' );
+
+    $find = function ( $name ) use ( $dir, $uri, $exts ) {
+        foreach ( $exts as $ext ) {
+            if ( file_exists( $dir . $name . '.' . $ext ) ) {
+                return $uri . $name . '.' . $ext;
+            }
+        }
+        return '';
+    };
+
+    $shots = array();
+    for ( $i = 1; $i <= 8; $i++ ) {
+        $url = $find( sprintf( '%02d', $i ) );
+        if ( $url ) {
+            $shots[] = $url;
+        }
+    }
+
+    return array(
+        'cover' => $find( 'cover' ),
+        'shots' => $shots,
+    );
+}
+
+/**
+ * Render a browser-window mockup frame around a project screenshot.
+ *
+ * @param string $img_url   Image URL.
+ * @param string $domain    Domain shown in the URL bar (e.g. howtoinvest.pro).
+ * @param string $variant   '' (cover) | 'tall' | 'short'.
+ * @param bool   $with_mark Show the "A" brand mark in the bar.
+ */
+function atlas_render_mock( $img_url, $domain = '', $variant = '', $with_mark = true ) {
+    if ( ! $img_url ) {
+        return;
+    }
+    $classes = 'cs-mock' . ( $variant ? ' cs-mock-' . $variant : ' cs-mock-cover' );
+    ?>
+    <figure class="<?php echo esc_attr( $classes ); ?>">
+        <div class="cs-mock-win">
+            <div class="cs-mock-bar">
+                <span class="cs-dots"><i></i><i></i><i></i></span>
+                <span class="cs-url">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2D5BFF" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                    <?php if ( $domain ) : ?><b><?php echo esc_html( $domain ); ?></b><span>/</span><?php endif; ?>
+                </span>
+                <?php if ( $with_mark ) : ?><span class="cs-mark">A</span><?php endif; ?>
+            </div>
+            <div class="cs-mock-screen"><img src="<?php echo esc_url( $img_url ); ?>" alt="" loading="lazy"></div>
+        </div>
+    </figure>
+    <?php
+}

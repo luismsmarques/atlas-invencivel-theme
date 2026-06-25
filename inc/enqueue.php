@@ -15,8 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Enqueue Theme Assets - SIMPLIFIED VERSION FOR DEBUGGING
  */
 function atlas_theme_enqueue_assets() {
-    // Google Fonts - TEMPORARILY USING FOR DEBUGGING
-    wp_enqueue_style( 'atlas-theme-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap', array(), null );
+    // Google Fonts — Atlas Invencível 2026 type system
+    wp_enqueue_style( 'atlas-theme-fonts', 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap', array(), null );
     
     // Font Awesome for social icons
     wp_enqueue_style( 'atlas-theme-fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', array(), '6.5.1' );
