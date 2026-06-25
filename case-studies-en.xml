@@ -20,15 +20,15 @@
     <item>
         <title>How To Invest</title>
         <link>https://atlasinvencivel.pt/en/project/how-to-invest-en/</link>
-        <pubDate>Mon, 08 Jun 2026 12:00:00 +0000</pubDate>
+        <pubDate>Mon, 08 Jun 2026 09:30:00 +0000</pubDate>
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/en/project/how-to-invest-en/</guid>
         <description></description>
         <content:encoded><![CDATA[<p>I've worked with WordPress for over 15 years, so the choice was obvious: it fit my skills and the project's needs — especially distribution. We wanted every article and every concept to be indexable and bring compounding organic traffic.</p><p>The most important architectural decision was one of trust: <strong>the rules decide (archetype + allocation); the LLM only explains.</strong> The recommendation logic is deterministic and auditable; Gemini only adds context in plain language, never choosing for you.</p><p>From there the constraints wrote themselves: output by asset class only (never named instruments), disclaimers on every result, the AI key always server-side, and GDPR (export/delete data) as a day-one priority.</p>]]></content:encoded>
         <excerpt:encoded><![CDATA[A financial-education app rebuilt from React to WordPress, with one firm principle: the rules decide the allocation; the AI only explains.]]></excerpt:encoded>
         <wp:post_id>6001</wp:post_id>
-        <wp:post_date>2026-06-08 12:00:00</wp:post_date>
-        <wp:post_date_gmt>2026-06-08 12:00:00</wp:post_date_gmt>
+        <wp:post_date>2026-06-08 09:30:00</wp:post_date>
+        <wp:post_date_gmt>2026-06-08 09:30:00</wp:post_date_gmt>
         <wp:comment_status>closed</wp:comment_status>
         <wp:ping_status>closed</wp:ping_status>
         <wp:post_name>how-to-invest-en</wp:post_name>
@@ -79,15 +79,15 @@
     <item>
         <title>ToS Summarizer</title>
         <link>https://atlasinvencivel.pt/en/project/tos-summarizer-en/</link>
-        <pubDate>Sun, 07 Jun 2026 12:00:00 +0000</pubDate>
+        <pubDate>Sun, 07 Jun 2026 09:30:00 +0000</pubDate>
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/en/project/tos-summarizer-en/</guid>
         <description></description>
         <content:encoded><![CDATA[<p>The MVP came together fast, with Cursor as co-pilot. But I soon saw the real adoption blocker: forcing each person to paste their own API key was a barrier. The goal became twofold — accessible to anyone and, above all, secure.</p><p>The “experiment” became my biggest project to date. I built the infrastructure around it: a full Vercel deploy, credit-based payments with Stripe, a secure API-key management system (the key never leaves the server) and a management dashboard. Analysis is done by Google Gemini; history and accounts live in a database.</p>]]></content:encoded>
         <excerpt:encoded><![CDATA[A Chrome extension that summarizes Terms of Service and Privacy Policies with AI — and rates the risk before you accept.]]></excerpt:encoded>
         <wp:post_id>6002</wp:post_id>
-        <wp:post_date>2026-06-07 12:00:00</wp:post_date>
-        <wp:post_date_gmt>2026-06-07 12:00:00</wp:post_date_gmt>
+        <wp:post_date>2026-06-07 09:30:00</wp:post_date>
+        <wp:post_date_gmt>2026-06-07 09:30:00</wp:post_date_gmt>
         <wp:comment_status>closed</wp:comment_status>
         <wp:ping_status>closed</wp:ping_status>
         <wp:post_name>tos-summarizer-en</wp:post_name>
@@ -138,15 +138,15 @@
     <item>
         <title>VibeSell</title>
         <link>https://atlasinvencivel.pt/en/project/vibesell-en/</link>
-        <pubDate>Sat, 06 Jun 2026 12:00:00 +0000</pubDate>
+        <pubDate>Sat, 06 Jun 2026 09:30:00 +0000</pubDate>
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/en/project/vibesell-en/</guid>
         <description></description>
         <content:encoded><![CDATA[<p>The principle is the opposite of slop: <strong>the tool suggests, the human decides.</strong> Nothing is posted automatically. An “Engage” button on threads generates three short, relevant drafts (1–3 sentences), personalized to the product and to a chosen directness level — you copy, tweak and post.</p><p>The intelligence comes from the Anthropic API (Claude). Underneath, a lean architecture: static site, Express backend with a REST API, magic-link login and Stripe payments for the SaaS model — all on Vercel, with continuous deployment and per-plan usage limits.</p>]]></content:encoded>
         <excerpt:encoded><![CDATA[A Chrome extension that, when you click “Engage” on a Reddit post, returns three human, product-personalized reply drafts — you copy, edit and post.]]></excerpt:encoded>
         <wp:post_id>6003</wp:post_id>
-        <wp:post_date>2026-06-06 12:00:00</wp:post_date>
-        <wp:post_date_gmt>2026-06-06 12:00:00</wp:post_date_gmt>
+        <wp:post_date>2026-06-06 09:30:00</wp:post_date>
+        <wp:post_date_gmt>2026-06-06 09:30:00</wp:post_date_gmt>
         <wp:comment_status>closed</wp:comment_status>
         <wp:ping_status>closed</wp:ping_status>
         <wp:post_name>vibesell-en</wp:post_name>
@@ -197,15 +197,15 @@
     <item>
         <title>Super Portistas</title>
         <link>https://atlasinvencivel.pt/en/project/super-portistas-en/</link>
-        <pubDate>Fri, 05 Jun 2026 12:00:00 +0000</pubDate>
+        <pubDate>Fri, 05 Jun 2026 09:30:00 +0000</pubDate>
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/en/project/super-portistas-en/</guid>
         <description></description>
         <content:encoded><![CDATA[<p>The base decision was modular: a thin theme for presentation and four custom plugins for the domain, so each piece could evolve without breaking the others.</p><ul><li><strong>super-portistas-wordpress-theme</strong> — presentation (HTMX + Alpine.js frontend, contextual sidebars, user dashboard, theme options). Depends on Core.</li><li><strong>super-portistas-core</strong> — domain: sp/v1 REST API, gamification + leaderboard, predictions, polls, auth and push via Firebase, Brevo integration (double opt-in, digests, alerts, achievements).</li><li><strong>rss-manager</strong> — automatic ingestion (WP Cron) of RSS, YouTube, X/Twitter and newspaper front pages into the ai_news_article CPT, with hash dedup, filters, logs and SSRF protection.</li><li><strong>ai-news</strong> — the AI editorial layer (Gemini): pre/post-match articles from match data, a “daily summary”, curated content and a “Source Studio” (articles from a URL/text).</li><li><strong>api-sportmonks</strong> — the data bridge: syncs matches into the aps_jogo CPT, maps teams/leagues, live minutes, and helpers consumed by the theme and AI News.</li></ul>]]></content:encoded>
         <excerpt:encoded><![CDATA[The largest FC Porto fan community, now as its own platform: RSS aggregation, AI-written articles, SportMonks data, gamification and push on WordPress.]]></excerpt:encoded>
         <wp:post_id>6004</wp:post_id>
-        <wp:post_date>2026-06-05 12:00:00</wp:post_date>
-        <wp:post_date_gmt>2026-06-05 12:00:00</wp:post_date_gmt>
+        <wp:post_date>2026-06-05 09:30:00</wp:post_date>
+        <wp:post_date_gmt>2026-06-05 09:30:00</wp:post_date_gmt>
         <wp:comment_status>closed</wp:comment_status>
         <wp:ping_status>closed</wp:ping_status>
         <wp:post_name>super-portistas-en</wp:post_name>
@@ -256,15 +256,15 @@
     <item>
         <title>Lotarias.pt</title>
         <link>https://atlasinvencivel.pt/en/project/lotarias-pt-en/</link>
-        <pubDate>Thu, 04 Jun 2026 12:00:00 +0000</pubDate>
+        <pubDate>Thu, 04 Jun 2026 09:30:00 +0000</pubDate>
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/en/project/lotarias-pt-en/</guid>
         <description></description>
         <content:encoded><![CDATA[<p>The decision that unlocked everything was using a low-code platform (Base44) as the backend — entities, serverless functions and SDK — and spending the time on what differentiates: a custom React/Vite frontend and the automation. Results arrive via scheduled scraping; saved bets are checked automatically; and alerts go out by push and email (Brevo).</p><p>Ticket reading combines client-side OCR with LLM extraction. Monetization (Stripe) brings a paywall, limits and a referral program.</p>]]></content:encoded>
         <excerpt:encoded><![CDATA[A web app for lottery players in Portugal: generate numbers, save bets, check tickets by OCR and follow results, stats and alerts.]]></excerpt:encoded>
         <wp:post_id>6005</wp:post_id>
-        <wp:post_date>2026-06-04 12:00:00</wp:post_date>
-        <wp:post_date_gmt>2026-06-04 12:00:00</wp:post_date_gmt>
+        <wp:post_date>2026-06-04 09:30:00</wp:post_date>
+        <wp:post_date_gmt>2026-06-04 09:30:00</wp:post_date_gmt>
         <wp:comment_status>closed</wp:comment_status>
         <wp:ping_status>closed</wp:ping_status>
         <wp:post_name>lotarias-pt-en</wp:post_name>
@@ -315,15 +315,15 @@
     <item>
         <title>ReadyCV</title>
         <link>https://atlasinvencivel.pt/en/project/readycv-en/</link>
-        <pubDate>Wed, 03 Jun 2026 12:00:00 +0000</pubDate>
+        <pubDate>Wed, 03 Jun 2026 09:30:00 +0000</pubDate>
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/en/project/readycv-en/</guid>
         <description></description>
         <content:encoded><![CDATA[<p>I took the vibecoding platform I'd been testing (Base44) and rebuilt the product to solve my own problem — and that of anyone in the same spot. It was also a proof of concept of how fast you can build today: the project came out in two to three hours, purely with prompts, and was 100% functional.</p>]]></content:encoded>
         <excerpt:encoded><![CDATA[A CV generator that delivers a modern, well-organized résumé — without the surprise 99-cent paywall at download time.]]></excerpt:encoded>
         <wp:post_id>6006</wp:post_id>
-        <wp:post_date>2026-06-03 12:00:00</wp:post_date>
-        <wp:post_date_gmt>2026-06-03 12:00:00</wp:post_date_gmt>
+        <wp:post_date>2026-06-03 09:30:00</wp:post_date>
+        <wp:post_date_gmt>2026-06-03 09:30:00</wp:post_date_gmt>
         <wp:comment_status>closed</wp:comment_status>
         <wp:ping_status>closed</wp:ping_status>
         <wp:post_name>readycv-en</wp:post_name>
@@ -374,15 +374,15 @@
     <item>
         <title>Up and Go SUP</title>
         <link>https://atlasinvencivel.pt/en/project/up-and-go-sup-en/</link>
-        <pubDate>Tue, 02 Jun 2026 12:00:00 +0000</pubDate>
+        <pubDate>Tue, 02 Jun 2026 09:30:00 +0000</pubDate>
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/en/project/up-and-go-sup-en/</guid>
         <description></description>
         <content:encoded><![CDATA[<p>Once again, my WordPress experience made the choice obvious: a custom theme, with full control over design and structure — and local SEO at the center of the decisions, because that's what a proximity business depends on. Dedicated pages per service (Surf, Stand Up Paddle) and a direct contact/booking flow.</p>]]></content:encoded>
         <excerpt:encoded><![CDATA[Migrating a surf & SUP school from Wix to a custom WordPress theme, with a focus on local SEO and online bookings.]]></excerpt:encoded>
         <wp:post_id>6007</wp:post_id>
-        <wp:post_date>2026-06-02 12:00:00</wp:post_date>
-        <wp:post_date_gmt>2026-06-02 12:00:00</wp:post_date_gmt>
+        <wp:post_date>2026-06-02 09:30:00</wp:post_date>
+        <wp:post_date_gmt>2026-06-02 09:30:00</wp:post_date_gmt>
         <wp:comment_status>closed</wp:comment_status>
         <wp:ping_status>closed</wp:ping_status>
         <wp:post_name>up-and-go-sup-en</wp:post_name>
@@ -433,15 +433,15 @@
     <item>
         <title>MVC Bio</title>
         <link>https://atlasinvencivel.pt/en/project/mvc-bio-en/</link>
-        <pubDate>Mon, 01 Jun 2026 12:00:00 +0000</pubDate>
+        <pubDate>Mon, 01 Jun 2026 09:30:00 +0000</pubDate>
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/en/project/mvc-bio-en/</guid>
         <description></description>
         <content:encoded><![CDATA[<p>In this AI era, I proposed a Base44 (vibecoding) solution: quick to build, easy to maintain and without heavy costs. More than delivering and leaving, I showed her the way — we built a clean, professional base she understands and can evolve.</p>]]></content:encoded>
         <excerpt:encoded><![CDATA[A biotechnologist's online portfolio: a clean, modern, professional Base44 site, with academic and professional background and email contact.]]></excerpt:encoded>
         <wp:post_id>6008</wp:post_id>
-        <wp:post_date>2026-06-01 12:00:00</wp:post_date>
-        <wp:post_date_gmt>2026-06-01 12:00:00</wp:post_date_gmt>
+        <wp:post_date>2026-06-01 09:30:00</wp:post_date>
+        <wp:post_date_gmt>2026-06-01 09:30:00</wp:post_date_gmt>
         <wp:comment_status>closed</wp:comment_status>
         <wp:ping_status>closed</wp:ping_status>
         <wp:post_name>mvc-bio-en</wp:post_name>
