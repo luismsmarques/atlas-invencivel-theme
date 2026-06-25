@@ -88,6 +88,8 @@
     border: 1px solid var(--ai-line);
     padding: 10px;
     margin-bottom: -1px;
+    background: #0C1220;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .45);
 }
 
 .cs-cover img {
@@ -237,6 +239,8 @@
 .cs-shot {
     border: 1px solid var(--ai-line);
     padding: 10px;
+    background: #0C1220;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .45);
 }
 
 .cs-shot img { width: 100%; display: block; object-fit: cover; }
