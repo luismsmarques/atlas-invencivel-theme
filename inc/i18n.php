@@ -113,6 +113,35 @@ function atlas_page_url( $candidates ) {
 }
 
 /**
+ * Make a translated page inherit the page template of its source-language
+ * counterpart. Without this, a page created/translated in Polylang without an
+ * explicitly-assigned template (e.g. the EN Contact page) falls back to the
+ * generic page.php and loses the Contact form + sidebar.
+ */
+add_filter( 'template_include', function ( $template ) {
+    if ( ! is_page() || ! function_exists( 'pll_get_post' ) || ! function_exists( 'pll_default_language' ) ) {
+        return $template;
+    }
+    $id = get_queried_object_id();
+    // Page already has its own template — leave it alone.
+    if ( ! $id || get_page_template_slug( $id ) ) {
+        return $template;
+    }
+    $source = pll_get_post( $id, pll_default_language() );
+    if ( ! $source || $source === $id ) {
+        return $template;
+    }
+    $slug = get_page_template_slug( $source );
+    if ( $slug ) {
+        $located = locate_template( $slug );
+        if ( $located ) {
+            return $located;
+        }
+    }
+    return $template;
+}, 99 );
+
+/**
  * Render the Polylang language switcher (no-op if Polylang is inactive
  * or only one language exists).
  */
