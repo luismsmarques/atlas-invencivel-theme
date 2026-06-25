@@ -85,29 +85,29 @@ Mais do que adoção, este projeto provou capacidade. Foi o meu primeiro produto
 - **categoria**: IA / GROWTH
 - **ano**: 2026
 - **função**: Estratégia · Eng · Produto
-- **stack**: JavaScript · HTML/CSS/JS vanilla · Node.js/Express (API REST) · auth por magic link + token Bearer · checkout/portal de faturação · Vercel
+- **stack**: JavaScript · HTML/CSS/JS vanilla · Node.js/Express (API REST) · API Anthropic (Claude) · auth por magic link · Stripe (SaaS) · Vercel
 - **estado**: ● pré-lançamento
 - **resumo**: Extensão Chrome que, ao clicar em “Engage” num post do Reddit, devolve três rascunhos de resposta humanos e personalizados ao produto — copia, edita e publica tu.
 
 **Desafio**
 
-Marketing orgânico no Reddit é um campo minado: uma resposta que cheire a spam queima a marca e viola as regras do subreddit. O desafio era ajudar a participar em escala sem perder a credibilidade nem o controlo humano.
+O Reddit está inundado de comentários gerados por IA — slop óbvio, que ninguém respeita e que as comunidades penalizam. Mas continua a ser um dos sítios com maior intenção de compra. O desafio: ajudar product owners a participar de forma genuína e em escala, sem cair no spam — com uma pessoa sempre a decidir antes de publicar.
 
 **Abordagem**
 
-O princípio veio primeiro: **a ferramenta sugere, o humano decide.** Nada é publicado automaticamente. Um botão “Engage” nas threads gera três rascunhos curtos (1–3 frases) a partir do contexto do produto e de um nível de diretividade à escolha.
+O princípio é o oposto do slop: **a ferramenta sugere, o humano decide.** Nada é publicado automaticamente. Um botão “Engage” nas threads gera três rascunhos curtos e relevantes (1–3 frases), personalizados ao produto e a um nível de diretividade à escolha — copias, ajustas e publicas tu.
 
-Por baixo, uma arquitetura enxuta: site estático, backend Express com API REST, login por magic link e faturação no padrão Stripe — tudo na Vercel, com deploy contínuo. Modelo freemium com limites diários para alinhar valor e custo de IA.
+A inteligência vem da API da Anthropic (Claude). Por baixo, uma arquitetura enxuta: site estático, backend Express com API REST, login por magic link e pagamentos Stripe para o modelo SaaS — tudo na Vercel, com deploy contínuo e limites de uso por plano.
 
 **Solução**
 
-Extensão Chrome de drafting dentro do Reddit, site institucional e área de conta com login por magic link, dashboard de plano e medidor de uso. O plano pago abre auto-discovery, voice match e direct mode.
+Extensão Chrome de drafting dentro do Reddit, site institucional e área de conta com login por magic link, dashboard de plano e medidor de uso. Monetização SaaS com Stripe (planos e limites diários); o plano pago abre auto-discovery, voice match e direct mode.
 
 **Resultados**
 
-Em pré-lançamento, com a arquitetura completa de ponta a ponta (extensão, site, auth, faturação) e um posicionamento claro: engagement orgânico assistido, anti-spam, com o humano sempre no comando. (Sem métricas públicas.)
+A prova veio do mundo real: usei a própria extensão para promover o meu projeto How To Invest no Reddit. Mesmo com um primeiro MVP, esse canal trouxe mais de 150 utilizadores e cerca de 200 sessões (GA4) — uma das maiores fontes de tráfego do projeto. É o argumento central do VibeSell: participação genuína, com controlo humano, gera visitas reais sem queimar a marca. O produto está em pré-lançamento, com a stack SaaS completa (extensão, auth, pagamentos).
 
-**Notas**: Repo privado. Stack do backend inferida de cabeçalhos HTTP e chamadas de API. Disclaimer de não-afiliação com o Reddit.
+**Notas**: IA via API Anthropic (Claude). Tração demonstrada por um teste real a promover o How To Invest (GA4: 150+ utilizadores / ~200 sessões via Reddit). Repo privado.
 
 ---
 
