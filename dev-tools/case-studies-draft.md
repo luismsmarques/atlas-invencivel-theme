@@ -52,29 +52,29 @@ Online desde junho de 2025 (começou em Base44, hoje em desenvolvimento próprio
 - **categoria**: IA / WEB
 - **ano**: 2025
 - **função**: Estratégia · Eng · Produto
-- **stack**: JavaScript · Chrome Extension (Manifest V3) · Node.js · Express · PostgreSQL · Google Gemini · Stripe · JWT · Vercel
+- **stack**: JavaScript · Chrome Extension (Manifest V3) · Node.js · Express · Supabase/PostgreSQL · Google Gemini · Stripe · JWT · Cursor (IA) · Vercel
 - **estado**: ● em produção
 - **resumo**: Extensão Chrome que resume Termos de Serviço e Políticas de Privacidade com IA — e classifica o risco antes de aceitares.
 
 **Desafio**
 
-Ninguém lê os Termos de Serviço — são longos, densos e escritos em jurídico. Aceitamos cláusulas sobre os nossos dados sem perceber o que estamos a dar. O desafio era fechar esse fosso de legibilidade no momento e no sítio onde ele acontece: o browser, mesmo antes do clique em “aceitar”.
+Tudo começou num post do Pedro Fonseca: e se a IA resumisse os Termos de Serviço? A ideia ficou-me — porque não trazer isso para o browser, a um clique? Havia dois desafios. O do utilizador: ninguém lê os ToS (longos, densos, jurídicos) e aceitamos cláusulas sobre os nossos dados às cegas. E o meu, pessoal: este foi o meu primeiro projeto construído inteiramente com IA, e quis usá-lo para provar que dominava uma integração completa de ponta a ponta — pagamentos, gestão segura de chaves e deploy real em produção.
 
 **Abordagem**
 
-A primeira decisão foi de formato: em vez de mais um site, uma extensão Chrome (Manifest V3) que aparece onde o problema está. O trabalho pesado fica no servidor — um backend Node/Express na Vercel — para a extensão ser leve e a chave da IA nunca sair do servidor.
+O MVP nasceu depressa, com o Cursor como co-piloto. Mas percebi cedo o verdadeiro travão à adoção: obrigar cada pessoa a colar a sua própria chave de API era uma barreira. A meta passou a ser dupla — acessível a qualquer pessoa e, acima de tudo, seguro.
 
-A análise é delegada ao Google Gemini; o histórico, as contas e os créditos vivem em PostgreSQL. A monetização (Stripe) e a autenticação (JWT) entraram cedo, e a v1.3.0 fez uma limpeza de segurança — fora credenciais no código, tudo por variáveis de ambiente.
+O “experimento” tornou-se o meu maior projeto até à data. Construí a infraestrutura à volta disso: deploy completo na Vercel, pagamentos por créditos com Stripe, um sistema de gestão segura das chaves de API (a chave nunca sai do servidor) e um dashboard de gestão. A análise é feita pelo Google Gemini; o histórico e as contas vivem em base de dados.
 
 **Solução**
 
-Sobre qualquer ToS ou política, devolve um resumo estruturado (visão geral, pontos-chave, alertas de privacidade) e classifica risco, complexidade e boas práticas de 1 a 10, com indicadores tipo semáforo. Escolhes o foco (privacidade, termos ou equilibrado), guardas histórico com filtros e exportas em JSON/CSV/TXT. O sistema de créditos aceita a API partilhada ou a tua própria chave Gemini.
+Sobre qualquer ToS ou política, devolve um resumo estruturado (visão geral, pontos-chave, alertas de privacidade) e classifica risco, complexidade e boas práticas de 1 a 10, com indicadores tipo semáforo. Escolhes o foco (privacidade, termos ou equilibrado), guardas histórico com filtros e exportas em JSON/CSV/TXT. Um sistema de créditos com Stripe e gestão segura de chaves deixa usar a API partilhada — sem cada pessoa configurar a sua — ou a própria chave Gemini. Tudo coroado por um dashboard de gestão.
 
 **Resultados**
 
-Em produção e publicada na Chrome Web Store, com backend a correr na Vercel. Transforma um documento que ninguém lê num resumo de risco em segundos, sem tirar o utilizador do contexto. (Sem métricas públicas de adoção verificadas.)
+Mais do que adoção, este projeto provou capacidade. Foi o meu primeiro produto construído inteiramente com IA e a primeira vez que liguei, de ponta a ponta, pagamentos (Stripe), gestão segura de chaves de API e deploy em produção na Vercel. Está live e publicado na Chrome Web Store. A tração foi propositadamente secundária — o objetivo era provar o “como”, não escalar o “quê”. O que ficou foi o método que passei a usar em tudo o que vim a construir depois: validar a ideia, construir com IA como co-piloto e levar à produção com segurança.
 
-**Notas**: Licença do repo "Other". Função inferida (projeto solo Atlas Invencível).
+**Notas**: Primeiro projeto construído inteiramente com IA (Cursor como co-piloto), inspirado num post de Pedro Fonseca. Armazenamento em Supabase/Postgres (a confirmar). GA4 mostra tração inicial modesta — projeto de prova de capacidade, não de escala.
 
 ---
 
