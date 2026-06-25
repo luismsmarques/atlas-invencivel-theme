@@ -221,6 +221,15 @@ if ( $atlas_cv->have_posts() ) {
 </section>
 
 <!-- ============ CONTACT ============ -->
+<?php
+// Botão "enviar" → página de Contacto (na língua ativa); fallback para mailto.
+$atlas_contact_page = function_exists( 'atlas_page_url' )
+    ? atlas_page_url( array( 'contacto', 'contact', 'contact-2', 'contactos' ) )
+    : '';
+if ( ! $atlas_contact_page || ( function_exists( 'atlas_home_url' ) && $atlas_contact_page === atlas_home_url( '/' ) ) ) {
+    $atlas_contact_page = 'mailto:' . $atlas_email;
+}
+?>
 <section id="contacto" class="ai-contact">
     <div class="ai-label" style="margin-bottom:28px;"><?php atlas_te( '// CONTACTO.exec', '// CONTACT.exec' ); ?></div>
     <h2><?php atlas_te( 'Vamos construir algo invencível.', "Let's build something invincible." ); ?></h2>
@@ -228,7 +237,7 @@ if ( $atlas_cv->have_posts() ) {
         <span class="prompt">$</span>
         <a href="mailto:<?php echo esc_attr( $atlas_email ); ?>" class="mail"><?php echo esc_html( $atlas_email ); ?></a>
         <span class="ai-caret" style="height:17px;"></span>
-        <a href="mailto:<?php echo esc_attr( $atlas_email ); ?>" class="ai-btn ai-btn-primary"><?php atlas_te( 'enviar', 'send' ); ?> &rarr;</a>
+        <a href="<?php echo esc_url( $atlas_contact_page ); ?>" class="ai-btn ai-btn-primary"><?php atlas_te( 'enviar', 'send' ); ?> &rarr;</a>
     </div>
 </section>
 
