@@ -217,28 +217,28 @@ Prova de conceito construída em 2–3 horas, apenas com prompts, e 100% funcion
 - **repo**: —
 - **categoria**: WORDPRESS / WEBSITE
 - **ano**: —
-- **função**: Tema WordPress à medida · Dev
-- **stack**: WordPress · tema à medida (PHP)
+- **função**: Cliente · Tema WordPress à medida · SEO
+- **stack**: WordPress · tema à medida (PHP) · SEO local (migração de Wix)
 - **estado**: ● em produção
-- **resumo**: Site da escola de surf e Stand Up Paddle “Up and Go” em Azurara, Vila do Conde, com apresentação de aulas e tours e pedidos de reserva online.
+- **resumo**: Migração de uma escola de surf e SUP do Wix para um tema WordPress à medida, com foco em SEO local e reservas online.
 
 **Desafio**
 
-Uma escola de surf e SUP precisava de existir online: comunicar as experiências e captar reservas, sem depender de plataformas de terceiros nem de construtores fechados.
+O cliente — a escola de surf e SUP “Up and Go”, em Azurara — tinha o site no Wix e pagava caro para o manter online, com pouco controlo e fraca visibilidade. Precisava de uma presença mais barata de manter, verdadeiramente sua, e sobretudo mais encontrável por quem procura aulas e tours na zona.
 
 **Abordagem**
 
-Optei por um tema WordPress à medida — controlo total sobre o design e a estrutura, e autonomia para a escola gerir o conteúdo. Páginas por serviço (Surf, Stand Up Paddle) e um fluxo de contacto/reserva direto, a apresentar as experiências (aulas, sessões ao pôr do sol, tours de SUP no Rio Paiva com visita à Ilha dos Amores).
+Mais uma vez, a minha experiência de WordPress tornou a escolha óbvia: um tema à medida, com controlo total sobre o design e a estrutura — e com o SEO local no centro das decisões, porque é dele que depende um negócio de proximidade. Páginas dedicadas por serviço (Surf, Stand Up Paddle) e um fluxo de contacto/reserva direto.
 
 **Solução**
 
-Website multi-página com fluxo de reservas/contacto online, descrição das experiências, localização (Praia da Azurara) e referência à certificação pela ASSUP — Associação SUP Portugal.
+Website WordPress à medida, otimizado para SEO local, com as experiências bem apresentadas (aulas, sessões ao pôr do sol, tours de SUP no Rio Paiva), localização (Praia da Azurara), certificação ASSUP e um canal de contacto/reserva online.
 
 **Resultados**
 
-Escola com presença digital ativa e canal de reservas online; presença consolidada (referida em turismo local e com avaliações positivas em plataformas de terceiros).
+A escola saiu de uma mensalidade alta no Wix para um site próprio, mais barato de manter e construído para ser encontrado — com presença consolidada (referida no turismo local e com avaliações positivas em plataformas de terceiros). (Sem métricas de tráfego disponíveis.)
 
-**Notas**: Tema WordPress à medida (confirmado pelo Luís).
+**Notas**: Projeto para cliente (escola de surf/SUP). Migração de Wix para WordPress à medida, com foco em SEO local. Ano a confirmar.
 
 ---
 

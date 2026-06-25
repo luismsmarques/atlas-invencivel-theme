@@ -391,8 +391,8 @@
         <dc:creator><![CDATA[admin]]></dc:creator>
         <guid isPermaLink="false">https://atlasinvencivel.pt/project/up-and-go-sup/</guid>
         <description></description>
-        <content:encoded><![CDATA[<p>Optei por um tema WordPress à medida — controlo total sobre o design e a estrutura, e autonomia para a escola gerir o conteúdo. Páginas por serviço (Surf, Stand Up Paddle) e um fluxo de contacto/reserva direto, a apresentar as experiências (aulas, sessões ao pôr do sol, tours de SUP no Rio Paiva com visita à Ilha dos Amores).</p>]]></content:encoded>
-        <excerpt:encoded><![CDATA[Site da escola de surf e Stand Up Paddle “Up and Go” em Azurara, Vila do Conde, com apresentação de aulas e tours e pedidos de reserva online.]]></excerpt:encoded>
+        <content:encoded><![CDATA[<p>Mais uma vez, a minha experiência de WordPress tornou a escolha óbvia: um tema à medida, com controlo total sobre o design e a estrutura — e com o SEO local no centro das decisões, porque é dele que depende um negócio de proximidade. Páginas dedicadas por serviço (Surf, Stand Up Paddle) e um fluxo de contacto/reserva direto.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[Migração de uma escola de surf e SUP do Wix para um tema WordPress à medida, com foco em SEO local e reservas online.]]></excerpt:encoded>
         <wp:post_id>5007</wp:post_id>
         <wp:post_date>2026-06-02 12:00:00</wp:post_date>
         <wp:post_date_gmt>2026-06-02 12:00:00</wp:post_date_gmt>
@@ -421,11 +421,11 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_client</wp:meta_key>
-            <wp:meta_value><![CDATA[Tema WordPress à medida · Dev]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Cliente · Tema WordPress à medida · SEO]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_technologies</wp:meta_key>
-            <wp:meta_value><![CDATA[WordPress · tema à medida (PHP)]]></wp:meta_value>
+            <wp:meta_value><![CDATA[WordPress · tema à medida (PHP) · SEO local (migração de Wix)]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_status</wp:meta_key>
@@ -433,15 +433,15 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_challenges</wp:meta_key>
-            <wp:meta_value><![CDATA[Uma escola de surf e SUP precisava de existir online: comunicar as experiências e captar reservas, sem depender de plataformas de terceiros nem de construtores fechados.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[O cliente — a escola de surf e SUP “Up and Go”, em Azurara — tinha o site no Wix e pagava caro para o manter online, com pouco controlo e fraca visibilidade. Precisava de uma presença mais barata de manter, verdadeiramente sua, e sobretudo mais encontrável por quem procura aulas e tours na zona.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_solutions</wp:meta_key>
-            <wp:meta_value><![CDATA[Website multi-página com fluxo de reservas/contacto online, descrição das experiências, localização (Praia da Azurara) e referência à certificação pela ASSUP — Associação SUP Portugal.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Website WordPress à medida, otimizado para SEO local, com as experiências bem apresentadas (aulas, sessões ao pôr do sol, tours de SUP no Rio Paiva), localização (Praia da Azurara), certificação ASSUP e um canal de contacto/reserva online.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_results</wp:meta_key>
-            <wp:meta_value><![CDATA[Escola com presença digital ativa e canal de reservas online; presença consolidada (referida em turismo local e com avaliações positivas em plataformas de terceiros).]]></wp:meta_value>
+            <wp:meta_value><![CDATA[A escola saiu de uma mensalidade alta no Wix para um site próprio, mais barato de manter e construído para ser encontrado — com presença consolidada (referida no turismo local e com avaliações positivas em plataformas de terceiros). (Sem métricas de tráfego disponíveis.)]]></wp:meta_value>
         </wp:postmeta>
     </item>
 
