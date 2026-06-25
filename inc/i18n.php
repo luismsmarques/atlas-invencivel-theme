@@ -55,23 +55,50 @@ function atlas_home_url( $path = '/' ) {
 }
 
 /**
- * Permalink of a page in the CURRENT language (Polylang-aware).
+ * Find a page by a list of candidate slugs OR titles (any language).
  *
- * Pass one or more candidate slugs (PT and/or EN). The first page found is
- * resolved to its translation in the active language. Returns the home URL
- * if no matching page exists.
- *
- * @param string|array $slugs Candidate page slugs.
- * @return string
+ * @param string|array $candidates Slugs and/or titles.
+ * @return WP_Post|null
  */
-function atlas_page_url( $slugs ) {
-    $page = null;
-    foreach ( (array) $slugs as $slug ) {
-        $page = get_page_by_path( $slug );
+function atlas_find_page( $candidates ) {
+    // 1) Match by slug (sanitized, so titles passed in also work as slugs).
+    foreach ( (array) $candidates as $c ) {
+        $page = get_page_by_path( sanitize_title( $c ) );
         if ( $page ) {
-            break;
+            return $page;
         }
     }
+    // 2) Fallback: match by exact title (covers slugs that don't follow the
+    //    title, e.g. WordPress "-2" suffixes when a slug was already taken).
+    foreach ( (array) $candidates as $c ) {
+        $q = new WP_Query( array(
+            'post_type'        => 'page',
+            'title'            => $c,
+            'posts_per_page'   => 1,
+            'no_found_rows'    => true,
+            'post_status'      => 'publish',
+            'suppress_filters' => false,
+            'lang'             => '', // search across all languages
+        ) );
+        if ( ! empty( $q->posts ) ) {
+            return $q->posts[0];
+        }
+    }
+    return null;
+}
+
+/**
+ * Permalink of a page in the CURRENT language (Polylang-aware).
+ *
+ * Pass one or more candidate slugs and/or titles (PT and/or EN). The first
+ * page found is resolved to its translation in the active language. Returns
+ * the home URL if no matching page exists.
+ *
+ * @param string|array $candidates Candidate page slugs and/or titles.
+ * @return string
+ */
+function atlas_page_url( $candidates ) {
+    $page = atlas_find_page( $candidates );
     if ( ! $page ) {
         return atlas_home_url( '/' );
     }

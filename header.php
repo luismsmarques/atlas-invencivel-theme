@@ -14,7 +14,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 $atlas_logo_icon = get_option( 'atlas_logo_icon', 'A' );
 $atlas_logo_text = get_option( 'atlas_logo_text', 'atlas.invencivel' );
 $atlas_custom_logo_id = get_option( 'custom_logo' );
-$atlas_contact_url = atlas_home_url( '/#contacto' );
+// Aponta para a PÁGINA de contacto (na língua ativa); recai na secção
+// #contacto da homepage se a página não existir.
+$atlas_contact_url = function_exists( 'atlas_page_url' )
+    ? atlas_page_url( array( 'contacto', 'contact', 'contact-2', 'contactos' ) )
+    : home_url( '/#contacto' );
+if ( ! $atlas_contact_url || $atlas_contact_url === atlas_home_url( '/' ) ) {
+    $atlas_contact_url = atlas_home_url( '/#contacto' );
+}
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>

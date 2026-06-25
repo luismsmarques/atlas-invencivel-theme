@@ -33,15 +33,15 @@ $atlas_footer_socials = array(
         $atlas_footer_candidates = array(
             array(
                 'label' => atlas_t( 'Contacto', 'Contact' ),
-                'slugs' => array( 'contacto', 'contact', 'contact-2' ),
+                'slugs' => array( 'contacto', 'contact', 'contact-2', 'contactos', 'Contacto', 'Contact' ),
             ),
             array(
                 'label' => atlas_t( 'Termos e Condições', 'Terms & Conditions' ),
-                'slugs' => array( 'termos-e-condicoes', 'terms-and-conditions', 'terms-conditions', 'termos' ),
+                'slugs' => array( 'termos-e-condicoes', 'terms-and-conditions', 'terms-conditions', 'termos', 'Termos e Condições', 'Terms and Conditions', 'Terms & Conditions' ),
             ),
             array(
                 'label' => atlas_t( 'Privacidade', 'Privacy' ),
-                'slugs' => array( 'politica-de-privacidade', 'privacy-policy', 'privacidade' ),
+                'slugs' => array( 'politica-de-privacidade', 'privacy-policy', 'privacidade', 'Política de Privacidade', 'Privacy Policy' ),
             ),
         );
         foreach ( $atlas_footer_candidates as $atlas_c ) {
