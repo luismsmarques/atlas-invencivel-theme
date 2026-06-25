@@ -46,6 +46,20 @@ while ( have_posts() ) :
         }
     }
 
+    // Theme-bundled image fallback (assets/images/projects/{slug}/).
+    $cs_local = atlas_project_local_images( get_post_field( 'post_name', $cs_id ) );
+
+    // Cover: featured image first, then local cover.
+    $cs_cover_url = has_post_thumbnail() ? get_the_post_thumbnail_url( $cs_id, 'atlas-project-large' ) : $cs_local['cover'];
+
+    // Gallery: WP gallery first, then local shots.
+    if ( empty( $cs_gallery_urls ) ) {
+        $cs_gallery_urls = $cs_local['shots'];
+    }
+
+    // Domain shown in the browser-mockup bar.
+    $cs_domain = $cs_url ? preg_replace( '#^www\.#', '', (string) wp_parse_url( $cs_url, PHP_URL_HOST ) ) : '';
+
     // Case number based on menu order / fallback to a short hash of the ID.
     $cs_number = get_post_field( 'menu_order', $cs_id );
     $cs_number = $cs_number ? (int) $cs_number : ( $cs_id % 1000 );
@@ -72,8 +86,8 @@ while ( have_posts() ) :
                 <p class="cs-hero-lead"><?php echo esc_html( get_the_excerpt() ); ?></p>
             <?php endif; ?>
 
-            <?php if ( has_post_thumbnail() ) : ?>
-                <div class="cs-cover"><?php the_post_thumbnail( 'atlas-project-large' ); ?></div>
+            <?php if ( $cs_cover_url ) : ?>
+                <div class="cs-cover-wrap"><?php atlas_render_mock( $cs_cover_url, $cs_domain, '', true ); ?></div>
             <?php endif; ?>
         </header>
 
@@ -127,9 +141,7 @@ while ( have_posts() ) :
                 <?php endif; ?>
 
                 <?php if ( ! empty( $cs_gallery_urls ) ) : ?>
-                    <div class="cs-shot tall">
-                        <img src="<?php echo esc_url( $cs_gallery_urls[0] ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" loading="lazy">
-                    </div>
+                    <?php atlas_render_mock( $cs_gallery_urls[0], $cs_domain, 'tall', false ); ?>
                     <?php
                     $cs_rest = array_slice( $cs_gallery_urls, 1 );
                     if ( ! empty( $cs_rest ) ) :
@@ -138,9 +150,7 @@ while ( have_posts() ) :
                             ?>
                             <div class="cs-shots-2">
                                 <?php foreach ( $cs_pair as $cs_pair_url ) : ?>
-                                    <div>
-                                        <div class="cs-shot short"><img src="<?php echo esc_url( $cs_pair_url ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" loading="lazy"></div>
-                                    </div>
+                                    <div><?php atlas_render_mock( $cs_pair_url, $cs_domain, 'short', false ); ?></div>
                                 <?php endforeach; ?>
                             </div>
                         <?php
