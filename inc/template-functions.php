@@ -15,11 +15,12 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Fallback menu for primary navigation
  */
 function atlas_theme_fallback_menu() {
-    $home = home_url( '/' );
+    $home = function_exists( 'atlas_home_url' ) ? atlas_home_url( '/' ) : home_url( '/' );
+    $t    = function_exists( 'atlas_t' ) ? 'atlas_t' : null;
     echo '<ul class="menu">';
-    echo '<li><a class="nav-link" href="' . esc_url( $home . '#sobre' ) . '">' . esc_html__( 'sobre', 'atlas-theme' ) . '</a></li>';
-    echo '<li><a class="nav-link" href="' . esc_url( $home . '#servicos' ) . '">' . esc_html__( 'serviços', 'atlas-theme' ) . '</a></li>';
-    echo '<li><a class="nav-link" href="' . esc_url( $home . '#trabalho' ) . '">' . esc_html__( 'trabalho', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a class="nav-link" href="' . esc_url( $home . '#sobre' ) . '">' . esc_html( $t ? atlas_t( 'sobre', 'about' ) : 'sobre' ) . '</a></li>';
+    echo '<li><a class="nav-link" href="' . esc_url( $home . '#servicos' ) . '">' . esc_html( $t ? atlas_t( 'serviços', 'services' ) : 'serviços' ) . '</a></li>';
+    echo '<li><a class="nav-link" href="' . esc_url( $home . '#trabalho' ) . '">' . esc_html( $t ? atlas_t( 'trabalho', 'work' ) : 'trabalho' ) . '</a></li>';
     echo '</ul>';
 }
 
@@ -78,9 +79,15 @@ function atlas_theme_footer_about_fallback_menu() {
  * Fallback menu for footer legal navigation
  */
 function atlas_theme_footer_legal_fallback_menu() {
+    if ( function_exists( 'atlas_page_url' ) ) {
+        $privacy = atlas_page_url( array( 'privacy-policy', 'politica-de-privacidade' ) );
+        $terms   = atlas_page_url( array( 'terms-conditions', 'terms-and-conditions', 'termos-e-condicoes' ) );
+        echo '<a href="' . esc_url( $privacy ) . '">' . esc_html( atlas_t( 'Política de Privacidade', 'Privacy Policy' ) ) . '</a>';
+        echo '<a href="' . esc_url( $terms ) . '">' . esc_html( atlas_t( 'Termos e Condições', 'Terms & Conditions' ) ) . '</a>';
+        return;
+    }
     echo '<a href="/privacy-policy/">' . esc_html__( 'Privacy Policy', 'atlas-theme' ) . '</a>';
     echo '<a href="/terms-conditions/">' . esc_html__( 'Terms & Conditions', 'atlas-theme' ) . '</a>';
-    echo '<a href="/code-conduct/">' . esc_html__( 'Code of Conduct', 'atlas-theme' ) . '</a>';
 }
 
 /**
