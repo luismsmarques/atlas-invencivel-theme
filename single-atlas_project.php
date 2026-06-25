@@ -144,18 +144,21 @@ while ( have_posts() ) :
                     <?php atlas_render_mock( $cs_gallery_urls[0], $cs_domain, 'tall', false ); ?>
                     <?php
                     $cs_rest = array_slice( $cs_gallery_urls, 1 );
-                    if ( ! empty( $cs_rest ) ) :
-                        $cs_pairs = array_chunk( $cs_rest, 2 );
-                        foreach ( $cs_pairs as $cs_pair ) :
-                            ?>
-                            <div class="cs-shots-2">
-                                <?php foreach ( $cs_pair as $cs_pair_url ) : ?>
-                                    <div><?php atlas_render_mock( $cs_pair_url, $cs_domain, 'short', false ); ?></div>
-                                <?php endforeach; ?>
-                            </div>
-                        <?php
-                        endforeach;
-                    endif;
+                    if ( ! empty( $cs_rest ) ) {
+                        foreach ( array_chunk( $cs_rest, 2 ) as $cs_pair ) {
+                            if ( count( $cs_pair ) === 1 ) {
+                                atlas_render_mock( $cs_pair[0], $cs_domain, 'tall', false );
+                            } else {
+                                echo '<div class="cs-shots-2">';
+                                foreach ( $cs_pair as $cs_pair_url ) {
+                                    echo '<div>';
+                                    atlas_render_mock( $cs_pair_url, $cs_domain, 'short', false );
+                                    echo '</div>';
+                                }
+                                echo '</div>';
+                            }
+                        }
+                    }
                     ?>
                 <?php endif; ?>
             </section>
