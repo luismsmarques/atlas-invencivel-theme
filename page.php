@@ -30,7 +30,7 @@ while ( have_posts() ) :
             <?php
             the_content();
             wp_link_pages( array(
-                'before' => '<div class="ai-postmeta">' . esc_html__( 'Páginas:', 'atlas-theme' ) . ' ',
+                'before' => '<div class="ai-postmeta">' . esc_html( atlas_t( 'Páginas:', 'Pages:' ) ) . ' ',
                 'after'  => '</div>',
             ) );
             ?>

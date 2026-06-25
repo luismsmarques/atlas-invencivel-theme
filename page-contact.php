@@ -27,9 +27,9 @@ $ai_socials = array(
 <section class="ai-contact-page">
 
     <header class="ai-page-header">
-        <div class="ai-page-label">// CONTACTO.exec</div>
-        <h1 class="ai-page-title"><?php esc_html_e( 'Vamos construir algo invencível.', 'atlas-theme' ); ?></h1>
-        <p class="ai-page-sub"><?php esc_html_e( 'Tens um projeto em mente? Diz-me o que precisas — respondo em 24h.', 'atlas-theme' ); ?></p>
+        <div class="ai-page-label"><?php atlas_te( '// CONTACTO.exec', '// CONTACT.exec' ); ?></div>
+        <h1 class="ai-page-title"><?php atlas_te( 'Vamos construir algo invencível.', "Let's build something invincible." ); ?></h1>
+        <p class="ai-page-sub"><?php atlas_te( 'Tens um projeto em mente? Diz-me o que precisas — respondo em 24h.', 'Got a project in mind? Tell me what you need — I reply within 24h.' ); ?></p>
     </header>
 
     <div class="ai-contact-cols">
@@ -45,7 +45,7 @@ $ai_socials = array(
                 } else {
                     ?>
                     <p class="ai-contact-fallback">
-                        <?php esc_html_e( 'O plugin Contact Form 7 é necessário para o formulário. Em alternativa, escreve diretamente:', 'atlas-theme' ); ?>
+                        <?php atlas_te( 'O plugin Contact Form 7 é necessário para o formulário. Em alternativa, escreve diretamente:', 'The Contact Form 7 plugin is required for the form. Otherwise, write directly to:' ); ?>
                         <a href="mailto:<?php echo esc_attr( $ai_email ); ?>"><?php echo esc_html( $ai_email ); ?></a>
                     </p>
                     <?php
@@ -61,11 +61,11 @@ $ai_socials = array(
                 <a class="v" href="mailto:<?php echo esc_attr( $ai_email ); ?>"><?php echo esc_html( $ai_email ); ?></a>
             </div>
             <div class="ai-contact-item">
-                <div class="k">LOCALIZAÇÃO</div>
+                <div class="k"><?php atlas_te( 'LOCALIZAÇÃO', 'LOCATION' ); ?></div>
                 <div class="v"><?php echo esc_html( $ai_location ); ?></div>
             </div>
             <div class="ai-contact-item">
-                <div class="k">REDES</div>
+                <div class="k"><?php atlas_te( 'REDES', 'SOCIAL' ); ?></div>
                 <div class="ai-contact-social">
                     <?php
                     foreach ( $ai_socials as $ai_label => $ai_url ) {

@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $atlas_logo_icon = get_option( 'atlas_logo_icon', 'A' );
 $atlas_logo_text = get_option( 'atlas_logo_text', 'atlas.invencivel' );
 $atlas_custom_logo_id = get_option( 'custom_logo' );
-$atlas_contact_url = home_url( '/#contacto' );
+$atlas_contact_url = atlas_home_url( '/#contacto' );
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -60,7 +60,8 @@ $atlas_contact_url = home_url( '/#contacto' );
                     'walker'         => new Atlas_Theme_Walker_Nav_Menu(),
                 ) );
                 ?>
-                <a href="<?php echo esc_url( $atlas_contact_url ); ?>" class="nav-cta">./contacto</a>
+                <a href="<?php echo esc_url( $atlas_contact_url ); ?>" class="nav-cta"><?php echo esc_html( atlas_t( './contacto', './contact' ) ); ?></a>
+                <?php atlas_lang_switcher(); ?>
             </nav>
 
             <button class="nav-toggle" aria-label="<?php esc_attr_e( 'Toggle menu', 'atlas-theme' ); ?>" aria-expanded="false" aria-controls="mobile-menu-overlay">
@@ -73,7 +74,7 @@ $atlas_contact_url = home_url( '/#contacto' );
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-        <button class="mobile-menu-close" aria-label="<?php esc_attr_e( 'Close menu', 'atlas-theme' ); ?>">[ fechar ]</button>
+        <button class="mobile-menu-close" aria-label="<?php esc_attr_e( 'Close menu', 'atlas-theme' ); ?>"><?php echo esc_html( atlas_t( '[ fechar ]', '[ close ]' ) ); ?></button>
         <nav class="mobile-menu-nav" aria-label="<?php esc_attr_e( 'Mobile Navigation', 'atlas-theme' ); ?>">
             <?php
             wp_nav_menu( array(
@@ -100,6 +101,7 @@ $atlas_contact_url = home_url( '/#contacto' );
             }
             ?>
         </div>
+        <?php atlas_lang_switcher(); ?>
     </div>
 
     <main id="primary" class="site-main">

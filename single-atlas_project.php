@@ -46,8 +46,16 @@ while ( have_posts() ) :
         }
     }
 
-    // Theme-bundled image fallback (assets/images/projects/{slug}/).
-    $cs_local = atlas_project_local_images( get_post_field( 'post_name', $cs_id ) );
+    // Theme-bundled image fallback — reuse the PT slug so EN translations share images.
+    $cs_img_slug = get_post_field( 'post_name', $cs_id );
+    if ( function_exists( 'pll_get_post' ) && function_exists( 'pll_default_language' ) ) {
+        $cs_pt_id = pll_get_post( $cs_id, pll_default_language() );
+        if ( $cs_pt_id ) {
+            $cs_img_slug = get_post_field( 'post_name', $cs_pt_id );
+        }
+    }
+    $cs_img_slug = preg_replace( '/-en$/', '', $cs_img_slug );
+    $cs_local = atlas_project_local_images( $cs_img_slug );
 
     // Cover: featured image first, then local cover.
     $cs_cover_url = has_post_thumbnail() ? get_the_post_thumbnail_url( $cs_id, 'atlas-project-large' ) : $cs_local['cover'];
@@ -69,7 +77,7 @@ while ( have_posts() ) :
 
         <!-- HERO -->
         <header class="cs-hero">
-            <a href="<?php echo esc_url( home_url( '/#trabalho' ) ); ?>" class="cs-back">$ cd ../trabalho <span class="muted">// voltar</span></a>
+            <a href="<?php echo esc_url( atlas_home_url( '/#trabalho' ) ); ?>" class="cs-back">$ cd ../<?php atlas_te( 'trabalho', 'work' ); ?> <span class="muted">// <?php atlas_te( 'voltar', 'back' ); ?></span></a>
 
             <?php if ( ! empty( $cs_tags ) ) : ?>
                 <div class="cs-tags">
@@ -95,11 +103,11 @@ while ( have_posts() ) :
         <section class="cs-metabar">
             <div class="cs-meta-grid">
                 <div class="cs-meta">
-                    <div class="k">FUNCAO</div>
-                    <div class="v"><?php echo esc_html( $cs_client ? $cs_client : __( 'Estratégia · Eng · Produto', 'atlas-theme' ) ); ?></div>
+                    <div class="k"><?php atlas_te( 'FUNÇÃO', 'ROLE' ); ?></div>
+                    <div class="v"><?php echo esc_html( $cs_client ? $cs_client : atlas_t( 'Estratégia · Eng · Produto', 'Strategy · Eng · Product' ) ); ?></div>
                 </div>
                 <div class="cs-meta">
-                    <div class="k">ANO</div>
+                    <div class="k"><?php atlas_te( 'ANO', 'YEAR' ); ?></div>
                     <div class="v"><?php echo esc_html( $cs_date ? $cs_date : get_the_date( 'Y' ) ); ?></div>
                 </div>
                 <div class="cs-meta">
@@ -107,8 +115,8 @@ while ( have_posts() ) :
                     <div class="v"><?php echo esc_html( $cs_technologies ? $cs_technologies : '—' ); ?></div>
                 </div>
                 <div class="cs-meta">
-                    <div class="k">ESTADO</div>
-                    <div class="v accent"><?php echo esc_html( $cs_status ? $cs_status : __( '● em produção', 'atlas-theme' ) ); ?></div>
+                    <div class="k"><?php atlas_te( 'ESTADO', 'STATUS' ); ?></div>
+                    <div class="v accent"><?php echo esc_html( $cs_status ? $cs_status : atlas_t( '● em produção', '● in production' ) ); ?></div>
                 </div>
             </div>
         </section>
@@ -117,7 +125,7 @@ while ( have_posts() ) :
         <?php if ( $cs_challenges ) : ?>
             <section class="cs-section">
                 <div class="cs-challenge-grid">
-                    <div class="cs-label" style="margin-bottom:0;">// O_DESAFIO.md</div>
+                    <div class="cs-label" style="margin-bottom:0;"><?php atlas_te( '// O_DESAFIO.md', '// THE_CHALLENGE.md' ); ?></div>
                     <div class="cs-body"><?php echo wp_kses_post( wpautop( $cs_challenges ) ); ?></div>
                 </div>
             </section>
@@ -126,7 +134,7 @@ while ( have_posts() ) :
         <!-- APPROACH / OVERVIEW (post body) -->
         <?php if ( trim( get_the_content() ) ) : ?>
             <section class="cs-section">
-                <div class="cs-label">// A_ABORDAGEM.md</div>
+                <div class="cs-label"><?php atlas_te( '// A_ABORDAGEM.md', '// THE_APPROACH.md' ); ?></div>
                 <div class="cs-body"><?php the_content(); ?></div>
             </section>
         <?php endif; ?>
@@ -134,7 +142,7 @@ while ( have_posts() ) :
         <!-- SOLUTION -->
         <?php if ( $cs_solutions || ! empty( $cs_gallery_urls ) ) : ?>
             <section class="cs-section">
-                <div class="cs-label">// A_SOLUCAO.build</div>
+                <div class="cs-label"><?php atlas_te( '// A_SOLUCAO.build', '// THE_SOLUTION.build' ); ?></div>
 
                 <?php if ( $cs_solutions ) : ?>
                     <div class="cs-body" style="max-width:780px;margin-bottom:40px;"><?php echo wp_kses_post( wpautop( $cs_solutions ) ); ?></div>
@@ -167,10 +175,10 @@ while ( have_posts() ) :
         <!-- RESULTS -->
         <?php if ( $cs_results ) : ?>
             <section class="cs-section">
-                <div class="cs-label">// RESULTADOS.out</div>
+                <div class="cs-label"><?php atlas_te( '// RESULTADOS.out', '// RESULTS.out' ); ?></div>
                 <div class="cs-body" style="max-width:780px;"><?php echo wp_kses_post( wpautop( $cs_results ) ); ?></div>
                 <?php if ( $cs_url ) : ?>
-                    <a href="<?php echo esc_url( $cs_url ); ?>" target="_blank" rel="noopener" class="ai-btn ai-btn-primary" style="margin-top:40px;"><?php esc_html_e( 'Ver projeto', 'atlas-theme' ); ?> &rarr;</a>
+                    <a href="<?php echo esc_url( $cs_url ); ?>" target="_blank" rel="noopener" class="ai-btn ai-btn-primary" style="margin-top:40px;"><?php atlas_te( 'Ver projeto', 'View project' ); ?> &rarr;</a>
                 <?php endif; ?>
             </section>
         <?php endif; ?>
@@ -189,8 +197,8 @@ while ( have_posts() ) :
             ?>
             <section class="cs-section">
                 <div class="cs-next-head">
-                    <h2><?php esc_html_e( 'Mais projetos', 'atlas-theme' ); ?></h2>
-                    <a href="<?php echo esc_url( home_url( '/#trabalho' ) ); ?>"><?php esc_html_e( 'ver todos', 'atlas-theme' ); ?> &rarr;</a>
+                    <h2><?php atlas_te( 'Mais projetos', 'More projects' ); ?></h2>
+                    <a href="<?php echo esc_url( atlas_home_url( '/#trabalho' ) ); ?>"><?php atlas_te( 'ver todos', 'see all' ); ?> &rarr;</a>
                 </div>
                 <?php
                 $cs_k = 0;
@@ -207,7 +215,7 @@ while ( have_posts() ) :
                                 <div class="cs-next-sub"><?php echo esc_html( get_the_excerpt() ); ?></div>
                             <?php endif; ?>
                         </div>
-                        <span class="cs-next-cat"><?php echo esc_html( $cs_more_cat ? $cs_more_cat : 'PROJETO' ); ?></span>
+                        <span class="cs-next-cat"><?php echo esc_html( $cs_more_cat ? $cs_more_cat : atlas_t( 'PROJETO', 'PROJECT' ) ); ?></span>
                         <span class="cs-next-arrow">&rarr;</span>
                     </a>
                     <?php
