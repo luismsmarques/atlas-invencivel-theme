@@ -2,27 +2,31 @@
 # Atlas Invencível Theme — cPanel Git Version Control deploy config
 # Corre quando carregas "Deploy HEAD Commit" no cPanel (Git Version Control).
 # Copia o tema do clone Git para a pasta do tema em produção.
+#
+# IMPORTANTE: o repositório TEM de estar clonado FORA de public_html
+# (ex.: /home/atlasinv/repositories/atlas-invencivel-theme). Se o clone e o
+# destino se sobrepuserem, o rsync copia uma pasta para dentro de si mesma em
+# loop infinito — é isso que faz o deploy ficar "in progress" para sempre.
+# As verificações abaixo abortam o deploy (em vez de pendurar) se detetarem
+# essa sobreposição.
 
 deployment:
   tasks:
-    # 1) Caminho do tema em produção.
-    - export DEPLOYPATH=/home/atlasinv/public_html/wp-content/themes/atlas-invencivel-theme/
-    - export BACKUPDIR="${DEPLOYPATH}../atlas-invencivel-theme-backup-$(date +%Y%m%d-%H%M%S)"
+    # 1) Caminho do tema em produção e raiz do clone (onde o deploy corre).
+    - export DEPLOYPATH=/home/atlasinv/public_html/wp-content/themes/atlas-invencivel-theme
+    - export SRC="$(pwd)"
 
-    # 2) Garantir que a pasta do tema existe.
+    # 2) Guardas anti-recursão: abortar se origem e destino se sobrepuserem.
+    - case "$DEPLOYPATH/" in "$SRC/"*) echo "ERRO: o destino esta dentro do clone ($SRC). Clona o repo para fora de public_html (ex.: ~/repositories/atlas-invencivel-theme)."; exit 1;; esac
+    - case "$SRC/" in "$DEPLOYPATH/"*) echo "ERRO: o clone esta dentro do destino ($DEPLOYPATH). Clona o repo para fora de public_html."; exit 1;; esac
+
+    # 3) Garantir que a pasta do tema existe.
     - /bin/mkdir -p "$DEPLOYPATH"
 
-    # 3) Backup do tema atual antes de copiar.
-    - /bin/mkdir -p "$BACKUPDIR"
-    - /bin/cp -R "$DEPLOYPATH". "$BACKUPDIR"/ 2>/dev/null || true
+    # 4) Sincronizar o tema do clone para produção. Define as permissões
+    #    diretamente no rsync (sem 'find -exec' lento, ficheiro a ficheiro).
+    #    Exclui VCS, ferramentas de dev e ficheiros que não pertencem ao tema.
+    - /usr/bin/rsync -a --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r --exclude='.git' --exclude='.github' --exclude='.gitignore' --exclude='.gitattributes' --exclude='.cpanel.yml' --exclude='dev-tools' --exclude='node_modules' --exclude='*.sh' --exclude='*.xml' --exclude='.htaccess' --exclude='.htaccess-cache-busting' "$SRC"/ "$DEPLOYPATH"/
 
-    # 4) Sincronizar TODO o tema do repositório para produção (overlay, sem apagar).
-    #    Exclui ficheiros de desenvolvimento / VCS / nível-de-site.
-    - /usr/bin/rsync -a --exclude='.git' --exclude='.github' --exclude='.gitignore' --exclude='.gitattributes' --exclude='.cpanel.yml' --exclude='dev-tools' --exclude='node_modules' --exclude='*.sh' --exclude='.htaccess' --exclude='.htaccess-cache-busting' ./ "$DEPLOYPATH"
-
-    # 5) Permissões corretas.
-    - /bin/find "$DEPLOYPATH" -type d -exec /bin/chmod 755 {} \;
-    - /bin/find "$DEPLOYPATH" -type f -exec /bin/chmod 644 {} \;
-
-    # 6) Log do deploy.
-    - echo "Atlas Theme deployed successfully at $(date)" >> "${DEPLOYPATH}../deploy.log"
+    # 5) Log do deploy.
+    - echo "Atlas Theme deployed at $(date)" >> "$DEPLOYPATH/../deploy.log"
