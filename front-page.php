@@ -35,9 +35,9 @@ $atlas_hero_lead = get_option( 'atlas_hero_lead', atlas_t(
             <div class="ai-code-bar"><span></span><span></span><span></span></div>
             <div class="ai-code-body">
                 <span class="ln"><span class="kw">const</span> <span class="var">atlas</span> = {</span>
-                <span class="ln ind"><?php atlas_te( 'anos', 'years' ); ?>: <span class="num"><?php echo esc_html( get_option( 'atlas_code_years', '12' ) ); ?></span>,</span>
+                <span class="ln ind"><?php atlas_te( 'anos', 'years' ); ?>: <span class="num"><?php echo esc_html( get_option( 'atlas_code_years', '15' ) ); ?></span>,</span>
                 <span class="ln ind"><?php atlas_te( 'empresas', 'companies' ); ?>: <span class="num"><?php echo esc_html( get_option( 'atlas_code_companies', '5' ) ); ?></span>,</span>
-                <span class="ln ind"><?php atlas_te( 'comunidades', 'communities' ); ?>: <span class="num"><?php echo esc_html( get_option( 'atlas_code_communities', '10' ) ); ?></span>,</span>
+                <span class="ln ind"><?php atlas_te( 'comunidades', 'communities' ); ?>: <span class="num"><?php echo esc_html( get_option( 'atlas_code_communities', '+50' ) ); ?></span>,</span>
                 <span class="ln ind">stack: [<span class="str">'code'</span>, <span class="str">'AI'</span>, <span class="str">'growth'</span>],</span>
                 <span class="ln">}<span class="ai-caret"></span></span>
             </div>
