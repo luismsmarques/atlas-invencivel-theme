@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$atlas_email = get_option( 'atlas_contact_email', 'luis@atlasinvencivel.pt' );
+$atlas_email = get_option( 'atlas_contact_email', 'lm@atlasinvencivel.pt' );
 $atlas_hero_lead = get_option( 'atlas_hero_lead', 'Estúdio de engenharia e produto. Construímos software que resolve problemas reais — e que aguenta o peso do mundo real.' );
 ?>
 
