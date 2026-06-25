@@ -239,3 +239,17 @@ add_action( 'send_headers', 'atlas_theme_security_headers' );
  * Disable XML-RPC
  */
 add_filter( 'xmlrpc_enabled', '__return_false' );
+
+/**
+ * Favicons / Web App Manifest
+ *
+ * Files are expected at the site root (public_html): apple-touch-icon.png,
+ * favicon-32x32.png, favicon-16x16.png, site.webmanifest.
+ */
+function atlas_theme_favicons() {
+    echo '<link rel="apple-touch-icon" sizes="180x180" href="' . esc_url( home_url( '/apple-touch-icon.png' ) ) . '">' . "\n";
+    echo '<link rel="icon" type="image/png" sizes="32x32" href="' . esc_url( home_url( '/favicon-32x32.png' ) ) . '">' . "\n";
+    echo '<link rel="icon" type="image/png" sizes="16x16" href="' . esc_url( home_url( '/favicon-16x16.png' ) ) . '">' . "\n";
+    echo '<link rel="manifest" href="' . esc_url( home_url( '/site.webmanifest' ) ) . '">' . "\n";
+}
+add_action( 'wp_head', 'atlas_theme_favicons', 2 );
