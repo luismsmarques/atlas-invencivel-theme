@@ -15,11 +15,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Fallback menu for primary navigation
  */
 function atlas_theme_fallback_menu() {
-    echo '<ul id="primary-menu" class="menu">';
-    echo '<li><a href="#home" class="nav-link active">' . esc_html__( 'Home', 'atlas-theme' ) . '</a></li>';
-    echo '<li><a href="#about" class="nav-link">' . esc_html__( 'About', 'atlas-theme' ) . '</a></li>';
-    echo '<li><a href="#projects" class="nav-link">' . esc_html__( 'Projects', 'atlas-theme' ) . '</a></li>';
-    echo '<li><a href="#contacts" class="nav-link">' . esc_html__( 'Contacts', 'atlas-theme' ) . '</a></li>';
+    $home = home_url( '/' );
+    echo '<ul class="menu">';
+    echo '<li><a class="nav-link" href="' . esc_url( $home . '#sobre' ) . '">' . esc_html__( 'sobre', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a class="nav-link" href="' . esc_url( $home . '#servicos' ) . '">' . esc_html__( 'serviços', 'atlas-theme' ) . '</a></li>';
+    echo '<li><a class="nav-link" href="' . esc_url( $home . '#trabalho' ) . '">' . esc_html__( 'trabalho', 'atlas-theme' ) . '</a></li>';
     echo '</ul>';
 }
 
