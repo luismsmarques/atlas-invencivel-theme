@@ -301,6 +301,22 @@ p {
 
 .nav-cta:hover { filter: brightness(1.1); color: var(--ai-bg) !important; }
 
+/* Language switcher */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: .06em;
+}
+
+.lang-switch-item { color: var(--ai-text-faint); }
+.lang-switch-item:hover { color: var(--ai-text); }
+.lang-switch-item.current { color: var(--ai-accent); }
+
+.mobile-menu-overlay .lang-switch { font-size: 14px; }
+
 /* Hamburger */
 .nav-toggle {
     display: none;

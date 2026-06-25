@@ -19,14 +19,14 @@ $ai_found = (int) $wp_query->found_posts;
 <section class="ai-page">
 
     <header class="ai-page-header">
-        <div class="ai-page-label">// PESQUISA.grep</div>
+        <div class="ai-page-label"><?php atlas_te( '// PESQUISA.grep', '// SEARCH.grep' ); ?></div>
         <h1 class="ai-page-title">"<?php echo esc_html( get_search_query() ); ?>"</h1>
         <div class="ai-page-sub">
             <?php
-            printf(
-                esc_html( _n( '%s resultado encontrado.', '%s resultados encontrados.', $ai_found, 'atlas-theme' ) ),
-                esc_html( number_format_i18n( $ai_found ) )
-            );
+            $ai_tpl = ( 1 === $ai_found )
+                ? atlas_t( '%s resultado encontrado.', '%s result found.' )
+                : atlas_t( '%s resultados encontrados.', '%s results found.' );
+            printf( esc_html( $ai_tpl ), esc_html( number_format_i18n( $ai_found ) ) );
             ?>
         </div>
     </header>
@@ -52,8 +52,8 @@ $ai_found = (int) $wp_query->found_posts;
         </div>
     <?php else : ?>
         <div class="ai-empty">
-            <h2><?php esc_html_e( 'Sem resultados', 'atlas-theme' ); ?></h2>
-            <p><?php esc_html_e( 'Tenta outros termos de pesquisa.', 'atlas-theme' ); ?></p>
+            <h2><?php atlas_te( 'Sem resultados', 'No results' ); ?></h2>
+            <p><?php atlas_te( 'Tenta outros termos de pesquisa.', 'Try other search terms.' ); ?></p>
             <?php get_search_form(); ?>
         </div>
     <?php endif; ?>

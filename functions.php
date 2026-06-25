@@ -26,6 +26,7 @@ define( 'ATLAS_THEME_INC', ATLAS_THEME_DIR . '/inc' );
 /**
  * Include Theme Files
  */
+require_once ATLAS_THEME_INC . '/i18n.php';
 require_once ATLAS_THEME_INC . '/enqueue.php';
 // REMOVED: WordPress Customizer - Theme uses options page instead
 require_once ATLAS_THEME_INC . '/custom-post-types.php';
