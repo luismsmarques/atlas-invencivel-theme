@@ -55,6 +55,37 @@ function atlas_home_url( $path = '/' ) {
 }
 
 /**
+ * Permalink of a page in the CURRENT language (Polylang-aware).
+ *
+ * Pass one or more candidate slugs (PT and/or EN). The first page found is
+ * resolved to its translation in the active language. Returns the home URL
+ * if no matching page exists.
+ *
+ * @param string|array $slugs Candidate page slugs.
+ * @return string
+ */
+function atlas_page_url( $slugs ) {
+    $page = null;
+    foreach ( (array) $slugs as $slug ) {
+        $page = get_page_by_path( $slug );
+        if ( $page ) {
+            break;
+        }
+    }
+    if ( ! $page ) {
+        return atlas_home_url( '/' );
+    }
+    $id = $page->ID;
+    if ( function_exists( 'pll_get_post' ) ) {
+        $translated = pll_get_post( $id ); // current language
+        if ( $translated ) {
+            $id = $translated;
+        }
+    }
+    return get_permalink( $id );
+}
+
+/**
  * Render the Polylang language switcher (no-op if Polylang is inactive
  * or only one language exists).
  */
