@@ -67,12 +67,12 @@ if ( $atlas_services->have_posts() ) {
     wp_reset_postdata();
 } else {
     $atlas_service_items = array(
-        array( 'tag' => 'WP',    'name' => 'WordPress & Web',          'desc' => 'Sites e plataformas funcionais, rápidos e fáceis de gerir.' ),
-        array( 'tag' => 'CODE',  'name' => 'Programação',              'desc' => 'Aplicações e automações à medida, da ideia ao deploy.' ),
-        array( 'tag' => 'AI',    'name' => 'Inteligência Artificial',  'desc' => 'Integração de IA para automatizar e escalar produtos reais.' ),
-        array( 'tag' => 'DM',    'name' => 'Marketing Digital',        'desc' => 'Estratégias que ligam produto a audiência e a resultados.' ),
-        array( 'tag' => 'STRAT', 'name' => 'Estratégia de Conteúdo',   'desc' => 'Conteúdo e comunidade que constroem marca a longo prazo.' ),
-        array( 'tag' => 'ANGEL', 'name' => 'Investimento Anjo',        'desc' => 'Apoio a startups com impacto social e crescimento escalável.' ),
+        array( 'tag' => 'WP',    'name' => 'WordPress & Web',          'desc' => 'Construímos sites e plataformas rápidos, fiáveis e fáceis de gerir.' ),
+        array( 'tag' => 'CODE',  'name' => 'Programação',              'desc' => 'Desenvolvemos aplicações e automações à medida — da ideia ao deploy.' ),
+        array( 'tag' => 'AI',    'name' => 'Inteligência Artificial',  'desc' => 'Integramos IA para automatizar tarefas e escalar produtos reais.' ),
+        array( 'tag' => 'DM',    'name' => 'Marketing Digital',        'desc' => 'Ligamos produto, audiência e resultados com estratégia digital.' ),
+        array( 'tag' => 'STRAT', 'name' => 'Estratégia de Conteúdo',   'desc' => 'Criamos conteúdo e comunidade que constroem marca a longo prazo.' ),
+        array( 'tag' => 'ANGEL', 'name' => 'Investimento Anjo',        'desc' => 'Investimos em startups com impacto real e potencial de escala.' ),
     );
 }
 $atlas_service_count = count( $atlas_service_items );

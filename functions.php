@@ -198,6 +198,78 @@ function atlas_theme_webp_support() {
 add_action( 'wp_head', 'atlas_theme_webp_support', 1 );
 
 /**
+ * SEO: meta description + Open Graph / Twitter Card
+ *
+ * Skipped automatically when a dedicated SEO plugin (Yoast, RankMath, AIOSEO,
+ * SEOPress) is active, to avoid duplicate tags.
+ */
+function atlas_theme_meta_tags() {
+    if (
+        defined( 'WPSEO_VERSION' ) ||                 // Yoast SEO
+        class_exists( 'RankMath' ) ||                 // Rank Math
+        defined( 'AIOSEO_VERSION' ) ||                // All in One SEO
+        defined( 'SEOPRESS_VERSION' )                 // SEOPress
+    ) {
+        return;
+    }
+
+    $default_desc = get_option(
+        'atlas_site_description',
+        __( 'Estúdio de engenharia e produto. Construímos software que resolve problemas reais — e que aguenta o peso do mundo real.', 'atlas-theme' )
+    );
+
+    $description = $default_desc;
+    $og_type     = 'website';
+    $url         = home_url( add_query_arg( null, null ) );
+    $image       = '';
+
+    if ( is_singular() ) {
+        $og_type = is_singular( 'post' ) ? 'article' : 'website';
+        $url     = get_permalink();
+
+        $excerpt = has_excerpt() ? get_the_excerpt() : wp_strip_all_tags( get_the_content() );
+        $excerpt = trim( preg_replace( '/\s+/', ' ', (string) $excerpt ) );
+        if ( $excerpt ) {
+            $description = wp_html_excerpt( $excerpt, 155, '…' );
+        }
+
+        if ( has_post_thumbnail() ) {
+            $thumb = wp_get_attachment_image_url( get_post_thumbnail_id(), 'atlas-project-large' );
+            if ( $thumb ) {
+                $image = $thumb;
+            }
+        }
+    } elseif ( is_archive() ) {
+        $arch = wp_strip_all_tags( get_the_archive_description() );
+        if ( $arch ) {
+            $description = wp_html_excerpt( trim( $arch ), 155, '…' );
+        }
+        $url = home_url( add_query_arg( null, null ) );
+    }
+
+    if ( ! $image ) {
+        $image = get_template_directory_uri() . '/screenshot.png';
+    }
+
+    $title = wp_get_document_title();
+
+    echo "\n<!-- Atlas SEO -->\n";
+    printf( '<meta name="description" content="%s">' . "\n", esc_attr( $description ) );
+    printf( '<meta property="og:title" content="%s">' . "\n", esc_attr( $title ) );
+    printf( '<meta property="og:description" content="%s">' . "\n", esc_attr( $description ) );
+    printf( '<meta property="og:type" content="%s">' . "\n", esc_attr( $og_type ) );
+    printf( '<meta property="og:url" content="%s">' . "\n", esc_url( $url ) );
+    printf( '<meta property="og:site_name" content="%s">' . "\n", esc_attr( get_bloginfo( 'name' ) ) );
+    printf( '<meta property="og:image" content="%s">' . "\n", esc_url( $image ) );
+    printf( '<meta name="twitter:card" content="%s">' . "\n", 'summary_large_image' );
+    printf( '<meta name="twitter:title" content="%s">' . "\n", esc_attr( $title ) );
+    printf( '<meta name="twitter:description" content="%s">' . "\n", esc_attr( $description ) );
+    printf( '<meta name="twitter:image" content="%s">' . "\n", esc_url( $image ) );
+    echo "<!-- /Atlas SEO -->\n";
+}
+add_action( 'wp_head', 'atlas_theme_meta_tags', 5 );
+
+/**
  * Regenerate image sizes on theme activation
  */
 function atlas_regenerate_image_sizes() {
