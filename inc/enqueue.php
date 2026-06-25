@@ -64,62 +64,6 @@ function atlas_theme_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'atlas_theme_enqueue_assets' );
 
 /**
- * REMOVED: Block Editor Assets - Theme uses only PHP templates
- * All editor assets have been removed to disable FSE completely
- */
-
-// Customizer assets removed - using classic options page instead
-
-/**
- * Conditional Asset Loading
- */
-function atlas_theme_conditional_assets() {
-    // Load specific assets based on page type
-    // REMOVED homepage.js - functionality is in main.js
-    
-    // REMOVED: All specific page assets - Theme only uses front page
-}
-add_action( 'wp_enqueue_scripts', 'atlas_theme_conditional_assets' );
-
-/**
- * Add loadCSS Polyfill and Async CSS Loading
- */
-function atlas_theme_loadcss_polyfill() {
-    ?>
-    <script>
-    /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
-    (function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
-    var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=false}return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",true);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
-    </script>
-    <?php
-}
-add_action( 'wp_head', 'atlas_theme_loadcss_polyfill', 1 );
-
-/**
- * Convert CSS Links to Async Loading
- */
-function atlas_theme_async_css_loading( $html, $handle, $href, $media ) {
-    // List of CSS files to load asynchronously - TEMPORARILY DISABLED FOR DEBUGGING
-    $async_css = array(
-        // 'atlas-theme-main',
-        // 'atlas-theme-fonts', 
-        // 'atlas-theme-services',
-        // 'atlas-theme-case-study',
-        // 'atlas-theme-project',
-        // 'atlas-theme-service'
-    );
-    
-    if ( in_array( $handle, $async_css ) ) {
-        // Use preload + loadCSS technique for async loading
-        return '<link rel="preload" href="' . esc_url( $href ) . '" as="style" onload="this.onload=null;this.rel=\'stylesheet\'">' . 
-               '<noscript><link rel="stylesheet" href="' . esc_url( $href ) . '"></noscript>';
-    }
-    
-    return $html;
-}
-add_filter( 'style_loader_tag', 'atlas_theme_async_css_loading', 10, 4 );
-
-/**
  * Remove Unnecessary WordPress Assets
  */
 function atlas_theme_remove_unnecessary_assets() {
@@ -140,24 +84,6 @@ function atlas_theme_remove_unnecessary_assets() {
     remove_action( 'wp_head', 'wp_shortlink_wp_head' );
 }
 add_action( 'init', 'atlas_theme_remove_unnecessary_assets' );
-
-/**
- * Optimize CSS Delivery - Critical CSS Inline - TEMPORARILY DISABLED
- */
-function atlas_theme_optimize_css_delivery() {
-    // DISABLED FOR DEBUGGING - Critical CSS inline removed
-    // $critical_css = '
-    //     /* Ultra-critical loading optimization only */
-    //     /* Prevent FOUC (Flash of Unstyled Content) - REMOVED visibility:hidden */
-    //     
-    //     /* Critical font loading */
-    //     @font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url("' . ATLAS_THEME_URI . '/assets/fonts/inter-regular.woff2") format("woff2")}
-    //     @font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url("' . ATLAS_THEME_URI . '/assets/fonts/inter-bold.woff2") format("woff2")}
-    // ';
-    // 
-    // echo '<style id="atlas-critical-css">' . $critical_css . '</style>' . "\n";
-}
-add_action( 'wp_head', 'atlas_theme_optimize_css_delivery', 2 );
 
 /**
  * Optimize WordPress Block Styles
