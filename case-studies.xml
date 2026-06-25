@@ -136,7 +136,7 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_results</wp:meta_key>
-            <wp:meta_value><![CDATA[Mais do que adoção, este projeto provou capacidade. Foi o meu primeiro produto construído inteiramente com IA e a primeira vez que liguei, de ponta a ponta, pagamentos (Stripe), gestão segura de chaves de API e deploy em produção na Vercel. Está live e publicado na Chrome Web Store. A tração foi propositadamente secundária — o objetivo era provar o “como”, não escalar o “quê”. O que ficou foi o método que passei a usar em tudo o que vim a construir depois: validar a ideia, construir com IA como co-piloto e levar à produção com segurança.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Mais do que adoção, este projeto provou capacidade — mas a adoção também apareceu. Publicada na Chrome Web Store, a extensão soma cerca de 356 instalações com apenas 3 desinstalações: retenção quase total. Foi o meu primeiro produto construído inteiramente com IA e a primeira vez que liguei, de ponta a ponta, pagamentos (Stripe), gestão segura de chaves de API e deploy em produção na Vercel. O método que daqui saiu — validar a ideia, construir com IA como co-piloto e levar à produção com segurança — passou a ser a base de tudo o que construí depois.]]></wp:meta_value>
         </wp:postmeta>
     </item>
 

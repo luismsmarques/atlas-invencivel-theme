@@ -72,9 +72,9 @@ Sobre qualquer ToS ou política, devolve um resumo estruturado (visão geral, po
 
 **Resultados**
 
-Mais do que adoção, este projeto provou capacidade. Foi o meu primeiro produto construído inteiramente com IA e a primeira vez que liguei, de ponta a ponta, pagamentos (Stripe), gestão segura de chaves de API e deploy em produção na Vercel. Está live e publicado na Chrome Web Store. A tração foi propositadamente secundária — o objetivo era provar o “como”, não escalar o “quê”. O que ficou foi o método que passei a usar em tudo o que vim a construir depois: validar a ideia, construir com IA como co-piloto e levar à produção com segurança.
+Mais do que adoção, este projeto provou capacidade — mas a adoção também apareceu. Publicada na Chrome Web Store, a extensão soma cerca de 356 instalações com apenas 3 desinstalações: retenção quase total. Foi o meu primeiro produto construído inteiramente com IA e a primeira vez que liguei, de ponta a ponta, pagamentos (Stripe), gestão segura de chaves de API e deploy em produção na Vercel. O método que daqui saiu — validar a ideia, construir com IA como co-piloto e levar à produção com segurança — passou a ser a base de tudo o que construí depois.
 
-**Notas**: Primeiro projeto construído inteiramente com IA (Cursor como co-piloto), inspirado num post de Pedro Fonseca. Armazenamento em Supabase/Postgres (a confirmar). GA4 mostra tração inicial modesta — projeto de prova de capacidade, não de escala.
+**Notas**: Estatísticas da Chrome Web Store: ~356 instalações e 3 desinstalações (desde out/2025). Primeiro projeto construído inteiramente com IA (Cursor), inspirado num post de Pedro Fonseca. Armazenamento em Supabase/Postgres (a confirmar).
 
 ---
 
