@@ -18,6 +18,10 @@ get_header();
     <div class="ai-404-line">$ atlas open <span class="accent">// página não encontrada</span></div>
     <div class="ai-404-line">&gt; Error: ENOENT — no such file or directory<span class="ai-caret"></span></div>
 
+    <p style="max-width:560px;margin:24px 0 0;font-family:var(--font-body);font-size:17px;line-height:1.7;color:var(--ai-text-muted);">
+        <?php esc_html_e( 'Esta página não existe ou mudou de sítio. Sem problema — vamos pôr-te de volta no caminho.', 'atlas-theme' ); ?>
+    </p>
+
     <div style="margin-top:40px;display:flex;gap:12px;flex-wrap:wrap;">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="ai-btn ai-btn-primary"><?php esc_html_e( 'Voltar ao início', 'atlas-theme' ); ?> &rarr;</a>
         <a href="<?php echo esc_url( home_url( '/#trabalho' ) ); ?>" class="ai-btn ai-btn-ghost"><?php esc_html_e( 'Ver trabalho', 'atlas-theme' ); ?></a>

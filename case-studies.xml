@@ -26,7 +26,7 @@
         <guid isPermaLink="false">https://atlasinvencivel.pt/project/how-to-invest/</guid>
         <description></description>
         <content:encoded><![CDATA[<p>Reconstrução em WordPress com estratégia SEO-first para captar tráfego orgânico, sob um princípio de arquitetura não-negociável: <strong>as regras decidem (arquétipo + alocação); o LLM apenas explica</strong>. A lógica determinística governa os resultados; a IA dá só contexto.</p><p>Restrições firmes: o output é por classes de ativos (nunca instrumentos nomeados), com disclaimers contextuais em todos os resultados, chave Gemini sempre server-side, e RGPD (export/delete) como prioridade.</p>]]></content:encoded>
-        <excerpt:encoded><![CDATA[Plataforma que apura o arquétipo de investidor por questionário e devolve alocações ilustrativas por classe de ativos, num enquadramento educativo.]]></excerpt:encoded>
+        <excerpt:encoded><![CDATA[Apura o perfil de investidor por questionário e devolve uma alocação ilustrativa por classe de ativos, num enquadramento educativo.]]></excerpt:encoded>
         <wp:post_id>5001</wp:post_id>
         <wp:post_date>2026-06-08 12:00:00</wp:post_date>
         <wp:post_date_gmt>2026-06-08 12:00:00</wp:post_date_gmt>
@@ -87,7 +87,7 @@
         <guid isPermaLink="false">https://atlasinvencivel.pt/project/tos-summarizer/</guid>
         <description></description>
         <content:encoded><![CDATA[<p>Extensão Chrome em Manifest V3 (frontend JS vanilla, UI Material Design) suportada por backend Node/Express na Vercel. A análise é delegada à API Google Gemini; a persistência (histórico, contas, créditos) assenta em PostgreSQL.</p><p>Autenticação por JWT e monetização via Stripe. Arquitetura modular (extensão, backend, dashboard) com processamento assíncrono. A v1.3.0 trouxe endurecimento de segurança (sem credenciais hardcoded, configuração por variáveis de ambiente).</p>]]></content:encoded>
-        <excerpt:encoded><![CDATA[Extensão Chrome que usa IA para resumir Termos de Serviço e Políticas de Privacidade, com classificação de risco e backend seguro.]]></excerpt:encoded>
+        <excerpt:encoded><![CDATA[Extensão Chrome que resume Termos de Serviço e Políticas de Privacidade com IA — e classifica o risco antes de aceitares.]]></excerpt:encoded>
         <wp:post_id>5002</wp:post_id>
         <wp:post_date>2026-06-07 12:00:00</wp:post_date>
         <wp:post_date_gmt>2026-06-07 12:00:00</wp:post_date_gmt>
