@@ -458,6 +458,22 @@ p {
 
 .footer-tagline { color: var(--ai-text-faint); }
 
+.footer-legal {
+    width: 100%;
+    max-width: var(--ai-maxw);
+    margin: 0 auto;
+    padding: 0 var(--ai-pad) 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: .06em;
+}
+
+.footer-legal a { color: var(--ai-text-muted); }
+.footer-legal a:hover { color: var(--ai-accent); }
+
 /* =========================================================
    RESPONSIVE — base shell
    ========================================================= */
