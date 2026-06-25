@@ -25,6 +25,35 @@ $atlas_footer_socials = array(
 
     </main><!-- #primary -->
 
+    <?php
+    // Links de páginas (contacto / termos / privacidade), resolvidos para a
+    // língua ativa via Polylang. Só aparecem se a página existir.
+    $atlas_footer_pages = array();
+    if ( function_exists( 'atlas_page_url' ) ) {
+        $atlas_footer_candidates = array(
+            array(
+                'label' => atlas_t( 'Contacto', 'Contact' ),
+                'slugs' => array( 'contacto', 'contact', 'contact-2' ),
+            ),
+            array(
+                'label' => atlas_t( 'Termos e Condições', 'Terms & Conditions' ),
+                'slugs' => array( 'termos-e-condicoes', 'terms-and-conditions', 'terms-conditions', 'termos' ),
+            ),
+            array(
+                'label' => atlas_t( 'Privacidade', 'Privacy' ),
+                'slugs' => array( 'politica-de-privacidade', 'privacy-policy', 'privacidade' ),
+            ),
+        );
+        foreach ( $atlas_footer_candidates as $atlas_c ) {
+            $atlas_u = atlas_page_url( $atlas_c['slugs'] );
+            // atlas_page_url devolve a home se não encontrar a página — ignorar nesse caso.
+            if ( $atlas_u && $atlas_u !== atlas_home_url( '/' ) ) {
+                $atlas_footer_pages[] = array( 'label' => $atlas_c['label'], 'url' => $atlas_u );
+            }
+        }
+    }
+    ?>
+
     <footer id="colophon" class="site-footer">
         <div class="footer-inner">
             <span class="footer-wordmark"><?php echo esc_html( $atlas_wordmark ); ?></span>
@@ -41,6 +70,16 @@ $atlas_footer_socials = array(
 
             <span class="footer-tagline">&copy; <?php echo esc_html( $atlas_year ); ?> &middot; <?php echo esc_html( $atlas_tagline ); ?></span>
         </div>
+
+        <?php if ( ! empty( $atlas_footer_pages ) ) : ?>
+            <nav class="footer-legal" aria-label="<?php echo esc_attr( atlas_t( 'Ligações de rodapé', 'Footer links' ) ); ?>">
+                <?php
+                foreach ( $atlas_footer_pages as $atlas_page ) {
+                    echo '<a href="' . esc_url( $atlas_page['url'] ) . '">' . esc_html( $atlas_page['label'] ) . '</a>';
+                }
+                ?>
+            </nav>
+        <?php endif; ?>
     </footer>
 </div><!-- #page -->
 
