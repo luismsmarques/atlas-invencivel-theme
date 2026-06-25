@@ -251,5 +251,6 @@ function atlas_theme_favicons() {
     echo '<link rel="icon" type="image/png" sizes="32x32" href="' . esc_url( home_url( '/favicon-32x32.png' ) ) . '">' . "\n";
     echo '<link rel="icon" type="image/png" sizes="16x16" href="' . esc_url( home_url( '/favicon-16x16.png' ) ) . '">' . "\n";
     echo '<link rel="manifest" href="' . esc_url( home_url( '/site.webmanifest' ) ) . '">' . "\n";
+    echo '<meta name="theme-color" content="#0A0E17">' . "\n";
 }
 add_action( 'wp_head', 'atlas_theme_favicons', 2 );
