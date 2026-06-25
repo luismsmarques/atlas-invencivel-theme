@@ -209,7 +209,7 @@
         <guid isPermaLink="false">https://atlasinvencivel.pt/project/super-portistas/</guid>
         <description></description>
         <content:encoded><![CDATA[<p>A decisão de base foi modular: um tema fino para a apresentação e quatro plugins próprios para o domínio, para que cada peça evoluísse sem partir as outras.</p><ul><li><strong>super-portistas-wordpress-theme</strong> — apresentação (frontend HTMX + Alpine.js, sidebars contextuais, dashboard de utilizador, opções de tema). Depende do Core.</li><li><strong>super-portistas-core</strong> — domínio: REST API sp/v1, gamificação + leaderboard, prognósticos, sondagens, auth e push via Firebase, integração Brevo (double opt-in, resumos, alertas, conquistas).</li><li><strong>rss-manager</strong> — ingestão automática (WP Cron) de RSS, YouTube, X/Twitter e capas de jornais para o CPT ai_news_article, com deduplicação por hash, filtros, logs e proteção SSRF.</li><li><strong>ai-news</strong> — camada editorial de IA (Gemini): artigos pre/post-match a partir de dados de jogos, “Resumo do dia”, conteúdo curado e “Source Studio” (artigos a partir de URL/texto).</li><li><strong>api-sportmonks</strong> — ponte de dados: sincroniza jogos no CPT aps_jogo, mapeia equipas/ligas, minutos ao vivo, e helpers consumidos pelo tema e pelo AI News.</li></ul>]]></content:encoded>
-        <excerpt:encoded><![CDATA[Portal WordPress dos adeptos do FC Porto que junta agregação RSS, geração editorial por IA, dados SportMonks, gamificação e push numa só plataforma.]]></excerpt:encoded>
+        <excerpt:encoded><![CDATA[A maior comunidade de adeptos do FC Porto, agora como plataforma própria: agregação RSS, artigos por IA, dados SportMonks, gamificação e push em WordPress.]]></excerpt:encoded>
         <wp:post_id>5004</wp:post_id>
         <wp:post_date>2026-06-05 12:00:00</wp:post_date>
         <wp:post_date_gmt>2026-06-05 12:00:00</wp:post_date_gmt>
@@ -234,11 +234,11 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_date</wp:meta_key>
-            <wp:meta_value><![CDATA[2026]]></wp:meta_value>
+            <wp:meta_value><![CDATA[2014—26]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_client</wp:meta_key>
-            <wp:meta_value><![CDATA[Tema + 4 plugins · Eng · Produto]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Co-fundador · Tema + 4 plugins · Eng]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_technologies</wp:meta_key>
@@ -246,11 +246,11 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_status</wp:meta_key>
-            <wp:meta_value><![CDATA[● em produção]]></wp:meta_value>
+            <wp:meta_value><![CDATA[● em produção (comunidade em beta)]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_challenges</wp:meta_key>
-            <wp:meta_value><![CDATA[Um portal desportivo vive de ritmo: notícias, capas de jornais, vídeos, redes e dados de jogos, quase em tempo real. Fazer isto à mão é insustentável. O desafio era manter um meio completo do FC Porto — com comunidade fiel — praticamente em piloto automático, sem perder qualidade editorial.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Este é o meu projeto-bebé há mais de 12 anos. Eu e o meu sócio Pedro Andrade comprámos a página de fãs no Facebook quando o mercado ainda não estava saturado; ele fê-la crescer até hoje, para mais de 400 mil seguidores — a maior comunidade de adeptos do FC Porto. Ao longo dos anos testámos, acertámos e errámos em várias versões do site. O desafio desta versão é o mais ambicioso: transformar uma audiência social gigante numa plataforma e comunidade próprias, e manter um meio desportivo de alto ritmo quase em piloto automático, sem perder qualidade editorial.]]></wp:meta_value>
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_solutions</wp:meta_key>
@@ -258,7 +258,7 @@
         </wp:postmeta>
         <wp:postmeta>
             <wp:meta_key>_atlas_project_results</wp:meta_key>
-            <wp:meta_value><![CDATA[Em produção e ativo, com cobertura diária do FC Porto (notícias, resumos, capas, vídeos, modalidades), prognósticos e newsletter. Conjunto de plugins maduro e mantido (changelogs, testes PHPUnit, documentação de arquitetura/REST, endurecimento de segurança). Métricas de audiência não disponíveis nas fontes.]]></wp:meta_value>
+            <wp:meta_value><![CDATA[Não é um projeto novo — é uma audiência provada ao longo de uma década. Mais de 400 mil seguidores no Facebook e, no GA4 (2016–2026), mais de 515 mil utilizadores, 1,2 milhões de page views e 854 mil sessões só de social orgânico. Esta versão é a aposta madura: converter essa audiência numa comunidade própria. A camada de registo, gamificação e push está em fase de beta — primeiros 10 registos e sinais promissores — assente numa base técnica (tema + 4 plugins) madura e documentada (changelogs, testes PHPUnit, segurança).]]></wp:meta_value>
         </wp:postmeta>
     </item>
 

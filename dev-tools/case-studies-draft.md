@@ -116,15 +116,15 @@ A prova veio do mundo real: usei a própria extensão para promover o meu projet
 - **url**: https://superportistas.pt/
 - **repo**: https://github.com/luismsmarques/super-portistas-wordpress-theme (+ plugins)
 - **categoria**: WORDPRESS / MEDIA
-- **ano**: 2026
-- **função**: Tema + 4 plugins · Eng · Produto
+- **ano**: 2014—26
+- **função**: Co-fundador · Tema + 4 plugins · Eng
 - **stack**: WordPress 6.2+ · PHP 8.2+ · MySQL · HTMX + Alpine.js · REST API (sp/v1) · Firebase (Auth + FCM) · Brevo · Google Gemini · SportMonks API · YouTube API · X API · RSS.app
-- **estado**: ● em produção
-- **resumo**: Portal WordPress dos adeptos do FC Porto que junta agregação RSS, geração editorial por IA, dados SportMonks, gamificação e push numa só plataforma.
+- **estado**: ● em produção (comunidade em beta)
+- **resumo**: A maior comunidade de adeptos do FC Porto, agora como plataforma própria: agregação RSS, artigos por IA, dados SportMonks, gamificação e push em WordPress.
 
 **Desafio**
 
-Um portal desportivo vive de ritmo: notícias, capas de jornais, vídeos, redes e dados de jogos, quase em tempo real. Fazer isto à mão é insustentável. O desafio era manter um meio completo do FC Porto — com comunidade fiel — praticamente em piloto automático, sem perder qualidade editorial.
+Este é o meu projeto-bebé há mais de 12 anos. Eu e o meu sócio Pedro Andrade comprámos a página de fãs no Facebook quando o mercado ainda não estava saturado; ele fê-la crescer até hoje, para mais de 400 mil seguidores — a maior comunidade de adeptos do FC Porto. Ao longo dos anos testámos, acertámos e errámos em várias versões do site. O desafio desta versão é o mais ambicioso: transformar uma audiência social gigante numa plataforma e comunidade próprias, e manter um meio desportivo de alto ritmo quase em piloto automático, sem perder qualidade editorial.
 
 **Abordagem**
 
@@ -141,9 +141,9 @@ Pipeline automatizado ponta-a-ponta: api-sportmonks alimenta dados factuais → 
 
 **Resultados**
 
-Em produção e ativo, com cobertura diária do FC Porto (notícias, resumos, capas, vídeos, modalidades), prognósticos e newsletter. Conjunto de plugins maduro e mantido (changelogs, testes PHPUnit, documentação de arquitetura/REST, endurecimento de segurança). Métricas de audiência não disponíveis nas fontes.
+Não é um projeto novo — é uma audiência provada ao longo de uma década. Mais de 400 mil seguidores no Facebook e, no GA4 (2016–2026), mais de 515 mil utilizadores, 1,2 milhões de page views e 854 mil sessões só de social orgânico. Esta versão é a aposta madura: converter essa audiência numa comunidade própria. A camada de registo, gamificação e push está em fase de beta — primeiros 10 registos e sinais promissores — assente numa base técnica (tema + 4 plugins) madura e documentada (changelogs, testes PHPUnit, segurança).
 
-**Notas**: Tema e 3 plugins em repos privados; só api-sportmonks é público. Roadmap do tema inclui fórum, PWA e app.
+**Notas**: Co-fundado com Pedro Andrade. 400k+ seguidores no Facebook (maior comunidade de adeptos do FC Porto). GA4 2016–2026: 515k+ utilizadores, 1,2M page views, 854k sessões de social orgânico. Camada de comunidade/registo em beta (10 registos). Tema e 3 plugins privados; api-sportmonks público.
 
 ---
 
