@@ -171,7 +171,7 @@ function atlas_lang_switcher() {
  * Make the theme's custom post types & taxonomies translatable in Polylang.
  */
 add_filter( 'pll_get_post_types', function ( $types, $is_settings ) {
-    foreach ( array( 'atlas_project', 'atlas_skill', 'atlas_timeline', 'atlas_service' ) as $pt ) {
+    foreach ( array( 'atlas_project', 'atlas_skill', 'atlas_timeline' ) as $pt ) {
         $types[ $pt ] = $pt;
     }
     return $types;

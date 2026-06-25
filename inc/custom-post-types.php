@@ -115,71 +115,6 @@ function atlas_theme_register_post_types() {
         'show_in_rest'          => true,
     ) );
 
-    // Services Post Type
-    register_post_type( 'atlas_service', array(
-        'labels' => array(
-            'name'                  => esc_html__( 'Services', 'atlas-theme' ),
-            'singular_name'         => esc_html__( 'Service', 'atlas-theme' ),
-            'menu_name'             => esc_html__( 'Services', 'atlas-theme' ),
-            'name_admin_bar'        => esc_html__( 'Service', 'atlas-theme' ),
-            'add_new'               => esc_html__( 'Add New', 'atlas-theme' ),
-            'add_new_item'          => esc_html__( 'Add New Service', 'atlas-theme' ),
-            'new_item'              => esc_html__( 'New Service', 'atlas-theme' ),
-            'edit_item'             => esc_html__( 'Edit Service', 'atlas-theme' ),
-            'view_item'             => esc_html__( 'View Service', 'atlas-theme' ),
-            'all_items'             => esc_html__( 'All Services', 'atlas-theme' ),
-            'search_items'          => esc_html__( 'Search Services', 'atlas-theme' ),
-            'parent_item_colon'     => esc_html__( 'Parent Services:', 'atlas-theme' ),
-            'not_found'             => esc_html__( 'No services found.', 'atlas-theme' ),
-            'not_found_in_trash'    => esc_html__( 'No services found in Trash.', 'atlas-theme' ),
-        ),
-        'public'                => true,
-        'publicly_queryable'    => true,
-        'show_ui'               => true,
-        'show_in_menu'          => true,
-        'query_var'             => true,
-        'rewrite'               => array( 'slug' => 'service' ),
-        'capability_type'       => 'post',
-        'has_archive'           => true,
-        'hierarchical'          => false,
-        'menu_position'         => 23,
-        'menu_icon'             => 'dashicons-admin-tools',
-        'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
-        'show_in_rest'          => true,
-    ) );
-
-    // Company Logos Post Type
-    register_post_type( 'atlas_company_logo', array(
-        'labels' => array(
-            'name'                  => esc_html__( 'Company Logos', 'atlas-theme' ),
-            'singular_name'         => esc_html__( 'Company Logo', 'atlas-theme' ),
-            'menu_name'             => esc_html__( 'Company Logos', 'atlas-theme' ),
-            'name_admin_bar'        => esc_html__( 'Company Logo', 'atlas-theme' ),
-            'add_new'               => esc_html__( 'Add New', 'atlas-theme' ),
-            'add_new_item'          => esc_html__( 'Add New Company Logo', 'atlas-theme' ),
-            'new_item'              => esc_html__( 'New Company Logo', 'atlas-theme' ),
-            'edit_item'             => esc_html__( 'Edit Company Logo', 'atlas-theme' ),
-            'view_item'             => esc_html__( 'View Company Logo', 'atlas-theme' ),
-            'all_items'             => esc_html__( 'All Company Logos', 'atlas-theme' ),
-            'search_items'          => esc_html__( 'Search Company Logos', 'atlas-theme' ),
-            'parent_item_colon'     => esc_html__( 'Parent Company Logos:', 'atlas-theme' ),
-            'not_found'             => esc_html__( 'No company logos found.', 'atlas-theme' ),
-            'not_found_in_trash'    => esc_html__( 'No company logos found in Trash.', 'atlas-theme' ),
-        ),
-        'public'                => true,
-        'publicly_queryable'    => true,
-        'show_ui'               => true,
-        'show_in_menu'          => true,
-        'query_var'             => true,
-        'rewrite'               => array( 'slug' => 'company-logo' ),
-        'capability_type'       => 'post',
-        'has_archive'           => true,
-        'hierarchical'          => false,
-        'menu_position'         => 24,
-        'menu_icon'             => 'dashicons-building',
-        'supports'              => array( 'title', 'custom-fields' ),
-        'show_in_rest'          => true,
-    ) );
 }
 add_action( 'init', 'atlas_theme_register_post_types' );
 
@@ -273,25 +208,6 @@ function atlas_theme_add_meta_boxes() {
         'high'
     );
 
-    // Service Meta Box
-    add_meta_box(
-        'atlas_service_meta',
-        esc_html__( 'Service Details', 'atlas-theme' ),
-        'atlas_theme_service_meta_callback',
-        'atlas_service',
-        'normal',
-        'high'
-    );
-
-    // Company Logo Meta Box
-    add_meta_box(
-        'atlas_company_logo_meta',
-        esc_html__( 'Company Logo Details', 'atlas-theme' ),
-        'atlas_theme_company_logo_meta_callback',
-        'atlas_company_logo',
-        'normal',
-        'high'
-    );
 }
 add_action( 'add_meta_boxes', 'atlas_theme_add_meta_boxes' );
 
@@ -413,71 +329,6 @@ function atlas_theme_timeline_meta_callback( $post ) {
 }
 
 /**
- * Service Meta Box Callback
- */
-function atlas_theme_service_meta_callback( $post ) {
-    wp_nonce_field( 'atlas_theme_service_meta', 'atlas_theme_service_meta_nonce' );
-    
-    $service_number = get_post_meta( $post->ID, '_atlas_service_number', true );
-    $service_icon_type = get_post_meta( $post->ID, '_atlas_service_icon_type', true );
-    $service_featured = get_post_meta( $post->ID, '_atlas_service_featured', true );
-    
-    ?>
-    <table class="form-table">
-        <tr>
-            <th><label for="atlas_service_number"><?php esc_html_e( 'Service Number', 'atlas-theme' ); ?></label></th>
-            <td><input type="number" id="atlas_service_number" name="atlas_service_number" value="<?php echo esc_attr( $service_number ); ?>" min="1" max="99" /></td>
-        </tr>
-        <tr>
-            <th><label for="atlas_service_icon_type"><?php esc_html_e( 'Icon Type', 'atlas-theme' ); ?></label></th>
-            <td>
-                <select id="atlas_service_icon_type" name="atlas_service_icon_type">
-                    <option value="ux" <?php selected( $service_icon_type, 'ux' ); ?>>UX</option>
-                    <option value="ui" <?php selected( $service_icon_type, 'ui' ); ?>>UI</option>
-                    <option value="graphic" <?php selected( $service_icon_type, 'graphic' ); ?>>Graphic</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <th><label for="atlas_service_featured"><?php esc_html_e( 'Featured Service', 'atlas-theme' ); ?></label></th>
-            <td><input type="checkbox" id="atlas_service_featured" name="atlas_service_featured" value="1" <?php checked( $service_featured, '1' ); ?> /></td>
-        </tr>
-    </table>
-    <?php
-}
-
-/**
- * Company Logo Meta Box Callback
- */
-function atlas_theme_company_logo_meta_callback( $post ) {
-    wp_nonce_field( 'atlas_theme_company_logo_meta', 'atlas_theme_company_logo_meta_nonce' );
-    
-    $logo_shape_type = get_post_meta( $post->ID, '_atlas_logo_shape_type', true );
-    $logo_shape_letter = get_post_meta( $post->ID, '_atlas_logo_shape_letter', true );
-    
-    ?>
-    <table class="form-table">
-        <tr>
-            <th><label for="atlas_logo_shape_type"><?php esc_html_e( 'Shape Type', 'atlas-theme' ); ?></label></th>
-            <td>
-                <select id="atlas_logo_shape_type" name="atlas_logo_shape_type">
-                    <option value="shape-1" <?php selected( $logo_shape_type, 'shape-1' ); ?>>Shape 1 (Diamond)</option>
-                    <option value="shape-2" <?php selected( $logo_shape_type, 'shape-2' ); ?>>Shape 2 (Circle)</option>
-                    <option value="shape-3" <?php selected( $logo_shape_type, 'shape-3' ); ?>>Shape 3 (Hexagon)</option>
-                    <option value="shape-4" <?php selected( $logo_shape_type, 'shape-4' ); ?>>Shape 4 (Square)</option>
-                    <option value="shape-5" <?php selected( $logo_shape_type, 'shape-5' ); ?>>Shape 5 (Octagon)</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <th><label for="atlas_logo_shape_letter"><?php esc_html_e( 'Shape Letter/Icon', 'atlas-theme' ); ?></label></th>
-            <td><input type="text" id="atlas_logo_shape_letter" name="atlas_logo_shape_letter" value="<?php echo esc_attr( $logo_shape_letter ); ?>" class="regular-text" placeholder="e.g., S, W, or leave empty" /></td>
-        </tr>
-    </table>
-    <?php
-}
-
-/**
  * Save Meta Box Data
  */
 function atlas_theme_save_meta_boxes( $post_id ) {
@@ -546,25 +397,5 @@ function atlas_theme_save_meta_boxes( $post_id ) {
         }
     }
     
-    // Save Service Meta
-    if ( isset( $_POST['atlas_theme_service_meta_nonce'] ) && wp_verify_nonce( $_POST['atlas_theme_service_meta_nonce'], 'atlas_theme_service_meta' ) ) {
-        if ( isset( $_POST['atlas_service_number'] ) ) {
-            update_post_meta( $post_id, '_atlas_service_number', intval( $_POST['atlas_service_number'] ) );
-        }
-        if ( isset( $_POST['atlas_service_icon_type'] ) ) {
-            update_post_meta( $post_id, '_atlas_service_icon_type', sanitize_text_field( $_POST['atlas_service_icon_type'] ) );
-        }
-        update_post_meta( $post_id, '_atlas_service_featured', isset( $_POST['atlas_service_featured'] ) ? '1' : '0' );
-    }
-    
-    // Save Company Logo Meta
-    if ( isset( $_POST['atlas_theme_company_logo_meta_nonce'] ) && wp_verify_nonce( $_POST['atlas_theme_company_logo_meta_nonce'], 'atlas_theme_company_logo_meta' ) ) {
-        if ( isset( $_POST['atlas_logo_shape_type'] ) ) {
-            update_post_meta( $post_id, '_atlas_logo_shape_type', sanitize_text_field( $_POST['atlas_logo_shape_type'] ) );
-        }
-        if ( isset( $_POST['atlas_logo_shape_letter'] ) ) {
-            update_post_meta( $post_id, '_atlas_logo_shape_letter', sanitize_text_field( $_POST['atlas_logo_shape_letter'] ) );
-        }
-    }
 }
 add_action( 'save_post', 'atlas_theme_save_meta_boxes' );
